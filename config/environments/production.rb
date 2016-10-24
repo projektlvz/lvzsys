@@ -75,4 +75,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Some email notifications.
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {:host => 'https://ifasapp.herokuapp.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: 'smtp.gmail.com',
+      port: 587,
+      domain: 'gmail.com',
+      user_name: ENV.fetch('GMAIL_USERNAME'),
+      password: ENV.fetch('GMAIL_APP_SPECIFIC_PASSWORD'),
+      authentication: :login,
+      enable_starttls_auto: true
+  }
 end
