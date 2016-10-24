@@ -1,3 +1,49 @@
+PATH
+  remote: vendor/gems/community_engine
+  specs:
+    community_engine (3.2.0)
+      actionpack-action_caching
+      actionpack-page_caching
+      activeadmin (~> 1.0.0.pre2)
+      acts-as-taggable-on (~> 3.4.4)
+      acts_as_commentable (~> 4.0.2)
+      acts_as_list (>= 0.3.0)
+      authlogic (~> 3.4.6)
+      aws-sdk (< 2.0)
+      bcrypt
+      bootstrap-sass (~> 3.2.0)
+      bootstrap_form
+      ckeditor (~> 4.1.1)
+      cocaine (~> 0.5.1)
+      configatron (~> 4.2.0)
+      dynamic_form
+      font-awesome-rails
+      friendly_id (~> 5.1.0)
+      haml
+      htmlentities
+      jquery-rails
+      jquery-turbolinks
+      jquery-ui-rails (~> 5.0.0)
+      kaminari
+      koala (~> 1.6.0)
+      nokogiri
+      omniauth (~> 1.1.4)
+      paperclip (~> 4.3.0)
+      power_enum (~> 2.7)
+      pundit (= 0.3.0)
+      rack (>= 1.5.2)
+      rails (~> 4.1.0)
+      rails-observers
+      rails_autolink
+      rakismet
+      ransack (~> 1.7.0)
+      recaptcha
+      ri_cal
+      sanitize (>= 2.0.6)
+      sass-rails (~> 4.0.0)
+      sprockets (~> 2.10.0)
+      turbolinks
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -86,48 +132,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    community_engine (3.2.0)
-      actionpack-action_caching
-      actionpack-page_caching
-      activeadmin (~> 1.0.0.pre2)
-      acts-as-taggable-on (~> 3.4.4)
-      acts_as_commentable (~> 4.0.2)
-      acts_as_list (>= 0.3.0)
-      authlogic (~> 3.4.6)
-      aws-sdk (< 2.0)
-      bcrypt
-      bootstrap-sass (~> 3.2.0)
-      bootstrap_form
-      ckeditor (~> 4.1.1)
-      cocaine (~> 0.5.1)
-      configatron (~> 4.2.0)
-      dynamic_form
-      font-awesome-rails
-      friendly_id (~> 5.1.0)
-      haml
-      hpricot
-      htmlentities
-      jquery-rails
-      jquery-turbolinks
-      jquery-ui-rails (~> 5.0.0)
-      kaminari
-      koala (~> 1.6.0)
-      omniauth (~> 1.1.4)
-      paperclip (~> 4.3.0)
-      power_enum (~> 2.7)
-      pundit (= 0.3.0)
-      rack (>= 1.5.2)
-      rails (~> 4.1.0)
-      rails-observers
-      rails_autolink
-      rakismet
-      ransack (~> 1.7.0)
-      recaptcha
-      ri_cal
-      sanitize (>= 2.0.6)
-      sass-rails (~> 4.0.0)
-      sprockets (~> 2.10.0)
-      turbolinks
     configatron (4.2.1)
     crass (1.0.2)
     dynamic_form (1.1.4)
@@ -153,7 +157,6 @@ GEM
       activesupport (>= 3.2, < 5)
     hashie (2.1.2)
     hike (1.2.3)
-    hpricot (0.8.6)
     htmlentities (4.3.4)
     i18n (0.7.0)
     inherited_resources (1.6.0)
@@ -290,7 +293,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  community_engine
+  community_engine!
   jbuilder (~> 2.0)
   jquery-rails
   pg
