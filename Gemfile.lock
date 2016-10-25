@@ -150,6 +150,7 @@ GEM
     formtastic_i18n (0.6.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    gmaps4rails (2.1.2)
     haml (4.0.7)
       tilt
     has_scope (0.6.0)
@@ -294,6 +295,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   community_engine!
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   pg

@@ -34,4 +34,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  #Some temporary keys for development:
+  ENV['GOOGLE_MAPS_API_KEY'] = 'AIzaSyCPDQ4gMjIDzGnGZeMK_8IB5J7bjrG6Qr8'
 end
