@@ -15,15 +15,36 @@
   %p= link_to :already_have_an_account.l,  login_path
 
 
-= bootstrap_form_for @user, :layout => :horizontal do |f|
+= bootstrap_nested_form_for @user, :layout => :horizontal do |f|
   = f.text_field :login, :label => :username.l, :help => :required_your_username_must_not_contain_numerals_spaces_or_special_characters.l
   = f.text_field :email, :label => :e_mail_address.l, :help => :required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter.l
   = f.date_select :birthday, {:label => :birthday.l, :start_year => (Time.now.year - configatron.max_age), :end_year => (Time.now.year - configatron.min_age)}, :help => :required_you_must_be_at_least_years_old_to_sign_up.l_with_args(:min_age => configatron.min_age)
 
   = f.password_field :password, :label => :password.l
   = f.password_field :password_confirmation, :label => :confirm_password.l, :help => :re_type_your_password_to_confirm.l
+
+  - if params[:customer] == "false"
+    = f.text_field :first_name, :label => :first_name.l, :help => :required_first_name.l
+    = f.text_field :last_name, :label => :last_name.l, :help => :required_last_name.l
+    = f.text_field :facebook_link, :label => :facebook_link.l, :help => :required_facebook_link.l
+    = f.form_group label: { text: :privacy_check.l } do
+      = f.check_box :show_info, :label => :show_info.l
+    = f.fields_for :shops do |sf|
+      = sf.text_field :name, :label => :shop_name.l, :help => :required_shop_name.l
+      = sf.text_field :country, :label => :shop_country.l, :help => :required_shop_country.l
+      = sf.text_field :region, :label => :shop_region.l, :help => :required_shop_region.l
+      = sf.text_field :zip_code, :label => :shop_zip_code.l, :help => :required_shop_zip_code.l
+      = sf.text_field :street, :label => :shop_street.l, :help => :required_shop_street.l
+      = sf.form_group :shop_categories, label: { :text => :shop_category.l } do
+        = sf.radio_button :category, 1, label: :bakery_shop.l, inline: true, checked: true
+        = sf.radio_button :category, 2, label: :farm_shop.l, inline: true
+      = sf.form_group :shop_features, label: { text: :shop_features.l } do
+        - Shop.features_list.each_pair do |feature, translation|
+          = sf.check_box feature, :label => translation
+
   = hidden_field_tag :inviter_id, params[:inviter_id]
   = hidden_field_tag :inviter_code, params[:inviter_code]
+  = hidden_field_tag :customer, params[:customer]
 
   -if configatron.require_captcha_on_signup
     = f.form_group do

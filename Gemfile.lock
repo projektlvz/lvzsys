@@ -194,6 +194,7 @@ GEM
     minitest (5.9.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    nested_form (0.3.2)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     nokogumbo (1.4.9)
@@ -298,6 +299,7 @@ DEPENDENCIES
   gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
+  nested_form
   pg
   rails (= 4.1.16)
   sass-rails (~> 4.0.3)

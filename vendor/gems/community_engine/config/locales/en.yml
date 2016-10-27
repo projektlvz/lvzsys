@@ -1216,6 +1216,36 @@ en:
   showing_users: Showing users
   #en: sign_up: Sign Up!
   sign_up: Sign Up!
+  sign_up_customer: As Customer
+  sign_up_shop_owner: As Shop Owner
+  shop_category: Shop Category
+  bakery_shop: Bakery
+  farm_shop: Farm Shop
+  first_name: First Name
+  required_first_name: "(Required: Your first name must not contain spaces or special characters.)"
+  last_name: Last Name
+  required_last_name: "(Required: Your last name must not contain spaces or special characters.)"
+  facebook_link: Facebook Link
+  required_facebook_link: (Optional.)
+  privacy_check: Privacy Setting
+  show_info: Allow other users to see your personal data.
+  shop_name: Shop Name
+  required_shop_name: "(Required.)"
+  shop_street: Shop Street
+  required_shop_street: "(Required: street address of your shop.)"
+  shop_country: Country
+  required_shop_country: "(Required: country.)"
+  region: Region
+  required_shop_region: "(Required: region.)"
+  zip_code: Zip Code
+  required_shop_zip_code: "(Required: zip code.)"
+  shop_features: Shop Features
+  vegan: Vegan products
+  gluten: Gluten-free products
+  diabetis: Diabetis-friendly products
+  lactose: Lactose-free products
+  gmo: Gmo-free products
+  self_made: Self-made products
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a

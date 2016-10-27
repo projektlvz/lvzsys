@@ -23,3 +23,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'community_engine', :path => 'vendor/gems/community_engine'
 #Google maps gem.
 gem 'gmaps4rails'
+# Needed to create shops.
+gem 'nested_form'

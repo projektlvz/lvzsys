@@ -56,48 +56,52 @@ class User < ActiveRecord::Base
   validate :check_spam
 
   #associations
-    has_many :authorizations, :dependent => :destroy
-    has_many :posts, -> {order("published_at desc")}, :dependent => :destroy
-    has_many :photos, -> {order("created_at desc")}, :dependent => :destroy
-    has_many :invitations, :dependent => :destroy
-    has_many :rsvps, :dependent => :destroy
-    has_many :albums, :dependent => :destroy
+  has_many :authorizations, :dependent => :destroy
+  has_many :posts, -> {order("published_at desc")}, :dependent => :destroy
+  has_many :photos, -> {order("created_at desc")}, :dependent => :destroy
+  has_many :invitations, :dependent => :destroy
+  has_many :rsvps, :dependent => :destroy
+  has_many :albums, :dependent => :destroy
 
-    #friendship associations
-    has_many :friendships, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
-    has_many :accepted_friendships, -> { where('friendship_status_id = ?', 2) }, :class_name => "Friendship"
-    has_many :pending_friendships, -> { where('initiator = ? AND friendship_status_id = ?', false, 1) }, :class_name => "Friendship"
-    has_many :friendships_initiated_by_me, -> { where('initiator = ?', true) }, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
-    has_many :friendships_not_initiated_by_me, -> { where('initiator = ?', false) }, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
-    has_many :occurances_as_friend, :class_name => "Friendship", :foreign_key => "friend_id", :dependent => :destroy
+  #friendship associations
+  has_many :friendships, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
+  has_many :accepted_friendships, -> { where('friendship_status_id = ?', 2) }, :class_name => "Friendship"
+  has_many :pending_friendships, -> { where('initiator = ? AND friendship_status_id = ?', false, 1) }, :class_name => "Friendship"
+  has_many :friendships_initiated_by_me, -> { where('initiator = ?', true) }, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
+  has_many :friendships_not_initiated_by_me, -> { where('initiator = ?', false) }, :class_name => "Friendship", :foreign_key => "user_id", :dependent => :destroy
+  has_many :occurances_as_friend, :class_name => "Friendship", :foreign_key => "friend_id", :dependent => :destroy
 
-    #forums
-    has_many :moderatorships, :dependent => :destroy
-    has_many :forums, -> { order("forums.name") }, :through => :moderatorships
-    has_many :sb_posts, :dependent => :destroy
-    has_many :topics, :dependent => :destroy
-    has_many :monitorships, :dependent => :destroy
-    has_many :monitored_topics, -> { where('monitorships.active = ?', true).order('topics.replied_at desc') }, :through => :monitorships, :source => :topic
+  #forums
+  has_many :moderatorships, :dependent => :destroy
+  has_many :forums, -> { order("forums.name") }, :through => :moderatorships
+  has_many :sb_posts, :dependent => :destroy
+  has_many :topics, :dependent => :destroy
+  has_many :monitorships, :dependent => :destroy
+  has_many :monitored_topics, -> { where('monitorships.active = ?', true).order('topics.replied_at desc') }, :through => :monitorships, :source => :topic
 
-    belongs_to  :avatar, :class_name => "Photo", :foreign_key => "avatar_id", :inverse_of => :user_as_avatar
-    belongs_to  :metro_area, :counter_cache => true
-    belongs_to  :state
-    belongs_to  :country
-    has_many    :comments_as_author, -> { order("created_at desc") }, :class_name => "Comment", :foreign_key => "user_id", :dependent => :destroy
-    has_many    :comments_as_recipient, -> { order("created_at desc") }, :class_name => "Comment", :foreign_key => "recipient_id", :dependent => :destroy
-    has_many    :clippings, -> { order("created_at desc") }, :dependent => :destroy
-    has_many    :favorites, -> { order("created_at desc") }, :dependent => :destroy
+  belongs_to  :avatar, :class_name => "Photo", :foreign_key => "avatar_id", :inverse_of => :user_as_avatar
+  belongs_to  :metro_area, :counter_cache => true
+  belongs_to  :state
+  belongs_to  :country
+  has_many    :comments_as_author, -> { order("created_at desc") }, :class_name => "Comment", :foreign_key => "user_id", :dependent => :destroy
+  has_many    :comments_as_recipient, -> { order("created_at desc") }, :class_name => "Comment", :foreign_key => "recipient_id", :dependent => :destroy
+  has_many    :clippings, -> { order("created_at desc") }, :dependent => :destroy
+  has_many    :favorites, -> { order("created_at desc") }, :dependent => :destroy
 
-    #messages
-    has_many :all_sent_messages, :class_name => "Message", :foreign_key => "sender_id", :dependent => :destroy
-    has_many :sent_messages, -> { where("messages.sender_deleted = ?", false).order("messages.created_at DESC") },
-             :class_name => 'Message',
-             :foreign_key => 'sender_id'
+  #messages
+  has_many :all_sent_messages, :class_name => "Message", :foreign_key => "sender_id", :dependent => :destroy
+  has_many :sent_messages, -> { where("messages.sender_deleted = ?", false).order("messages.created_at DESC") },
+           :class_name => 'Message',
+           :foreign_key => 'sender_id'
 
-    has_many :received_messages, -> { where("messages.recipient_deleted = ?", false).order("messages.created_at DESC") },
-             :class_name => 'Message',
-             :foreign_key => 'recipient_id'
-    has_many :message_threads_as_recipient, :class_name => "MessageThread", :foreign_key => "recipient_id"
+  has_many :received_messages, -> { where("messages.recipient_deleted = ?", false).order("messages.created_at DESC") },
+           :class_name => 'Message',
+           :foreign_key => 'recipient_id'
+  has_many :message_threads_as_recipient, :class_name => "MessageThread", :foreign_key => "recipient_id"
+
+  has_one :shop, dependent: :destroy
+  accepts_nested_attributes_for :shop
+  validates_associated :shop
 
   #named scopes
   scope :recent, -> {order('users.created_at DESC')}
@@ -173,11 +177,11 @@ class User < ActiveRecord::Base
     options.reverse_merge! :limit => 30, :require_avatar => true, :since => 7.days.ago
 
     activities = Activity.since(options[:since]).select('activities.user_id, count(*) as count').
-      group('activities.user_id').
-      where("#{options[:require_avatar] ? ' users.avatar_id IS NOT NULL AND ' : ''} users.activated_at IS NOT NULL").
-      order('count DESC').
-      joins( "LEFT JOIN users ON users.id = activities.user_id").
-      limit(options[:limit])
+        group('activities.user_id').
+        where("#{options[:require_avatar] ? ' users.avatar_id IS NOT NULL AND ' : ''} users.activated_at IS NOT NULL").
+        order('count DESC').
+        joins( "LEFT JOIN users ON users.id = activities.user_id").
+        limit(options[:limit])
     activities.map{|a| find(a.user_id) }
   end
 
@@ -296,17 +300,17 @@ class User < ActiveRecord::Base
   end
 
   def reset_password
-     new_password = newpass(8)
-     self.password = new_password
-     self.password_confirmation = new_password
-     return self.valid?
+    new_password = newpass(8)
+    self.password = new_password
+    self.password_confirmation = new_password
+    return self.valid?
   end
 
   def newpass( len )
-     chars = ("a".."z").to_a + ("A".."Z").to_a + ("0".."9").to_a
-     new_password = ""
-     1.upto(len) { |i| new_password << chars[rand(chars.size-1)] }
-     return new_password
+    chars = ("a".."z").to_a + ("A".."Z").to_a + ("0".."9").to_a
+    new_password = ""
+    1.upto(len) { |i| new_password << chars[rand(chars.size-1)] }
+    return new_password
   end
 
   def owner
@@ -443,35 +447,35 @@ class User < ActiveRecord::Base
 
   protected
 
-    def make_activation_code
-      self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
-    end
+  def make_activation_code
+    self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+  end
 
-    # before actions
-    def whitelist_attributes
-      self.login = self.login.strip
-      self.description = white_list(self.description )
-      self.stylesheet = white_list(self.stylesheet )
-    end
+  # before actions
+  def whitelist_attributes
+    self.login = self.login.strip
+    self.description = white_list(self.description )
+    self.stylesheet = white_list(self.stylesheet )
+  end
 
-    def password_required?
-      crypted_password.blank? || !password.blank?
-    end
+  def password_required?
+    crypted_password.blank? || !password.blank?
+  end
 
-    def email_required?
-      !omniauthed?
-    end
+  def email_required?
+    !omniauthed?
+  end
 
-    def requires_valid_birthday?
-      !omniauthed?
-    end
+  def requires_valid_birthday?
+    !omniauthed?
+  end
 
-    def requires_unique_login?
-      true
-    end
+  def requires_unique_login?
+    true
+  end
 
-    def omniauthed?
-      authorizing_from_omniauth || authorizations.any?
-    end
+  def omniauthed?
+    authorizing_from_omniauth || authorizations.any?
+  end
 
 end

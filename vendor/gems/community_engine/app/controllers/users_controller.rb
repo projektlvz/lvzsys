@@ -3,15 +3,15 @@ class UsersController < BaseController
   cache_sweeper :taggable_sweeper, :only => [:activate, :update, :destroy]
 
   before_action :login_required, :only => [:edit, :edit_account, :update, :welcome_photo, :welcome_about,
-                                          :welcome_invite, :return_admin, :assume, :featured,
-                                          :toggle_featured, :edit_pro_details, :update_pro_details, :dashboard, :deactivate,
-                                          :crop_profile_photo, :upload_profile_photo]
+                                           :welcome_invite, :return_admin, :assume, :featured,
+                                           :toggle_featured, :edit_pro_details, :update_pro_details, :dashboard, :deactivate,
+                                           :crop_profile_photo, :upload_profile_photo]
   before_action :find_user, :only => [:edit, :edit_pro_details, :show, :update, :statistics, :deactivate,
                                       :crop_profile_photo, :upload_profile_photo ]
   before_action :require_current_user, :only => [:edit, :update, :update_account,
-                                                :edit_pro_details, :update_pro_details,
-                                                :welcome_photo, :welcome_about, :welcome_invite, :deactivate,
-                                                :crop_profile_photo, :upload_profile_photo]
+                                                 :edit_pro_details, :update_pro_details,
+                                                 :welcome_photo, :welcome_about, :welcome_invite, :deactivate,
+                                                 :crop_profile_photo, :upload_profile_photo]
   before_action :admin_required, :only => [:assume, :destroy, :featured, :toggle_featured, :toggle_moderator]
   before_action :admin_or_current_user_required, :only => [:statistics]
 
@@ -80,15 +80,20 @@ class UsersController < BaseController
   end
 
   def create
-    @user       = User.new(user_params)
+    shops_parameters = shop_params
+    user_parameters = user_params
+    user_parameters[:shop_attributes] = shops_parameters if shops_parameters.present?
+    @user = User.new(user_parameters)
+
     @user.role  = Role[:member]
+    @user.customer = params[:customer]
 
     if (!configatron.require_captcha_on_signup || verify_recaptcha(@user)) && @user.save
       create_friendship_with_inviter(@user, params)
       flash[:notice] = :email_signup_thanks.l_with_args(:email => @user.email)
       redirect_to signup_completed_user_path(@user)
     else
-      render :action => 'new'
+      render action: 'new', customer: params[:customer]
     end
   end
 
@@ -238,13 +243,13 @@ class UsersController < BaseController
       if friend && friend.valid_invite_code?(options[:inviter_code])
         accepted    = FriendshipStatus[:accepted]
         @friendship = Friendship.new(:user_id => friend.id,
-          :friend_id => user.id,
-          :friendship_status => accepted,
-          :initiator => true)
+                                     :friend_id => user.id,
+                                     :friendship_status => accepted,
+                                     :initiator => true)
 
         reverse_friendship = Friendship.new(:user_id => user.id,
-          :friend_id => friend.id,
-          :friendship_status => accepted )
+                                            :friend_id => friend.id,
+                                            :friendship_status => accepted )
 
         @friendship.save!
         reverse_friendship.save!
@@ -338,12 +343,12 @@ class UsersController < BaseController
     respond_to do |format|
       format.js {
         render :partial => 'shared/location_chooser', :locals => {
-          :states => states,
-          :metro_areas => metro_areas,
-          :selected_country => params[:country_id].to_i,
-          :selected_state => params[:state_id].to_i,
-          :selected_metro_area => nil,
-          :js => true }
+            :states => states,
+            :metro_areas => metro_areas,
+            :selected_country => params[:country_id].to_i,
+            :selected_state => params[:state_id].to_i,
+            :selected_metro_area => nil,
+            :js => true }
       }
     end
   end
@@ -405,24 +410,24 @@ class UsersController < BaseController
   end
 
   protected
-    def setup_metro_areas_for_cloud
-      @metro_areas_for_cloud = MetroArea.where("users_count > 0", :order => "users_count DESC").limit(100)
-      @metro_areas_for_cloud = @metro_areas_for_cloud.sort_by{|m| m.name}
-    end
+  def setup_metro_areas_for_cloud
+    @metro_areas_for_cloud = MetroArea.where("users_count > 0", :order => "users_count DESC").limit(100)
+    @metro_areas_for_cloud = @metro_areas_for_cloud.sort_by{|m| m.name}
+  end
 
-    def setup_locations_for(user)
-      metro_areas = states = []
+  def setup_locations_for(user)
+    metro_areas = states = []
 
-      states = user.country.states if user.country
+    states = user.country.states if user.country
 
-      metro_areas = user.state.metro_areas.order("name") if user.state
+    metro_areas = user.state.metro_areas.order("name") if user.state
 
-      return metro_areas, states
-    end
+    return metro_areas, states
+  end
 
-    def admin_or_current_user_required
-      current_user && (current_user.admin? || @is_current_user) ? true : access_denied
-    end
+  def admin_or_current_user_required
+    current_user && (current_user.admin? || @is_current_user) ? true : access_denied
+  end
 
 
   def avatar_params
@@ -431,12 +436,24 @@ class UsersController < BaseController
 
   def user_params
     params[:user].permit(:avatar_id, :company_name, :country_id, :description, :email,
-                                 :firstname, :fullname, :gender, :lastname, :login, :metro_area_id,
-                                 :middlename, :notify_comments, :notify_community_news,
-                                 :notify_friend_requests, :password, :password_confirmation,
-                                 :profile_public, :state_id, :stylesheet, :time_zone, :vendor, :zip,
-                                 :tag_list,
-                                 {:avatar_attributes => [:id, :name, :description, :album_id, :user, :user_id, :photo, :photo_remote_url]}, :birthday) if params[:user]
+                         :firstname, :fullname, :gender, :lastname, :login, :metro_area_id,
+                         :middlename, :notify_comments, :notify_community_news,
+                         :notify_friend_requests, :password, :password_confirmation,
+                         :profile_public, :state_id, :stylesheet, :time_zone, :vendor, :zip,
+                         :tag_list, :customer, :first_name, :last_name, :facebook_link, :show_info,
+                         {:avatar_attributes => [:id, :name, :description, :album_id, :user, :user_id, :photo, :photo_remote_url]}, :birthday) if params[:user]
+  end
+
+  def shop_params
+    if params[:user] && params[:user][:shops].present?
+      parameteres = params[:user][:shops].permit(:name, :street, :country, :region, :zip_code, :category, :vegan,
+                                                 :gluten, :diabetis, :lactose, :gmo, :self_made)
+      features = parameteres.extract!('vegan', 'gluten', 'diabetis', 'lactose', 'gmo', 'self_made')
+      parameteres[:features] = features
+      parameteres
+    else
+      nil
+    end
   end
 
   def comment_params

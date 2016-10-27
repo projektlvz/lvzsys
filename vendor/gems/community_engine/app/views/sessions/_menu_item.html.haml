@@ -25,4 +25,13 @@
       %li= link_to :log_out.l, logout_path
 -else
   %li= link_to(:log_in.l, login_path)
-  %li= link_to(:sign_up.l, signup_path)
+  %li.dropdown
+    %a.dropdown-toggle{"data-toggle"=>"dropdown", "role"=>"button", "aria-haspopup"=>"true", "aria-expanded"=>"false"}
+      = :sign_up.l
+      %span.caret
+    %ul.dropdown-menu
+      %li= link_to(:sign_up_customer.l, signup_path(customer: true))
+      %li= link_to(:sign_up_shop_owner.l, signup_path(customer: false))
+
+
+

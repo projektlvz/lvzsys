@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024093631) do
+ActiveRecord::Schema.define(version: 20161026115256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -364,6 +365,21 @@ ActiveRecord::Schema.define(version: 20161024093631) do
 
   add_index "sessions", ["sessid"], name: "index_sessions_on_sessid", using: :btree
 
+  create_table "shops", force: true do |t|
+    t.string   "name"
+    t.string   "category"
+    t.string   "street"
+    t.string   "region"
+    t.string   "country"
+    t.string   "zip_code"
+    t.integer  "user_id"
+    t.hstore   "features",   default: {}, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shops", ["features"], name: "shops_features_idx", using: :gin
+
   create_table "states", force: true do |t|
     t.string "name"
   end
@@ -450,11 +466,17 @@ ActiveRecord::Schema.define(version: 20161024093631) do
     t.datetime "current_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.boolean  "customer"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "facebook_link"
+    t.boolean  "show_info",                         default: false
   end
 
   add_index "users", ["activated_at"], name: "index_users_on_activated_at", using: :btree
   add_index "users", ["avatar_id"], name: "index_users_on_avatar_id", using: :btree
   add_index "users", ["created_at"], name: "index_users_on_created_at", using: :btree
+  add_index "users", ["customer"], name: "index_users_on_customer", using: :btree
   add_index "users", ["featured_writer"], name: "index_users_on_featured_writer", using: :btree
   add_index "users", ["last_request_at"], name: "index_users_on_last_request_at", using: :btree
   add_index "users", ["login"], name: "index_users_on_login", using: :btree
