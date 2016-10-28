@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026115256) do
+ActiveRecord::Schema.define(version: 20161028080050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -376,9 +376,12 @@ ActiveRecord::Schema.define(version: 20161026115256) do
     t.hstore   "features",   default: {}, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "shops", ["features"], name: "shops_features_idx", using: :gin
+  add_index "shops", ["latitude", "longitude"], name: "index_shops_on_latitude_and_longitude", using: :btree
 
   create_table "states", force: true do |t|
     t.string "name"

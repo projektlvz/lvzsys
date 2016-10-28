@@ -1235,9 +1235,9 @@ en:
   required_shop_street: "(Required: street address of your shop.)"
   shop_country: Country
   required_shop_country: "(Required: country.)"
-  region: Region
+  shop_region: Region
   required_shop_region: "(Required: region.)"
-  zip_code: Zip Code
+  shop_zip_code: Zip Code
   required_shop_zip_code: "(Required: zip code.)"
   shop_features: Shop Features
   vegan: Vegan products

@@ -25,3 +25,5 @@ gem 'community_engine', :path => 'vendor/gems/community_engine'
 gem 'gmaps4rails'
 # Needed to create shops.
 gem 'nested_form'
+# Geocoder to google api.
+gem 'geocoder'
