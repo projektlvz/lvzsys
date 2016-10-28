@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount CommunityEngine::Engine => "/"
-
+  get 'get_shops/' => 'map#get_shops'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
