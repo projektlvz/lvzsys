@@ -42,8 +42,8 @@
       = sf.text_field :zip_code, :label => :shop_zip_code.l, :help => :required_shop_zip_code.l
       = sf.text_field :street, :label => :shop_street.l, :help => :required_shop_street.l
       = sf.form_group :shop_categories, label: { :text => :shop_category.l } do
-        = sf.radio_button :category, 1, label: :bakery_shop.l, inline: true, checked: true
-        = sf.radio_button :category, 2, label: :farm_shop.l, inline: true
+        = sf.radio_button :category, 'bakery_shop', label: :bakery_shop.l, inline: true, checked: true
+        = sf.radio_button :category, 'farm_shop', label: :farm_shop.l, inline: true
       = sf.form_group :shop_features, label: { text: :shop_features.l } do
         - Shop.features_list.each_pair do |feature, translation|
           = sf.check_box feature, :label => translation

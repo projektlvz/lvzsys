@@ -5,23 +5,24 @@
         %label{for: "shop_category"}
           = :shop_category.l
         %select.form-control{id: "s_shop_category", style: 'width: 240px;'}
+          %option{value: ""}
           %option{value: "bakery_shop"}
             = :bakery_shop.l
           %option{value: "farm_shop"}
             = :farm_shop.l
     - Shop.features_list.each_slice(3) do |slice|
-      .col-sm-4{style: 'padding-bottom: 5px;'}
+      .col-sm-4
         - slice.each do |feature|
           %div.checkbox
             %label
               %input{type: "checkbox", id: "s_#{feature[0]}"}
               = feature[1]
-  .row
+  .row{style: 'padding-top: 5px;'}
     .col-sm-10
       .form-group
         %input{type: "text", class: "form-control", id: "s_city", placeholder: :select_city.l, style: 'width: 240px;'}
     .col-sm-2
-      %button{type:"button", class:"btn btn-default"}
+      %button{type:"button", class:"btn btn-default", onclick: "RetrieveShops()"}
         = :search.l
 
 
