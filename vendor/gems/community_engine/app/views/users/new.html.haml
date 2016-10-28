@@ -27,6 +27,12 @@
     = f.text_field :first_name, :label => :first_name.l, :help => :required_first_name.l
     = f.text_field :last_name, :label => :last_name.l, :help => :required_last_name.l
     = f.text_field :facebook_link, :label => :facebook_link.l, :help => :required_facebook_link.l
+    - if @user.shop && @user.shop.errors.full_messages.any?
+      %div{:class => "alert alert-danger", :role => "alert"}
+        - @user.shop.errors.full_messages.each do |message|
+          %div
+            = message
+
     = f.form_group label: { text: :privacy_check.l } do
       = f.check_box :show_info, :label => :show_info.l
     = f.fields_for :shops do |sf|
