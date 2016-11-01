@@ -1247,6 +1247,13 @@ en:
   gmo: Gmo-free products
   self_made: Self-made products
   select_city: Your city
+  customer_vegan: Vegan
+  customer_gluten: Gluten-free
+  customer_diabetis: Diabeties-friendly
+  customer_lactose: Lactose-free
+  customer_gmo: None-GMO
+  recipe: Recipe
+  review: Review
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a

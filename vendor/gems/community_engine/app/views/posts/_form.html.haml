@@ -23,9 +23,13 @@
 
 = bootstrap_form_for(object, :url => url, :layout => :horizontal) do |f|
   = f.text_field :title, :class => 'col-sm-6'
-  = f.collection_select(:category_id, Category.all, :id, :name, {}, {})
+  - categories = @owner_post ? Category.all : Category.where(name: 'Blog Post').all
+  = f.collection_select(:category_id, categories, :id, :name, {}, {})
   = f.text_area :raw_post, :rows => 15, :class => "rich_text_editor", :required => false
-  = f.text_field :tag_list, :autocomplete => "off", :label => :tags.l, :help => :optional_keywords_describing_this_post_separated_by_commas.l
+  = f.select :tag_list, @allowed_tags.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true }
+
+
+  = hidden_field_tag :owner_post, @owner_post
 
   -content_for :end_javascript do
     = tag_auto_complete_field 'post_tag_list', {:url => { :controller => "tags", :action => 'auto_complete_for_tag_name'}, :tokens => [','] }

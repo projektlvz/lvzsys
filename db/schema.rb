@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028080050) do
+ActiveRecord::Schema.define(version: 20161101120331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -320,9 +320,11 @@ ActiveRecord::Schema.define(version: 20161028080050) do
     t.string   "published_as",               limit: 16, default: "draft"
     t.datetime "published_at"
     t.boolean  "send_comment_notifications",            default: true
+    t.boolean  "owner_post",                            default: false
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
+  add_index "posts", ["owner_post"], name: "index_posts_on_owner_post", using: :btree
   add_index "posts", ["published_as"], name: "index_posts_on_published_as", using: :btree
   add_index "posts", ["published_at"], name: "index_posts_on_published_at", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree

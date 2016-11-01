@@ -38,11 +38,11 @@ class PostsController < BaseController
       format.html # index.rhtml
       format.rss {
         render_rss_feed_for(@posts,
-           { :feed => {:title => @rss_title, :link => url_for(:controller => 'posts', :action => 'index', :user_id => @user) },
-             :item => {:title => :title,
-                       :description => :post,
-                       :link => Proc.new {|post| user_post_url(post.user, post)},
-                       :pub_date => :published_at} })
+                            { :feed => {:title => @rss_title, :link => url_for(:controller => 'posts', :action => 'index', :user_id => @user) },
+                              :item => {:title => :title,
+                                        :description => :post,
+                                        :link => Proc.new {|post| user_post_url(post.user, post)},
+                                        :pub_date => :published_at} })
       }
     end
   end
@@ -87,18 +87,25 @@ class PostsController < BaseController
     @post.category = Category.find(params[:category_id]) if params[:category_id]
     @post.published_as = 'live'
     @categories = Category.all
+    @owner_post = !@user.customer?
+    @allowed_tags = get_allowed_tags(@owner_post)
   end
 
   # GET /posts/1;edit
   def edit
     @post = Post.unscoped.find(params[:id])
+    @owner_post = !@user.customer?
+    @allowed_tags = get_allowed_tags(@owner_post)
   end
 
   # POST /posts
   # POST /posts.xml
   def create
     @user = User.find(params[:user_id])
-    @post = Post.new(post_params)
+    post_parameters = post_params
+    post_parameters[:owner_post] = params[:owner_post] == 'true'
+    post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
+    @post = Post.new(post_parameters)
     @post.user = @user
 
     respond_to do |format|
@@ -128,7 +135,9 @@ class PostsController < BaseController
     @user = @post.user
 
     respond_to do |format|
-      if @post.update_attributes(post_params)
+      post_parameters = post_params
+      post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
+      if @post.update_attributes(post_parameters)
         @post.update_poll(params[:poll], params[:choices]) if params[:poll]
 
         format.html { redirect_to user_post_path(@post.user, @post) }
@@ -149,7 +158,7 @@ class PostsController < BaseController
       format.html {
         flash[:notice] = :your_post_was_deleted.l
         redirect_to manage_user_posts_url(@user)
-        }
+      }
     end
   end
 
@@ -190,8 +199,8 @@ class PostsController < BaseController
       format.html # index.rhtml
       format.rss {
         render_rss_feed_for(@posts, { :feed => {:title => @rss_title, :link => popular_url},
-          :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
-          })
+                                      :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
+        })
       }
     end
   end
@@ -208,8 +217,8 @@ class PostsController < BaseController
       format.html
       format.rss {
         render_rss_feed_for(@posts, { :feed => {:title => @rss_title, :link => recent_url},
-          :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
-          })
+                                      :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
+        })
       }
     end
   end
@@ -224,8 +233,8 @@ class PostsController < BaseController
       format.html
       format.rss {
         render_rss_feed_for(@posts, { :feed => {:title => @rss_title, :link => recent_url},
-          :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
-          })
+                                      :item => {:title => :title, :link => Proc.new {|post| user_post_url(post.user, post)}, :description => :post, :pub_date => :published_at}
+        })
       }
     end
   end
@@ -256,5 +265,21 @@ class PostsController < BaseController
 
   def comment_params
     params[:comment].permit(:author_name, :author_email, :notify_by_email, :author_url, :comment)
+  end
+
+  def get_allowed_tags(for_owner = false)
+    if for_owner
+      Shop.features_list
+    else
+      {
+        customer_vegan: :customer_vegan.l,
+        customer_gluten: :customer_gluten.l,
+        customer_diabetis: :customer_diabetis.l,
+        customer_lactose: :customer_lactose.l,
+        customer_gmo: :customer_gmo.l,
+        recipe: :recipe.l,
+        review: :review.l
+      }
+    end
   end
 end
