@@ -31,7 +31,7 @@ class BaseController < ApplicationController
   end
 
   def site_index
-    @posts = Post.find_recent
+    @posts = Post.find_recent.where('owner_post = TRUE')
 
     @rss_title = "#{configatron.community_name} "+:recent_posts.l
     @rss_url = rss_url
