@@ -49,7 +49,7 @@ class UsersController < BaseController
       @users = @users.joins(:shop).where("shops.name ilike :q or shops.features @> hstore(:key, '1')", q: "%#{params['q']}%", key: features_search)
     end
 
-    @users = @users.active.recent.includes(:tags).page(params[:page]).per(20)
+    @users = @users.active.recent.includes(:tags, :shop).page(params[:page]).per(20)
 
     @metro_areas, @states = User.find_country_and_state_from_search_params(params)
 
