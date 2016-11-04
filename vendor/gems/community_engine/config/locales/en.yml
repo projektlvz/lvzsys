@@ -1254,6 +1254,7 @@ en:
   customer_gmo: None-GMO
   recipe: Recipe
   review: Review
+  search_stores_by_name_and_feature: Shop name or category
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a
