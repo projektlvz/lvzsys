@@ -39,8 +39,11 @@ class UsersController < BaseController
   def index
     @users, @search, @metro_areas, @states = User.search_conditions_with_metros_and_states(params)
 
+    @shops_page = false
+
     if params['q'].present?
       features_search = nil
+      @shops_page= true
 
       Shop.features_list.each_key do |key|
         features_search = key.to_s if params['q'].downcase.include?(key.to_s)
@@ -124,6 +127,7 @@ class UsersController < BaseController
     end
 
     @user.tag_list = params[:tag_list] || ''
+    @user.city = params[:city]
 
     if user_params
       attributes = user_params.permit!

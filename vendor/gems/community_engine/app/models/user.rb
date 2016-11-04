@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 
   friendly_id :login, :use => [:slugged, :finders], :slug_column => 'login_slug'
 
+  geocoded_by :full_user_address
+  after_validation :geocode , if: ->(obj){ obj.full_user_address.present? and obj.address_was_changed? }
+
   MALE    = 'M'
   FEMALE  = 'F'
 
@@ -478,4 +481,11 @@ class User < ActiveRecord::Base
     authorizing_from_omniauth || authorizations.any?
   end
 
+  def full_user_address
+    [city, zip].compact.join(',')
+  end
+
+  def address_was_changed?
+    city_changed? || zip_changed?
+  end
 end

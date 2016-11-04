@@ -7,16 +7,12 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require jquery.turbolinks
-//= require turbolinks
 //
 ///////////////////////////////////////////
 // UTILITIES                             //
 ///////////////////////////////////////////
 //= require ckeditor/init
 //= require_directory ./ckeditor/rte
-
-
-Turbolinks.enableProgressBar();
 
 $.CE = {};
 

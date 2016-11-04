@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101120331) do
+ActiveRecord::Schema.define(version: 20161104163806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -476,6 +476,9 @@ ActiveRecord::Schema.define(version: 20161101120331) do
     t.string   "last_name"
     t.string   "facebook_link"
     t.boolean  "show_info",                         default: false
+    t.string   "city"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["activated_at"], name: "index_users_on_activated_at", using: :btree
@@ -484,6 +487,7 @@ ActiveRecord::Schema.define(version: 20161101120331) do
   add_index "users", ["customer"], name: "index_users_on_customer", using: :btree
   add_index "users", ["featured_writer"], name: "index_users_on_featured_writer", using: :btree
   add_index "users", ["last_request_at"], name: "index_users_on_last_request_at", using: :btree
+  add_index "users", ["latitude", "longitude"], name: "index_users_on_latitude_and_longitude", using: :btree
   add_index "users", ["login"], name: "index_users_on_login", using: :btree
   add_index "users", ["login_slug"], name: "index_users_on_login_slug", using: :btree
   add_index "users", ["persistence_token"], name: "index_users_on_persistence_token", using: :btree

@@ -1,11 +1,13 @@
 #location_chooser
   %label= :country.l
   = select_tag(:country_id, options_from_collection_for_select(Country.find_countries_with_metros, "id", "name", selected_country), {:include_blank => true, :class => "form-control"})
-
+  %br
+  %label= :city.l
+  = text_field_tag(:city, selected_city, {:class => "form-control"})
   %br
   %label= :state.l
   = select_tag(:state_id, options_from_collection_for_select(states, "id", "name", (selected_state rescue nil)), {:disabled => states.empty?, :class => "form-control" })
-
+  %br
   = ajax_spinner_for 'location_chooser'
 
   %br
