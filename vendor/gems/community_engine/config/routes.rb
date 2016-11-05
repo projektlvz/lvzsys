@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :shops, only: [:edit, :update]
   resources :monitorship
   resources :sb_posts do
     collection do

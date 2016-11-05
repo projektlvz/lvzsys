@@ -1,0 +1,17 @@
+= bootstrap_form_for @shop, :layout => :horizontal do |sf|
+  = sf.text_field :name, :label => :shop_name.l, :help => :required_shop_name.l
+  = sf.text_field :country, :label => :shop_country.l, :help => :required_shop_country.l
+  = sf.text_field :region, :label => :shop_region.l, :help => :required_shop_region.l
+  = sf.text_field :zip_code, :label => :shop_zip_code.l, :help => :required_shop_zip_code.l
+  = sf.text_field :street, :label => :shop_street.l, :help => :required_shop_street.l
+  = sf.form_group :shop_categories, label: { :text => :shop_category.l } do
+    = sf.radio_button :category, 'bakery_shop', label: :bakery_shop.l, inline: true, checked: true
+    = sf.radio_button :category, 'farm_shop', label: :farm_shop.l, inline: true
+  = sf.form_group :shop_features, label: { text: :shop_features.l } do
+    - Shop.features_list.each_pair do |feature, translation|
+      = check_box_tag feature, feature, @shop.features[feature.to_s] == '1'
+      %label.control-label
+        = translation
+      %br
+  = sf.form_group :submit_group do
+    = sf.primary :save.l

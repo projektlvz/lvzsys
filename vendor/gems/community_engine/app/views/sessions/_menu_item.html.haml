@@ -13,6 +13,7 @@
         %li.divider
       %li= link_to :edit_profile.l, edit_user_path(current_user)
       %li= link_to :edit_account.l, edit_account_user_path(current_user)
+      %li= link_to :edit_shop.l, edit_shop_path(current_user.shop) if current_user.shop.present?
       %li= link_to :manage_posts.l, manage_user_posts_path(current_user)
       %li= link_to :inbox.l, user_messages_path(current_user)
       %li.divider
