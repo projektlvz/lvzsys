@@ -37,19 +37,26 @@ class UsersController < BaseController
   end
 
   def index
+    @customers = params['customers'] == 'true'
     @users, @search, @metro_areas, @states = User.search_conditions_with_metros_and_states(params)
+    @users = @users.where(customer: @customers)
 
-    @shops_page = false
+    if !@customers && params.detect{ |k,v| k.include?('s_')}.present?
+      @users = @users.joins(:shop)
 
-    if params['q'].present?
-      features_search = nil
-      @shops_page= true
+      shops = Shop.where('latitude is not null and longitude is not null')
+                  .near(params['s_city'], ENV['GOOGLE_MAP_SEARCH_RADIUS'] || 50)
+                  .map {|s| s.id} if params['s_city'].present?
 
-      Shop.features_list.each_key do |key|
-        features_search = key.to_s if params['q'].downcase.include?(key.to_s)
+
+      @users = @users.where('shops.id in (?)', shops) if shops.present?
+
+      @users = @users.where("shops.category = ?", params['s_shop_category']) if params['s_shop_category'].present?
+
+      features_search = params.select {|k,v| k.include?('s_features_')}.keys
+      features_search.each do |f|
+        @users = @users.where("shops.features @> hstore(:key, '1')", key: f.sub('s_features_',''))
       end
-
-      @users = @users.joins(:shop).where("shops.name ilike :q or shops.features @> hstore(:key, '1')", q: "%#{params['q']}%", key: features_search)
     end
 
     @users = @users.active.recent.includes(:tags, :shop).page(params[:page]).per(20)

@@ -14,10 +14,7 @@
     = render 'forums/menu_item'
     = render 'posts/menu_item'
     = render 'users/menu_item'
-    = form_tag("/users", method: "get", class: "navbar-form navbar-left") do
-      .form-group
-        = text_field_tag(:q, nil, placeholder: :search_stores_by_name_and_feature.l, class:"form-control")
-        = submit_tag(:search.l, class: "btn btn-default")
+    = render 'users/customers_menu_item'
     - if @header_tabs.any?
       - for tab in @header_tabs
         %li= link_to tab.name, tab.url
