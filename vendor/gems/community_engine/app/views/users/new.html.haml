@@ -32,21 +32,21 @@
         - @user.shop.errors.full_messages.each do |message|
           %div
             = message
-
+    - shop_params = params['user'].present? ? params['user']['shops'] : {}
     = f.form_group label: { text: :privacy_check.l } do
       = f.check_box :show_info, :label => :show_info.l
     = f.fields_for :shops do |sf|
-      = sf.text_field :name, :label => :shop_name.l, :help => :required_shop_name.l
-      = sf.text_field :country, :label => :shop_country.l, :help => :required_shop_country.l
-      = sf.text_field :region, :label => :shop_region.l, :help => :required_shop_region.l
-      = sf.text_field :zip_code, :label => :shop_zip_code.l, :help => :required_shop_zip_code.l
-      = sf.text_field :street, :label => :shop_street.l, :help => :required_shop_street.l
+      = sf.text_field :name, :label => :shop_name.l, :help => :required_shop_name.l, value: shop_params['name']
+      = sf.text_field :country, :label => :shop_country.l, :help => :required_shop_country.l, value: shop_params['country']
+      = sf.text_field :region, :label => :shop_region.l, :help => :required_shop_region.l, value: shop_params['region']
+      = sf.text_field :zip_code, :label => :shop_zip_code.l, :help => :required_shop_zip_code.l, value: shop_params['zip_code']
+      = sf.text_field :street, :label => :shop_street.l, :help => :required_shop_street.l, value: shop_params['street']
       = sf.form_group :shop_categories, label: { :text => :shop_category.l } do
-        = sf.radio_button :category, 'bakery_shop', label: :bakery_shop.l, inline: true, checked: true
-        = sf.radio_button :category, 'farm_shop', label: :farm_shop.l, inline: true
+        = sf.radio_button :category, 'bakery_shop', label: :bakery_shop.l, inline: true, checked: !(shop_params['category'] == 'farm_shop')
+        = sf.radio_button :category, 'farm_shop', label: :farm_shop.l, inline: true,  checked: shop_params['category'] == 'farm_shop'
       = sf.form_group :shop_features, label: { text: :shop_features.l } do
         - Shop.features_list.each_pair do |feature, translation|
-          = sf.check_box feature, :label => translation
+          = sf.check_box feature, :label => translation, checked: shop_params[feature] == '1'
 
   = hidden_field_tag :inviter_id, params[:inviter_id]
   = hidden_field_tag :inviter_code, params[:inviter_code]
