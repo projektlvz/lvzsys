@@ -34,7 +34,6 @@ function RetrieveShops(){
             handler.removeMarkers(markers)
             markers = handler.addMarkers(shops_json);
             handler.bounds.extendWith(markers);
-            handler.fitMapToBounds();
         })
         .fail(function() {
             console.log( "Error retrieving filtered shops list." );
