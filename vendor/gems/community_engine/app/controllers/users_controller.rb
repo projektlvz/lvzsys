@@ -60,6 +60,14 @@ class UsersController < BaseController
       end
     end
 
+    if @customers && params.detect{ |k,v| k.include?('cust_')}.present?
+      @search_params = params.select{ |k,v| k.include?('cust_')}
+      tags_search = params.select {|k,v| k.include?('cust_tagz_')}.map{|k,v| k.sub('cust_tagz_','')}
+      @users = @users.tagged_with(tags_search) if tags_search.present?
+
+      @users = @users.near(params['cust_city']) if params['cust_city'].present?
+    end
+
     @users = @users.active.recent.includes(:tags, :shop).page(params[:page]).per(20)
 
     @metro_areas, @states = User.find_country_and_state_from_search_params(params)
