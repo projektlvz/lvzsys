@@ -1,6 +1,36 @@
 - @meta = { :description => "#{@user.login}'s profile on #{configatron.community_name}.", :keywords => "#{@user.login}, #{@user.tags.join(", ") unless @user.tags.nil?}", :robots => configatron.robots_meta_show_content }
 - @section = @user.eql?(current_user) ? 'my_profile' : 'users'
 - @sidebar_left = true
+.row.well
+  .col-sm-4
+    - if @user.shop.present?
+      - shop = @user.shop
+      %h4
+        = :shop_info.l
+      %ul.list-unstyled
+        %li
+          = shop.name
+        %li
+          = shop.category
+        %li
+          = [shop.country,  shop.region, shop.street].join(',')
+        %li
+          %h4
+            = :shop_features.l
+        - Shop.features_list.with_indifferent_access.select {|key, value| shop.features.select { |k,v| v=='1' }.keys.include?(key) }.values.each do |feature|
+          = feature
+        %br
+  .col-sm-4
+    - if !@user.customer? && @user.show_info?
+      %li
+        = @user.first_name
+      %li
+        = @user.last_name
+      -if @user.facebook_link.present?
+        %li
+          %a{href: "#{@user.facebook_link}", target: "_blank"}
+            Facebook profile
+      %br
 
 -widget :id => 'friends' do
   %h4
