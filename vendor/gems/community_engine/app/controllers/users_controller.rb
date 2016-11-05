@@ -40,8 +40,9 @@ class UsersController < BaseController
     @customers = params['customers'] == 'true'
     @users, @search, @metro_areas, @states = User.search_conditions_with_metros_and_states(params)
     @users = @users.where(customer: @customers)
-
+    @search_params = {}
     if !@customers && params.detect{ |k,v| k.include?('s_')}.present?
+      @search_params = params.select{ |k,v| k.include?('s_')}
       @users = @users.joins(:shop)
 
       shops = Shop.where('latitude is not null and longitude is not null')

@@ -47,7 +47,7 @@
         %li
           = shop.name
         %li
-          = shop.category
+          = shop.category.to_sym.l
         %li
           = [shop.country,  shop.region, shop.street].join(',')
         %li
