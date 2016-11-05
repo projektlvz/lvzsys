@@ -488,4 +488,16 @@ class User < ActiveRecord::Base
   def address_was_changed?
     city_changed? || zip_changed?
   end
+
+  def self.allowed_tags_list
+    {
+        customer_vegan: :customer_vegan.l,
+        customer_vegetarian: :customer_vegetarian.l,
+        customer_gluten: :customer_gluten.l,
+        customer_lactose: :customer_lactose.l,
+        customer_organic_food: :customer_organic_food.l,
+        customer_cook: :customer_cook.l,
+        customer_diabetic: :customer_diabetic.l
+    }
+  end
 end

@@ -133,8 +133,9 @@ class UsersController < BaseController
     else
       @user.metro_area = @user.state = @user.country = nil
     end
-
-    @user.tag_list = params[:tag_list] || ''
+    tags = {}
+    tags = params[:user][:tag_list].reject { |c| c.empty? }.join(',') if params[:user]
+    @user.tag_list = tags.present? ? tags : ''
     @user.city = params[:city]
 
     if user_params
