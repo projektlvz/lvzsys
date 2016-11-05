@@ -30,6 +30,7 @@ class MapController < ApplicationController
     Gmaps4rails.build_markers(shop) do |shop, marker|
       marker.lat shop.latitude
       marker.lng shop.longitude
+      marker.infowindow render_to_string(:partial => "/shops/shop_on_map", :locals => { :shop => shop})
     end
   end
 end
