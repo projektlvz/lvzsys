@@ -17,12 +17,13 @@
     %label=:choose_a_photo_for_your_profile.l
     = avatar_form.file_field :photo, :size => '15'
 
-  %h2= :location.l
-  = f.form_group :location, label: { :text => :location.l } do
-    = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, :selected_state => @user.state_id, :selected_metro_area => @user.metro_area_id, :states => @states, :metro_areas => @metro_areas, selected_city: @user.city}
+  - if @user.customer?
+    %h2= :location.l
+    = f.form_group :location, label: { :text => :location.l } do
+      = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, :selected_state => @user.state_id, :selected_metro_area => @user.metro_area_id, :states => @states, :metro_areas => @metro_areas, selected_city: @user.city}
 
-  = f.form_group :zip, label: { :text => :zippostal_code.l } do
-    = f.text_field :zip, :hide_label => true
+    = f.form_group :zip, label: { :text => :zippostal_code.l } do
+      = f.text_field :zip, :hide_label => true
 
   %h2=:birthday_gender.l
   = f.form_group :birthday_gender, label: { :text => :gender.l } do
