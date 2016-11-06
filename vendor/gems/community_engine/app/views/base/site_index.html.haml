@@ -3,6 +3,7 @@
 = javascript_include_tag 'gmaps_google'
 = javascript_include_tag 'underscore'
 = javascript_include_tag 'custom_map'
+= stylesheet_link_tag 'spinner'
 
 - @page_title = configatron.community_name + ' ' + :home.l
 - @meta = { :description => configatron.meta_description, :keywords => configatron.meta_keywords, :robots => configatron.robots_meta_list_content }
@@ -10,8 +11,11 @@
 -unless logged_in?
   =render :partial => 'base/homepage_banner_message'
 
-%div
+%div.spinner{id: 'map_spinner'}
   %div{:id => 'map', :style => 'height: 400px; border-radius: 10px;'}
+  .double-bounce1
+  .double-bounce2
+%div
   = render :partial => 'base/map_filters'
 
 -box :class => "hfeed" do 

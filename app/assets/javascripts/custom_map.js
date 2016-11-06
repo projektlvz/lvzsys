@@ -1,6 +1,10 @@
 var markers = null;
 
 window.onload = function() {
+    $('.double-bounce1').remove();
+    $('.double-bounce2').remove();
+    $('#map_spinner').removeClass('spinner');
+    
     handler = Gmaps.build('Google');
     handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
         handler.map.centerOn({ lat: 52.5125394, lng: 13.3421765 })
