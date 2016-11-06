@@ -57,6 +57,7 @@ class User < ActiveRecord::Base
 
   validate :valid_birthday, :if => :requires_valid_birthday?
   validate :check_spam
+  validates :facebook_link, format: {with: /\Ahttps:\/\/www.facebook.com\/profile/, allow_blank: true, message: 'Profile link is incorrect. Check example.'}
 
   #associations
   has_many :authorizations, :dependent => :destroy
