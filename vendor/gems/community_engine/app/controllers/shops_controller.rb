@@ -18,7 +18,7 @@ class ShopsController < BaseController
 
     if @shop.update_attributes(params_for_shop)
       flash[:notice] = :your_changes_were_saved.l
-      redirect_to user_path(@user)
+      redirect_to community_engine_url
     else
       render :action => 'edit'
     end
