@@ -1,6 +1,12 @@
 .row.well
-  .col-sm-3= link_to image_tag( user.avatar_photo_url(:medium), :class => "img-responsive" ), user_path(user)
-
+  .col-sm-3
+    = link_to image_tag( user.avatar_photo_url(:medium), :class => "img-responsive" ), user_path(user)
+    %ul.list-unstyled
+      %li.view
+        =:view_count.l
+        = "(#{user.view_count})"
+      - if current_user && user.id != current_user.id
+        %li.compose= link_to(:send_me_a_message.l, new_user_message_path(current_user, :to=>user))
   .col-sm-3
     %h4= link_to user.login, user_path(user)
 
