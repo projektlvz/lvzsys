@@ -1,7 +1,6 @@
 class ShopsController < BaseController
   include Viewable
   before_action :login_required
-  before_action :find_user, :only => [:edit, :update]
 
   def edit
     @shop = current_user.shop
