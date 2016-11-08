@@ -12,7 +12,13 @@
     = time_ago_in_words friendship.created_at
 
   - if @is_current_user
-    = friendship_control_links(friendship)
-    %ul.list-unstyled
+    %ul.list-unstyled{style: 'min-height: 60px;'}
       %li.compose= link_to(:send_me_a_message.l, new_user_message_path(@current_user, :to=>user))
-      %li.compose= link_to(:send_me_a_collaboration.l, new_user_message_path(@current_user, :to=>user)) if !friendship.friend_customer
+      %li.compose= link_to(:send_me_a_collaboration.l, new_user_message_path(@current_user, :to=>user, type: 'collaboration')) if !friendship.friend_customer? && !@current_user.customer?
+      %li.compose= link_to(:send_me_a_critic.l, new_user_message_path(@current_user, :to=>user, type: 'critic')) if !friendship.friend_customer? && @current_user.customer?
+      %li.compose= link_to(:send_a_recommendation.l, new_user_message_path(@current_user, type: 'recommendation', recommended_user: user.id)) if !friendship.friend_customer? && @current_user.customer?
+      %li.compose= link_to(:organize_meeting.l, new_user_message_path(@current_user, type: 'meeting', :to=>user)) if friendship.friend_customer? && @current_user.customer?
+    %br
+    = friendship_control_links(friendship)
+    %br
+    %br

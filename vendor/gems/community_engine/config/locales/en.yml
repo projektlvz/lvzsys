@@ -1270,6 +1270,17 @@ en:
   send_me_a_collaboration: Propose collaboration
   customers_friends: Customer
   shop_owner_friends: Shop owners
+  send_me_a_critic: Send a critic
+  send_a_recommendation: Recommend to a friend
+  organize_meeting: Organize a meeting
+  hygiene: Hygiene
+  staff: 'Staff/Friendliness'
+  food: Food Quality
+  organization: 'Organization/Opening Times'
+  expectations: I expected something else
+  below_expectations: Below expectations
+  disappointed: Disappointing
+  crucial_issue: Crucial issue
   search_stores_by_name_and_feature: Shop name or category
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.

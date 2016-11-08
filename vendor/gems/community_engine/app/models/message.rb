@@ -85,4 +85,22 @@ class Message < ActiveRecord::Base
     message
   end
 
+  def self.list_of_critic_subjects
+    [
+        [:hygiene.l,:hygiene.l],
+        [:staff.l,:staff.l],
+        [:food.l,:food.l],
+        [:organization.l,:organization.l],
+    ]
+  end
+
+  def self.list_of_severities
+    [
+        [:expectations.l, :expectations.l],
+        [:below_expectations.l, :below_expectations.l],
+        [:disappointed.l, :disappointed.l],
+        [:crucial_issue.l, :crucial_issue.l ]
+    ]
+  end
+
 end

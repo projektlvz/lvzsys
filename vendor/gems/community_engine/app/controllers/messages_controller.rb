@@ -96,6 +96,6 @@ class MessagesController < BaseController
     end
 
   def message_params
-    params.require(:message).permit(:to, :subject, :body,  :recipient_id, :sender_id, :parent_id)
+    params.require(:message).permit(:to, :subject, :body,  :recipient_id, :sender_id, :parent_id, :severity)
   end
 end

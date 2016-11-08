@@ -93,6 +93,6 @@ Rails.application.configure do
  # Some debug info
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = true
+  #config.consider_all_requests_local       = true
 
 end
