@@ -1,4 +1,4 @@
-%li.col-sm-3
+%li
   - user = friendship.friend
   
   = image_tag( user.avatar_photo_url(:medium))
@@ -8,7 +8,11 @@
     %p= "#{:from.l} #{user.location}"
   %p= friendship.friendship_status.name.l
   %p
-    =:requested.l
+    = :requested.l
     = time_ago_in_words friendship.created_at
-  
-  = friendship_control_links(friendship) if @is_current_user
+
+  - if @is_current_user
+    = friendship_control_links(friendship)
+    %ul.list-unstyled
+      %li.compose= link_to(:send_me_a_message.l, new_user_message_path(@current_user, :to=>user))
+      %li.compose= link_to(:send_me_a_collaboration.l, new_user_message_path(@current_user, :to=>user)) if !friendship.friend_customer

@@ -21,6 +21,14 @@ class Friendship < ActiveRecord::Base
     #hack: prevents FriendshipStatus[:accepted] from getting called before the friendship_status records are in the db (only matters in testing ENV)
     where("friendship_status_id = ?", FriendshipStatus[:accepted].id)
   }
+
+  scope :with_customer, lambda {
+    where(friend_customer: true)
+  }
+
+  scope :with_shop_owner, lambda {
+    where(friend_customer: false)
+  }
   
   def cannot_request_if_daily_limit_reached  
     if new_record? && initiator && user.has_reached_daily_friend_request_limit?

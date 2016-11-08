@@ -48,7 +48,8 @@ class FriendshipsController < BaseController
     @friend_count = @user.accepted_friendships.count
     @pending_friendships_count = @user.pending_friendships.count
 
-    @friendships = @user.friendships.accepted.page(params[:page]).per(12)
+    @friendships = @user.friendships.with_customer.accepted.page(params[:page]).per(12)
+    @friendships_with_shop_owner = @user.friendships.with_shop_owner.accepted.page(params[:page]).per(12)
 
     respond_to do |format|
       format.html
@@ -76,11 +77,12 @@ class FriendshipsController < BaseController
 
   def create
     @user = User.find(params[:user_id])
-    @friendship = Friendship.new(:user_id => params[:user_id], :friend_id => params[:friend_id], :initiator => true )
+    friend = User.find(params[:friend_id])
+    @friendship = Friendship.new(:user_id => params[:user_id], :friend_id => params[:friend_id], :initiator => true, friend_customer: friend.customer?)
     @friendship.friendship_status_id = FriendshipStatus[:pending].id
     reverse_friendship = Friendship.new
     reverse_friendship.friendship_status_id = FriendshipStatus[:pending].id
-    reverse_friendship.user_id, reverse_friendship.friend_id = @friendship.friend_id, @friendship.user_id
+    reverse_friendship.user_id, reverse_friendship.friend_id, reverse_friendship.friend_customer = @friendship.friend_id, @friendship.user_id, @user.customer?
 
     respond_to do |format|
       if @friendship.save && reverse_friendship.save
