@@ -17,6 +17,8 @@
         %td
           = link_to h(message.subject), user_message_path(message.sender, message)
           %br
+        %td
+          = message_thread.parent_message.message_type.capitalize
         %td.col-sm-2
           = time_ago_in_words_or_date(message.created_at)
   = submit_tag :delete_selected.l, :class => 'btn btn-danger'

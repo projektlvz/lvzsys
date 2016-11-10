@@ -7,7 +7,7 @@
     - @messages.each do |message_thread|
       - message = message_thread.message
       - children = message_thread.parent_message.children              
-      %tr{:class => message_thread.read? ? '' : 'alert-success'}
+      %tr{:class => message_thread.read? ? '' : (message_thread.parent_message.message_type == 'critic' ? 'alert-danger': 'alert-success')}
         %td
           = check_box_tag "delete[]", message_thread.id
         %td
@@ -27,7 +27,8 @@
             =message.sender.login
             \: 
             =truncate(message.body)
-        
+        %td
+          = message_thread.parent_message.message_type.capitalize
         %td
           =time_ago_in_words_or_date(message_thread.updated_at)    
   = submit_tag :delete_selected.l, :class => 'btn btn-danger'           

@@ -29,7 +29,7 @@
         %label.control-label.col-sm-2
           = :add_friends.l
         .col-sm-10
-          = select_tag "friends_to_invite", options_from_collection_for_select(@friends, "id", "login"), multiple: true, required: true, class:"form-control selectpicker"
+          = select_tag "friends_to_invite", options_from_collection_for_select(@friends, "id", "login"), multiple: true, class:"form-control selectpicker"
       = f.datetime_select :meeting_time, start_year: 2016
       = f.text_area :friends_message, :label => :friends_message.l, :rows => 10, :class => "col-sm-6"
 

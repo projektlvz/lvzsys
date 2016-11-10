@@ -1273,6 +1273,7 @@ en:
   send_me_a_critic: Send a critic
   send_a_recommendation: Recommend to a friend
   organize_meeting: Organize a meeting
+  meeting_time: Meeting Time
   hygiene: Hygiene
   staff: 'Staff/Friendliness'
   food: Food Quality
@@ -1285,6 +1286,7 @@ en:
   friends_message: Message to your friends
   shop_owner_message: Message to the shop owner
   search_stores_by_name_and_feature: Shop name or category
+  severity: 'Critic severity:'
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a
