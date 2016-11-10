@@ -111,7 +111,9 @@ class UsersController < BaseController
   def create
     shops_parameters = shop_params
     user_parameters = user_params
+    user_parameters[:login].downcase!
     user_parameters[:shop_attributes] = shops_parameters if shops_parameters.present?
+
     @user = User.new(user_parameters)
 
     @user.role  = Role[:member]
