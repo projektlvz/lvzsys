@@ -9,21 +9,30 @@
     -content_for :end_javascript do
       = tag_auto_complete_field 'message_to', {:url => { :controller => "messages", :action => 'auto_complete_for_username'}, :tokens => [','], :tagLimit => 1 }
 
-  = f.hidden_field :type, value: type || 'message'
+  = f.hidden_field :message_type, value: params['type'] || 'message'
 
-  - subject_preset_value = 'I discovered this awesome shop you might like as well' if type == 'recommendation'
-  - body_preset_value = "Check out this shop.\n\n#{user_url(recommended_user)} \n\nSee you soon!" if type == 'recommendation'
+  - subject_preset_value = 'I discovered this awesome shop you might like as well' if params['type'] == 'recommendation'
+  - body_preset_value = "Check out this shop.\n\n#{user_url(recommended_user)} \n\nSee you soon!" if params['type'] == 'recommendation'
 
 
   -if @reply
     = f.hidden_field :subject  
   -else
-    - if type == 'critic'
+    - if params['type'] == 'critic'
       = f.select :subject, Message.list_of_critic_subjects, { label: "Choose subject:" }, { class: "selectpicker" }
       = f.select :severity, Message.list_of_severities, { label: "Choose severity:" }, { class: "selectpicker" }
     - else
       = f.text_field :subject, {value: subject_preset_value}
 
-  = f.text_area :body, :label => :message.l, :rows => 10, :class => "col-sm-6", value: raw(body_preset_value), :escape => false
+    - if params['type'] == 'meeting'
+      .form-group
+        %label.control-label.col-sm-2
+          = :add_friends.l
+        .col-sm-10
+          = select_tag "friends_to_invite", options_from_collection_for_select(@friends, "id", "login"), multiple: true, required: true, class:"form-control selectpicker"
+      = f.datetime_select :meeting_time, start_year: 2016
+      = f.text_area :friends_message, :label => :friends_message.l, :rows => 10, :class => "col-sm-6"
+
+    = f.text_area :body, :label => (params['type'] == 'meeting' ? :shop_owner_message.l : :message.l) , :rows => 10, :class => "col-sm-6", value: raw(body_preset_value), :escape => false
 
   = f.primary :send.l

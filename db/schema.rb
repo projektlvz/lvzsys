@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108193819) do
+ActiveRecord::Schema.define(version: 20161108200333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -245,6 +245,10 @@ ActiveRecord::Schema.define(version: 20161108193819) do
     t.datetime "updated_at"
     t.integer  "parent_id"
     t.string   "severity"
+    t.string   "meeting_product"
+    t.datetime "meeting_time"
+    t.text     "friends_message"
+    t.text     "message_type",      default: "message"
   end
 
   create_table "metro_areas", force: true do |t|

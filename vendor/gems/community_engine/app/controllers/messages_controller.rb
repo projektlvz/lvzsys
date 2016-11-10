@@ -31,6 +31,7 @@ class MessagesController < BaseController
       in_reply_to = Message.find_by_id(params[:reply_to])
       message_thread = MessageThread.for(in_reply_to, current_user)
     end
+    @friends = User.select('id, login').where(id: @user.friendships.with_customer.pluck(:friend_id)) if params['type'] == 'meeting'
     @message = Message.new_reply(@user, message_thread, params)
   end
 
@@ -44,12 +45,20 @@ class MessagesController < BaseController
       render :action => :new and return
     else
       @message = Message.new(message_params)
-      @message.recipient= User.where('lower(login) = ?', params.require(:message)[:to].strip.downcase).first
+      @message.recipient= User.where('lower(login_slug) = ?', params.require(:message)[:to].strip.downcase).first
       @message.sender = @user
       unless @message.valid?
         render :action => :new and return
       else
         @message.save!
+        if params['friends_to_invite'].present?
+          params['friends_to_invite'].each do |friend_id|
+            message = @message.dup
+            message.body = params['message']['friends_message']
+            message.recipient_id = friend_id
+            message.save
+          end
+        end
       end
       flash[:notice] = :message_sent.l
       redirect_to user_messages_path(@user) and return
@@ -96,6 +105,6 @@ class MessagesController < BaseController
     end
 
   def message_params
-    params.require(:message).permit(:to, :subject, :body,  :recipient_id, :sender_id, :parent_id, :severity)
+    params.require(:message).permit(:to, :subject, :body,  :recipient_id, :sender_id, :parent_id, :severity, :meeting_time, :message_type)
   end
 end
