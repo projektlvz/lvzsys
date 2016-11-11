@@ -52,6 +52,11 @@
         %a.list-group-item{:href => "#{edit_user_post_path(@post.user, @post)}"}
           =fa_icon "pencil-square-o fw", :text => :edit.l
         = link_to fa_icon("trash-o fw", :text => :delete.l), user_post_path(@post.user, @post), {:method => :delete, data: { confirm: :permanently_delete_this_post.l }, :class => "list-group-item"}
+      %li.list-group-item{style: 'min-height: 40px;'}
+        .dislike_like_greed{style: 'width: 100%;'}
+          %div.col-1-2{style: "width: #{@stats[:red] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #f44336; color: #f44336; min-height: 20px;"}
+          %div.col-2-2{style: "width: #{@stats[:green] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #089808; color: #089808; min-height: 20px;"}
+
   = @post.post.html_safe
 / clearfix
 

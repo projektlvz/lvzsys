@@ -51,6 +51,19 @@ class PostsController < BaseController
   # GET /posts/1.xml
   def show
     @post = Post.unscoped.find(params[:id])
+
+    @stats = {red: 0, green: 0}
+
+    Point.where(post_id: params[:id]).each do |p|
+      if p.operation == 'plus'
+        @stats[:green] += p.score
+      else
+        @stats[:red] += 2
+      end
+    end
+
+    @stats[:red], @stats[:green] = 1,1 if @stats[:green] == 0 && @stats[:red] == 0
+
     redirect_to user_posts_path(@user), :alert => :post_not_published_yet.l and return false unless @post.is_live? || @post.user.eql?(current_user) || admin? || moderator?
 
     @rss_title = "#{configatron.community_name}: #{@user.login}'s posts"
