@@ -71,6 +71,20 @@ class SbPostsController < BaseController
     @post.author_ip = request.remote_ip #save the ip address for everyone, just because
 
     if (logged_in? || verify_recaptcha(@post)) && @post.save
+      if current_user
+        score = current_user.score
+        score += 1
+        current_user.update_attribute(:score, score)
+
+        Point.create { |p|
+          p.giver_id = @post.id
+          p.giver_type = 'forum_post'
+          p.owner_id = current_user.id
+          p.owner_type = 'User'
+          p.score = 1
+          p.operation = 'plus'
+        }
+      end
       respond_to do |format|
         format.html do
           redirect_to forum_topic_path(:forum_id => params[:forum_id], :id => params[:topic_id], :anchor => @post.dom_id, :page => params[:page] || '1')
