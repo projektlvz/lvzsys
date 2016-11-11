@@ -118,8 +118,10 @@ class UsersController < BaseController
 
     @user.role  = Role[:member]
     @user.customer = params[:customer]
+    @user.score = 10
 
     if (!configatron.require_captcha_on_signup || verify_recaptcha(@user)) && @user.save
+      Point.create!({owner: @user, giver_id: 0, giver_type: 'registration', score: 10, operation: 'plus'})
       create_friendship_with_inviter(@user, params)
       flash[:notice] = :email_signup_thanks.l_with_args(:email => @user.email)
       redirect_to signup_completed_user_path(@user)

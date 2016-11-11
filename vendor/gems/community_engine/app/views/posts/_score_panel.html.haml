@@ -1,0 +1,9 @@
+- if current_user.present? && post.user_id != current_user.id
+  %div.inline-block
+    %div{style: 'float: none; display: inline-block;'}
+      = submit_tag(:like.l, class: "btn btn-default", onclick: "setScore('like', #{post.id}, #{current_user.id})")
+    %div{style: 'float: none; display: inline-block;'}
+      = submit_tag(:superlike.l, class: "btn btn-default", onclick: "setScore('superlike', #{post.id}, #{current_user.id})")
+    %div{style: 'float: none; display: inline-block;'}
+      = submit_tag(:dislike.l, class: "btn btn-default", onclick: "setScore('dislike',#{post.id}, #{current_user.id})")
+  = javascript_include_tag('score_setter')

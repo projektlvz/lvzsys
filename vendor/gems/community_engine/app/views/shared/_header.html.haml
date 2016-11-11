@@ -18,5 +18,6 @@
       - for tab in @header_tabs
         %li= link_to tab.name, tab.url
   %ul.nav.navbar-nav.pull-right
+    = render 'users/score'
     = render 'messages/menu_item'
     = render 'sessions/menu_item'

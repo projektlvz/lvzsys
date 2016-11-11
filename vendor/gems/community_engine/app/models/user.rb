@@ -104,6 +104,8 @@ class User < ActiveRecord::Base
            :foreign_key => 'recipient_id'
   has_many :message_threads_as_recipient, :class_name => "MessageThread", :foreign_key => "recipient_id"
 
+  has_many :points, as: :owner
+
   has_one :shop, dependent: :destroy
   accepts_nested_attributes_for :shop
   validates_associated :shop

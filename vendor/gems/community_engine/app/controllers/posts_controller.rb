@@ -247,6 +247,55 @@ class PostsController < BaseController
     render :partial => "categories/tips", :locals => {:category => nil}
   end
 
+  def set_score
+    return unless request.xhr?
+    old_point = Point.where(giver_id: params['giver_id'], giver_type: 'User', post_id: params['post_id']).first
+    post = Post.where(id: params['post_id']).first
+
+    if post.present?
+      user_score = post.user.score
+      if old_point.present?
+        if old_point.operation == 'plus'
+          user_score -= old_point.score
+        else
+          user_score += old_point.score
+        end
+
+        old_point.delete
+      end
+
+      new_point = Point.new{ |p|
+        p.giver_id = params['giver_id']
+        p.giver_type = 'User'
+        p.post_id = params['post_id']
+        p.owner_id = post.user_id
+        p.owner_type = 'User'
+      }
+
+      case params['score']
+        when 'like'
+          new_point.score = 2
+          new_point.operation = 'plus'
+          user_score += 2
+        when 'superlike'
+          new_point.score = 4
+          new_point.operation = 'plus'
+          user_score += 4
+        when 'dislike'
+          new_point.score = 2
+          new_point.operation = 'minus'
+          user_score -= 2
+        else
+
+      end
+
+      new_point.save
+      post.user.update_attribute(:score, user_score)
+      render :nothing => true, :status => 200, :content_type => 'text/html'
+    end
+
+  end
+
   private
 
   def require_ownership_or_moderator

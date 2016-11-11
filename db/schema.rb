@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108200333) do
+ActiveRecord::Schema.define(version: 20161111124909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -301,6 +301,22 @@ ActiveRecord::Schema.define(version: 20161108200333) do
   add_index "photos", ["created_at"], name: "index_photos_on_created_at", using: :btree
   add_index "photos", ["parent_id"], name: "index_photos_on_parent_id", using: :btree
 
+  create_table "points", force: true do |t|
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "giver_id"
+    t.string   "giver_type"
+    t.integer  "score"
+    t.string   "operation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "post_id"
+  end
+
+  add_index "points", ["giver_type", "giver_id"], name: "index_points_on_giver_type_and_giver_id", using: :btree
+  add_index "points", ["owner_type", "owner_id"], name: "index_points_on_owner_type_and_owner_id", using: :btree
+  add_index "points", ["post_id"], name: "index_points_on_post_id", using: :btree
+
   create_table "polls", force: true do |t|
     t.string   "question"
     t.datetime "created_at"
@@ -327,6 +343,7 @@ ActiveRecord::Schema.define(version: 20161108200333) do
     t.datetime "published_at"
     t.boolean  "send_comment_notifications",            default: true
     t.boolean  "owner_post",                            default: false
+    t.integer  "score",                                 default: 0
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
@@ -485,6 +502,7 @@ ActiveRecord::Schema.define(version: 20161108200333) do
     t.string   "city"
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "score",                             default: 0
   end
 
   add_index "users", ["activated_at"], name: "index_users_on_activated_at", using: :btree
