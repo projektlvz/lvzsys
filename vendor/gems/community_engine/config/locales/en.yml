@@ -984,7 +984,7 @@ en:
   #en: plural_posts: "%{count} posts"
   plural_posts: "%{count} posts"
   #en: popular: Popular
-  popular: Popular
+  popular: My Friends posts
   #en: popular_category: Popular %{name}
   popular_category: "Popular %{name}"
   #en: popular_posts: Popular Posts

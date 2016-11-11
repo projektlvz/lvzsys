@@ -185,9 +185,9 @@ class PostsController < BaseController
 
 
   def popular
-    @posts = Post.find_popular({:limit => 15, :since => 3.days}).where('owner_post = FALSE')
+    @posts = Post.find_popular({:limit => 15, :since => 3.days}).where('owner_post = FALSE').where(user_id: current_user.friendships.map{ |f| f.friend_id})
 
-    @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where('owner_post = FALSE')
+    @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where('owner_post = FALSE').where(user_id: current_user.friendships.map{ |f| f.friend_id})
 
     @related_tags = ActsAsTaggableOn::Tag.find_by_sql("SELECT tags.id, tags.name, count(*) AS count
       FROM taggings, tags
@@ -206,7 +206,7 @@ class PostsController < BaseController
   end
 
   def recent
-    @posts = Post.where('owner_post = TRUE').recent.page(params[:page]).per(20)
+    @posts = Post.where('owner_post = TRUE').where(user_id: current_user.friendships.map{ |f| f.friend_id}).recent.page(params[:page]).per(20)
 
     @recent_clippings = Clipping.find_recent(:limit => 15)
     @recent_photos = Photo.find_recent(:limit => 10)
