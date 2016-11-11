@@ -1,4 +1,6 @@
 %div
-  = shop.name
-  %br
+  %p
+    = link_to shop.name, user_path(shop.user_id)
+  %p
+    = :shop_rating.l + shop.user.score.to_s
   = shop.full_shop_address

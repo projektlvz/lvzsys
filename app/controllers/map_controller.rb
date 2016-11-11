@@ -16,9 +16,9 @@ class MapController < ApplicationController
 
       shops = shops.near(search_params['location'], ENV['GOOGLE_MAP_SEARCH_RADIUS'] || 50) if search_params['location'].present?
 
-      @hash = shops_to_coords(shops.all)
+      @hash = shops_to_coords(shops.includes(:user).all)
     else
-      @hash = shops_to_coords(Shop.all)
+      @hash = shops_to_coords(Shop.includes(:user).all)
     end
 
     render json: @hash.to_json
