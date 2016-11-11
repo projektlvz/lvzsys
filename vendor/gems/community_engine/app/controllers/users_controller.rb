@@ -153,6 +153,32 @@ class UsersController < BaseController
     if user_params
       attributes = user_params.permit!
       attributes[:avatar_attributes][:user_id] = @user.id if attributes[:avatar_attributes]
+
+      additional_score = 5
+      additional_score += 15 if attributes[:avatar_attributes].present? || @user.avatar_photo_url.present?
+      additional_score += 5 if attributes[:gender].present? || @user.gender.present?
+      additional_score += 10 if attributes[:description].present?
+      additional_score += 20 if tags.present?
+
+      point = Point.where(owner_id: @user.id, owner_type: 'User', giver_id: 0, giver_type: 'PersonalInfo').first
+      attributes[:score] = @user.score
+
+      if point.present?
+        attributes[:score] -= point.score
+        point.delete
+      end
+
+      Point.create { |p|
+        p.giver_id = 0
+        p.giver_type = 'PersonalInfo'
+        p.owner_id = @user.id
+        p.owner_type = 'User'
+        p.score = additional_score
+        p.operation = 'plus'
+      }
+
+      attributes['score'] += additional_score
+
       if @user.update_attributes(attributes)
         @user.track_activity(:updated_profile)
 
@@ -472,7 +498,7 @@ class UsersController < BaseController
   def user_params
     params[:user].permit(:avatar_id, :company_name, :country_id, :description, :email,
                          :firstname, :fullname, :gender, :lastname, :login, :metro_area_id,
-                         :middlename, :notify_comments, :notify_community_news,
+                         :middlename, :notify_comments, :notify_community_news, :score,
                          :notify_friend_requests, :password, :password_confirmation,
                          :profile_public, :state_id, :stylesheet, :time_zone, :vendor, :zip,
                          :tag_list, :customer, :first_name, :last_name, :facebook_link, :show_info,
