@@ -51,6 +51,31 @@ class MessagesController < BaseController
         render :action => :new and return
       else
         @message.save!
+
+        score = @user.score
+
+        if message_params['message_type'] == 'recommendation'
+          @user.update_attribute(:score, score + 2)
+          Point.create { |p|
+            p.giver_id = 0
+            p.giver_type = 'recommendation'
+            p.owner_id = @user.id
+            p.owner_type = 'User'
+            p.score = 2
+            p.operation = 'plus'
+          }
+        elsif message_params['message_type'] == 'meeting'
+          @user.update_attribute(:score, score + 4)
+          Point.create { |p|
+            p.giver_id = 0
+            p.giver_type = 'meeting_creation'
+            p.owner_id = @user.id
+            p.owner_type = 'User'
+            p.score = 4
+            p.operation = 'plus'
+          }
+        end
+
         if params['friends_to_invite'].present?
           params['friends_to_invite'].each do |friend_id|
             message = @message.dup
