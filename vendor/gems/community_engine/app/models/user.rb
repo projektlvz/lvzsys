@@ -206,9 +206,17 @@ class User < ActiveRecord::Base
   end
 
 
-  def self.recent_activity(options = {})
+  def self.recent_activity(current_user, options = {})
     options.reverse_merge! :per_page => 10, :page => 1
-    Activity.recent.joins("LEFT JOIN users ON users.id = activities.user_id").where('users.activated_at IS NOT NULL').select('activities.*').page(options[:page]).per(options[:per_page])
+    user_ids = current_user ? current_user.friendships.map(&:friend_id) : nil
+    Activity.
+        recent.
+        joins("LEFT JOIN users ON users.id = activities.user_id").
+        where('users.activated_at IS NOT NULL').
+        where("activities.action = 'joined_the_site' OR activities.user_id in (?)", user_ids).
+        select('activities.*').
+        page(options[:page]).
+        per(options[:per_page])
   end
 
   def self.currently_online

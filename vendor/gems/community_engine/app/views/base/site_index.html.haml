@@ -21,5 +21,6 @@
 -box :class => "hfeed" do 
   %h2
     =:recent_posts.l
+  %h3
+    =link_to fa_icon('plus-circle', :text => :see_all_recent_posts.l), recent_path
   = render :partial => 'posts/post', :collection => @posts
-  =link_to fa_icon('plus-circle', :text => :see_all_recent_posts.l), recent_path
