@@ -39,12 +39,15 @@ class Post < ActiveRecord::Base
     def by_featured_writers
       includes(:user).where("users.featured_writer = ?", true).references(:users)
     end
+
     def popular
       order('posts.view_count DESC')
     end
+
     def since(days)
       where("posts.published_at > ?", days.ago)
     end
+
     def recent
       order("posts.published_at DESC")
     end

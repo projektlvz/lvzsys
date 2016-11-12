@@ -56,7 +56,8 @@
         .dislike_like_greed{style: 'width: 100%;'}
           %div.col-1-2{style: "width: #{@stats[:red] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #f44336; color: #f44336; min-height: 20px;"}
           %div.col-2-2{style: "width: #{@stats[:green] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #089808; color: #089808; min-height: 20px;"}
-
+      %li.list-group-item
+        = render :partial => 'posts/score_panel', :locals => {:post => @post, giver: current_user}
   = @post.post.html_safe
 / clearfix
 
