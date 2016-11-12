@@ -12,11 +12,11 @@
       - score_picture = 'expert.jpg'
       - score_name = 'Expert'
     - when score >= 501 && score < 1001
-      - score_picture = 'platinum_member.jpg'
-      - score_name = 'Platinum member'
-    - when score >= 1001
       - score_picture = 'gold_member.png'
       - score_name = 'Gold member'
+    - when score >= 1001
+      - score_picture = 'platinum_member.jpg'
+      - score_name = 'Platinum member'
   %div{style: 'min-height: 50px; margin-top: 1px; padding-top: 9%; background-color:white ;color: #ffc107; padding-left: 5px;padding-right: 5px;font-size: 18px;font-weight: 500; line-height: 1.1;', 'data-toggle'=>"tooltip", title: score_name}
     %span
       = "#{score} points"
