@@ -120,6 +120,7 @@ class PostsController < BaseController
     post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
     @post = Post.new(post_parameters)
     @post.user = @user
+    @allowed_tags = get_allowed_tags(@owner_post)
 
     respond_to do |format|
       if @post.save
