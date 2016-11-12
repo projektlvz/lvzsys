@@ -24,3 +24,7 @@
   %h3
     =link_to fa_icon('plus-circle', :text => :see_all_recent_posts.l), recent_path
   = render :partial => 'posts/post', :collection => @posts
+-if show_footer_content? && current_user.present?
+  .row#footer-content
+    = image_tag 'spinner.gif', :plugin => 'community_engine'
+    =:loading_recent_content.l
