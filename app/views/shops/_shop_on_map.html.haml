@@ -1,6 +1,5 @@
 %div
-  %p
+  %h4
     = link_to shop.name, user_path(shop.user_id)
-  %p
-    = :shop_rating.l + shop.user.score.to_s
+    = render partial: 'shared/score_shower', locals: {score: shop.user.score}
   = shop.full_shop_address
