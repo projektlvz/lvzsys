@@ -70,8 +70,6 @@ class PostsController < BaseController
       end
     end
 
-    @stats[:like], @stats[:superlike] , @stats[:dislike]= 1,1 if @stats[:like] == 0 && @stats[:dislike] == 0 && @stats[:superlike] == 0
-
     redirect_to user_posts_path(@user), :alert => :post_not_published_yet.l and return false unless @post.is_live? || @post.user.eql?(current_user) || admin? || moderator?
 
     @rss_title = "#{configatron.community_name}: #{@user.login}'s posts"
