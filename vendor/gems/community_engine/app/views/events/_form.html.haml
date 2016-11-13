@@ -12,7 +12,7 @@
   = f.text_field :location
 
   = f.form_group :location_group, :label => {:text => :metro_area.l} do
-    = render :partial => 'shared/location_chooser', :locals => {:selected_country => @country_id, :selected_state => @state_id, :selected_metro_area => @metro_area_id, :states => @states, :metro_areas => @metro_areas}
+    = render :partial => 'shared/location_chooser', :locals => {:selected_country => @country_id,  selected_city: nil}
 
   = f.form_group :submit_group do
     = f.primary :save.l

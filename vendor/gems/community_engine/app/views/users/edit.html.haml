@@ -20,9 +20,10 @@
   - if @user.customer?
     %h2= :location.l
     = f.form_group :location, label: { :text => :location.l } do
-      = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, :selected_state => @user.state_id, :selected_metro_area => @user.metro_area_id, :states => @states, :metro_areas => @metro_areas, selected_city: @user.city}
+      = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, selected_city: @user.city, selected_street: @user.zip}
 
-    = f.form_group :zip, label: { :text => :zippostal_code.l } do
+
+    = f.form_group :zip, label: { :text => :address.l } do
       = f.text_field :zip, :hide_label => true
 
   %h2=:birthday_gender.l

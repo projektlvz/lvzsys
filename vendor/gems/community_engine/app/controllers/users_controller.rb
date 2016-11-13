@@ -113,6 +113,8 @@ class UsersController < BaseController
     user_parameters = user_params
     user_parameters[:login].downcase!
     user_parameters[:shop_attributes] = shops_parameters if shops_parameters.present?
+    user_parameters[:city] = params[:city]
+    user_parameters[:country_id] = params[:country_id]
 
     @user = User.new(user_parameters)
 
@@ -136,19 +138,9 @@ class UsersController < BaseController
   end
 
   def update
-    @metro_areas, @states = setup_locations_for(@user)
-
-    unless params[:metro_area_id].blank?
-      @user.metro_area  = MetroArea.find(params[:metro_area_id])
-      @user.state       = (@user.metro_area && @user.metro_area.state) ? @user.metro_area.state : nil
-      @user.country     = @user.metro_area.country if (@user.metro_area && @user.metro_area.country)
-    else
-      @user.metro_area = @user.state = @user.country = nil
-    end
     tags = {}
-    tags = params[:user][:tag_list].reject { |c| c.empty? }.join(',') if params[:user]
+    tags = params[:user][:tag_list].reject { |c| c.empty? }.join(',') if params[:user] && params[:user][:tag_list]
     @user.tag_list = tags.present? ? tags : ''
-    @user.city = params[:city]
 
     if user_params
       attributes = user_params.permit!
@@ -162,6 +154,8 @@ class UsersController < BaseController
 
       point = Point.where(owner_id: @user.id, owner_type: 'User', giver_id: 0, giver_type: 'PersonalInfo').first
       attributes[:score] = @user.score
+      attributes[:city] = params[:city]
+      attributes[:country_id] = params[:country_id]
 
       if point.present?
         attributes[:score] -= point.score
@@ -404,11 +398,9 @@ class UsersController < BaseController
     respond_to do |format|
       format.js {
         render :partial => 'shared/location_chooser', :locals => {
-            :states => states,
-            :metro_areas => metro_areas,
             :selected_country => params[:country_id].to_i,
             :selected_state => params[:state_id].to_i,
-            :selected_metro_area => nil,
+            :selected_city => nil,
             :js => true }
       }
     end
