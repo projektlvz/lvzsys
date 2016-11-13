@@ -59,6 +59,14 @@ configatron.configure_from_hash(
     :missing_thumb => 'icon_missing_thumb.gif',
     :missing_medium => "icon_missing_medium.gif",
     :paperclip_options => {
+      storage: 's3',
+      s3_credentials: {
+        use_persistent: true,
+        :bucket => "vzbucket16",
+        :endpoint => 'vzbucket16.s3.amazonaws.com',
+        :access_key_id => "AKIAJN35QGVT6SEIWS5A",
+        :secret_access_key => "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",
+        s3_host_name: "s3.#{'eu-central-1'}.amazonaws.com"},
       :default_url => "",
       :path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename",
       :url => "/system/:attachment/:id/:style/:filename",

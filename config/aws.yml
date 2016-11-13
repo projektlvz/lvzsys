@@ -1,7 +1,7 @@
 development:
   bucket: vzbucket16
-  access_key_id: AKIAJN35QGVT6SEIWS5A
-  secret_access_key: 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
+  access_key_id: 'AKIAJN35QGVT6SEIWS5A'
+  secret_access_key: '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'
   use_persistent: true
 
 test:
@@ -12,6 +12,6 @@ test:
 
 production:
   bucket: vzbucket16
-  access_key_id: AKIAJN35QGVT6SEIWS5A
-  secret_access_key: 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
+  access_key_id: 'AKIAJN35QGVT6SEIWS5A'
+  secret_access_key: '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'
   use_persistent: true
