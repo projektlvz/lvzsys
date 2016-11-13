@@ -31,7 +31,5 @@
 %p
   = render :partial => 'polls/excerpt', :locals => {:poll => post.poll} if post.poll
 %p
-  = render :partial => 'posts/score_panel', :locals => {:post => post, giver: current_user}
-%p
   = link_to :read_more.l, user_post_path(post.user, post), :rel=> 'bookmark'
 

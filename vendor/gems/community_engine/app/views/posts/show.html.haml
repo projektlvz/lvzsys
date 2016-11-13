@@ -54,10 +54,13 @@
         = link_to fa_icon("trash-o fw", :text => :delete.l), user_post_path(@post.user, @post), {:method => :delete, data: { confirm: :permanently_delete_this_post.l }, :class => "list-group-item"}
       %li.list-group-item{style: 'min-height: 40px;'}
         .dislike_like_greed{style: 'width: 100%;'}
-          %div.col-1-2{style: "width: #{@stats[:red] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #f44336; color: #f44336; min-height: 20px;"}
-          %div.col-2-2{style: "width: #{@stats[:green] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #089808; color: #089808; min-height: 20px;"}
+          %div.col-1-2{style: "width: #{@stats[:dislike]*2 *100 /(@stats[:dislike]*2 + @stats[:like]*2 + @stats[:superlike]*4)}%; float: left; background-color: #f44336; color: #f44336; min-height: 20px;"}
+          %div.col-2-2{style: "width: #{(@stats[:like]*2 + @stats[:superlike]*4) *100 /(@stats[:dislike]*2 + @stats[:like]*2 + @stats[:superlike]*4)}%; float: left; background-color: #089808; color: #089808; min-height: 20px;"}
+      %li.list-group-item{style: 'min-height: 40px;'}
+        %p
+          = "Likes: #{@stats[:like]}, Superlikes: #{@stats[:superlike]}, Dislikes: #{@stats[:dislike]}"
       %li.list-group-item
-        = render :partial => 'posts/score_panel', :locals => {:post => @post, giver: current_user}
+        = render :partial => 'posts/score_panel', :locals => {:post => @post, giver: current_user, current_grade: @current_user_grade}
   .col-sm-3
     =image_tag (@post.avatar_photo_url(:medium)), :class => 'img-responsive'
   = @post.post.html_safe

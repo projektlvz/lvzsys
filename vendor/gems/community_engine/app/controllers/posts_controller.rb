@@ -52,17 +52,25 @@ class PostsController < BaseController
   def show
     @post = Post.unscoped.find(params[:id])
 
-    @stats = {red: 0, green: 0}
+    @stats = {dislike: 0, like: 0, superlike: 0}
+    @current_user_grade = nil
 
     Point.where(post_id: params[:id]).each do |p|
       if p.operation == 'plus'
-        @stats[:green] += p.score
+        if p.score == 2
+          @stats[:like] += 1
+          @current_user_grade = 'like' if p.giver_id == current_user.id && p.giver_type == 'User'
+        else
+          @stats[:superlike] += 1
+          @current_user_grade = 'superlike' if p.giver_id == current_user.id && p.giver_type == 'User'
+        end
       else
-        @stats[:red] += 2
+        @stats[:dislike] += 1
+        @current_user_grade = 'dislike' if p.giver_id == current_user.id && p.giver_type == 'User'
       end
     end
 
-    @stats[:red], @stats[:green] = 1,1 if @stats[:green] == 0 && @stats[:red] == 0
+    @stats[:like], @stats[:superlike] , @stats[:dislike]= 1,1 if @stats[:like] == 0 && @stats[:dislike] == 0 && @stats[:superlike] == 0
 
     redirect_to user_posts_path(@user), :alert => :post_not_published_yet.l and return false unless @post.is_live? || @post.user.eql?(current_user) || admin? || moderator?
 
@@ -341,13 +349,13 @@ class PostsController < BaseController
       Shop.features_list
     else
       {
-        customer_vegan: :customer_vegan.l,
-        customer_gluten: :customer_gluten.l,
-        customer_diabetis: :customer_diabetis.l,
-        customer_lactose: :customer_lactose.l,
-        customer_gmo: :customer_gmo.l,
-        recipe: :recipe.l,
-        review: :review.l
+          customer_vegan: :customer_vegan.l,
+          customer_gluten: :customer_gluten.l,
+          customer_diabetis: :customer_diabetis.l,
+          customer_lactose: :customer_lactose.l,
+          customer_gmo: :customer_gmo.l,
+          recipe: :recipe.l,
+          review: :review.l
       }
     end
   end

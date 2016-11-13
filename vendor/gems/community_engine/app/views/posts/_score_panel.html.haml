@@ -1,9 +1,10 @@
 - if current_user.present? && post.user_id != current_user.id
   %div.inline-block
-    %div{style: "float: none; display: inline-block; cursor: pointer;", 'data-toggle'=>"tooltip", title: "Like"}
+    %div{class: ('selected_grade' if current_grade == 'like'),style: "float: none; display: inline-block; cursor: pointer;", id: 'like-div', 'data-toggle'=>"tooltip", title: "Like"}
       = image_tag("like.png", size: "34x34", alt: "Like", id: 'like', onclick: "setScore('like', #{post.id}, #{current_user.id})", style: 'transition: width 1s, height 1s;')
-    %div{style: "float: none; display: inline-block; cursor: pointer;", 'data-toggle'=>"tooltip", title: "Super Like"}
+    %div{class: ('selected_grade' if current_grade == 'superlike'), style: "float: none; display: inline-block; cursor: pointer;", id: 'superlike-div', 'data-toggle'=>"tooltip", title: "Super Like"}
       = image_tag("superlike.png", size: "34x34", id: 'superlike', alt: "Super Like", onclick: "setScore('superlike', #{post.id}, #{current_user.id})", style: 'transition: width 1s, height 1s;')
-    %div{style: "float: none; display: inline-block; cursor: pointer;", 'data-toggle'=>"tooltip", title: "Dislike"}
+    %div{class: ('selected_grade' if current_grade == 'dislike'),style: "float: none; display: inline-block; cursor: pointer;", id: 'dislike-div', 'data-toggle'=>"tooltip", title: "Dislike"}
       = image_tag("dislike.png", size: "34x34", id: 'dislike', alt: "Dislike", onclick: "setScore('dislike', #{post.id}, #{current_user.id})", style: 'transition: width 1s, height 1s;')
   = javascript_include_tag('score_setter')
+  = stylesheet_link_tag('selected_grade')
