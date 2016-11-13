@@ -512,4 +512,11 @@ class User < ActiveRecord::Base
         customer_diabetic: :customer_diabetic.l
     }
   end
+
+  def self.nearest_users_by_city(city)
+    customers = User.near(city).map(&:id)
+    shop_owners = Shop.near(city).map(&:user_id)
+    result = customers + shop_owners
+    result.uniq.compact
+  end
 end
