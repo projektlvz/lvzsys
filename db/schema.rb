@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111124909) do
+ActiveRecord::Schema.define(version: 20161113094432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -344,6 +344,7 @@ ActiveRecord::Schema.define(version: 20161111124909) do
     t.boolean  "send_comment_notifications",            default: true
     t.boolean  "owner_post",                            default: false
     t.integer  "score",                                 default: 0
+    t.integer  "avatar_id"
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree

@@ -58,6 +58,8 @@
           %div.col-2-2{style: "width: #{@stats[:green] *100 /(@stats[:green] + @stats[:red])}%; float: left; background-color: #089808; color: #089808; min-height: 20px;"}
       %li.list-group-item
         = render :partial => 'posts/score_panel', :locals => {:post => @post, giver: current_user}
+  .col-sm-3
+    =image_tag (@post.avatar_photo_url(:medium)), :class => 'img-responsive'
   = @post.post.html_safe
 / clearfix
 

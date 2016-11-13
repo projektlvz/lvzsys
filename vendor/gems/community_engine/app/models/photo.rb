@@ -5,6 +5,22 @@ class Photo < ActiveRecord::Base
   belongs_to :album
 
   has_attached_file :photo, configatron.photo.paperclip_options.to_hash
+
+=begin
+  has_attached_file :photo, :storage => :s3,
+                    :s3_credentials => Proc.new{ |a| a.instance.s3_credentials }
+
+  def s3_credentials
+    {
+        use_persistent: true,
+        :bucket => "vzbucket16",
+        :endpoint => 'vzbucket16.s3.amazonaws.com',
+        :access_key_id => "AKIAJN35QGVT6SEIWS5A",
+        :secret_access_key => "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",
+        s3_host_name: "s3.#{'eu-central-1'}.amazonaws.com"
+    }
+  end
+=end
   validates_attachment_presence :photo, :unless => Proc.new{|record| record.photo_remote_url }
   validates_attachment_content_type :photo, :content_type => configatron.photo.validation_options.content_type
   validates_attachment_size :photo, :less_than => configatron.photo.validation_options.max_size.to_i.megabytes
@@ -60,9 +76,9 @@ class Photo < ActiveRecord::Base
 
   def self.find_related_to(photo, options = {})
     options.reverse_merge!({:limit => 8,
-        :order => 'photos.created_at DESC',
-        :conditions => ['photos.id != ?', photo.id]
-    })
+                            :order => 'photos.created_at DESC',
+                            :conditions => ['photos.id != ?', photo.id]
+                           })
     limit(options[:limit]).order(options[:order]).where(options[:conditions]).tagged_with(photo.tags.collect{|t| t.name }, :any => true)
   end
 

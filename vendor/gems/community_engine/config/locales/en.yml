@@ -1288,6 +1288,8 @@ en:
   search_stores_by_name_and_feature: Shop name or category
   severity: 'Critic severity:'
   shop_rating: 'Shop rating: '
+  choose_a_photo_for_your_post: 'Choose a photo for your post:'
+  current_post_photo: 'Current post photo:'
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a

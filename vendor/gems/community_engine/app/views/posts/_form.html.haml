@@ -26,8 +26,16 @@
   - categories = @owner_post ? Category.all : Category.where(name: 'Blog Post').all
   = f.collection_select(:category_id, categories, :id, :name, {}, {})
   = f.text_area :raw_post, :rows => 15, :class => "rich_text_editor", :required => false
+  .form-group
+    %label.control-label.col-sm-2=:choose_a_photo_for_your_post.l
+    .col-sm-10
+      = f.fields_for :avatar, @avatar do |avatar_form|
+        = avatar_form.file_field :photo, :size => '15'
+  .form-group
+    %label.control-label.col-sm-2=:current_post_photo.l
+    .col-sm-6
+      =image_tag (@post.avatar_photo_url(:medium)), :class => 'img-responsive'
   = f.select :tag_list, @allowed_tags.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true }
-
 
   = hidden_field_tag :owner_post, @owner_post
 
@@ -41,4 +49,3 @@
 
   = f.form_group :submit_group do
     = f.primary :save.l
-

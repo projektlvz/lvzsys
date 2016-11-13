@@ -13,6 +13,9 @@ class Post < ActiveRecord::Base
   has_many   :polls, :dependent => :destroy
   has_many :favorites, :as => :favoritable, :dependent => :destroy
 
+  belongs_to  :avatar, :class_name => "Photo", :foreign_key => "avatar_id", :inverse_of => :user_as_avatar
+  accepts_nested_attributes_for :avatar
+
   validates_presence_of :raw_post
   validates_presence_of :title
   validates_presence_of :user
@@ -199,4 +202,16 @@ class Post < ActiveRecord::Base
     is_live? ? I18n.l(published_at, :format => format.to_sym) : 'Draft'
   end
 
+  def avatar_photo_url(size = :original)
+    if avatar_id
+      avatar.photo.url(size)
+    else
+      case size
+        when :thumb
+          configatron.photo.missing_thumb.to_s
+        else
+          configatron.photo.missing_medium.to_s
+      end
+    end
+  end
 end

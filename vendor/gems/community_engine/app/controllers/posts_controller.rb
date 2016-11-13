@@ -99,9 +99,11 @@ class PostsController < BaseController
     @post = Post.new
     @post.category = Category.find(params[:category_id]) if params[:category_id]
     @post.published_as = 'live'
+
     @categories = Category.all
     @owner_post = !@user.customer?
     @allowed_tags = get_allowed_tags(@owner_post)
+    @avatar =  @post.build_avatar
   end
 
   # GET /posts/1;edit
@@ -109,6 +111,7 @@ class PostsController < BaseController
     @post = Post.unscoped.find(params[:id])
     @owner_post = !@user.customer?
     @allowed_tags = get_allowed_tags(@owner_post)
+    @avatar = (@post.avatar || @post.build_avatar)
   end
 
   # POST /posts
@@ -117,6 +120,7 @@ class PostsController < BaseController
     @user = User.find(params[:user_id])
     post_parameters = post_params
     post_parameters[:owner_post] = params[:owner_post] == 'true'
+    post_parameters[:avatar_attributes][:user_id] = @user.id if post_parameters[:avatar_attributes]
     post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
     @post = Post.new(post_parameters)
     @post.user = @user
@@ -151,6 +155,7 @@ class PostsController < BaseController
     respond_to do |format|
       post_parameters = post_params
       post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
+      post_parameters[:avatar_attributes][:user_id] = @user.id if post_parameters[:avatar_attributes]
       if @post.update_attributes(post_parameters)
         @post.update_poll(params[:poll], params[:choices]) if params[:poll]
 
@@ -323,7 +328,8 @@ class PostsController < BaseController
 
 
   def post_params
-    params[:post].permit(:category_id, :title, :raw_post, :published_as, :send_comment_notifications, :tag_list)
+    params[:post].permit(:category_id, :title, :raw_post, :published_as, :send_comment_notifications,
+                         :tag_list, {:avatar_attributes => [:id, :name, :description, :album_id, :user, :user_id, :photo, :photo_remote_url]})
   end
 
   def comment_params
