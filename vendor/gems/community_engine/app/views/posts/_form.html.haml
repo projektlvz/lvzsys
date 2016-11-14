@@ -35,7 +35,7 @@
     %label.control-label.col-sm-2=:current_post_photo.l
     .col-sm-6
       =image_tag (@post.avatar_photo_url(:medium)), :class => 'img-responsive'
-  = f.select :tag_list, @allowed_tags.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true }
+  = f.select :tag_list, @allowed_tags.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true, class: 'selectpicker' }
 
   = hidden_field_tag :owner_post, @owner_post
 

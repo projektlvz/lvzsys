@@ -31,7 +31,7 @@
 
   %h2=:about_me.l
   = f.text_area :description, :class => "rich_text_editor"
-  = f.select :tag_list, User.allowed_tags_list.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true }
+  = f.select :tag_list, User.allowed_tags_list.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true, class: 'selectpicker' }
   -content_for :end_javascript do
     = tag_auto_complete_field 'user_tag_list', {:url => { :controller => "tags", :action => 'auto_complete_for_tag_name'}, :tokens => [','] }
   = f.form_group :save_group do
