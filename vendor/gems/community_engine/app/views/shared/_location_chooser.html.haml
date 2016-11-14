@@ -1,10 +1,12 @@
 #location_chooser
-  %label= :country.l
-  = select_tag(:country_id, options_from_collection_for_select(Country.all, "id", "name", selected_country), {:include_blank => true, :class => "form-control"})
-  %br
-  %label= :city.l
-  = text_field_tag(:city, selected_city, {:class => "form-control"})
-  %br
+  .form-group
+    %label.control-label.col-sm-2= :country.l
+    .col-sm-10
+      = select_tag(:country_id, options_from_collection_for_select(Country.all, "id", "name", selected_country), {:include_blank => true, :class => "form-control"})
+  .form-group
+    %label.control-label.col-sm-2= :city.l
+    .col-sm-10
+      = text_field_tag(:city, selected_city, {:class => "form-control"})
 
 - js ||= nil
 - if js

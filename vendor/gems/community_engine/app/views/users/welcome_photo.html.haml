@@ -5,7 +5,7 @@
   %p
     =:photo_message.l :site => configatron.community_name
   %ul.list-unstyled
-    %li= link_to :skip_this_step.l, welcome_about_user_path(@user)
+    %li= link_to :skip_this_step.l, edit_user_path(@user)
     %li= link_to :go_to_your_profile.l, user_path(@user)
 
 = bootstrap_form_for @user, :url => user_path(:welcome => 'about'), :method => :put, :multipart => true, :layout => :horizontal do |f|

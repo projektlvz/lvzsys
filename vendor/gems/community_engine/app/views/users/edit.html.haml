@@ -9,7 +9,7 @@
   =:feel_free_to_embed_images_or_videos.l
 
 = bootstrap_form_for @user, :layout => :horizontal, :html => {:multipart =>true} do |f|
-
+  = hidden_field_tag(:welcome, 'invite') if params[:welcome] == 'about'
   %h2=:profile_photo.l
   = @user.vendor ? "<div class='right_corner'><div class='community_pro'></div></div>" : ''
   = image_tag( @user.avatar_photo_url(:medium), :class => "thumbnail" )
@@ -18,27 +18,21 @@
     = avatar_form.file_field :photo, :size => '15'
 
   - if @user.customer?
-    %h2= :location.l
-    = f.form_group :location, label: { :text => :location.l } do
-      = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, selected_city: @user.city, selected_street: @user.zip}
-
-
+    = render :partial => 'shared/location_chooser', :locals => {:selected_country => @user.country_id, selected_city: @user.city, selected_street: @user.zip}
     = f.form_group :zip, label: { :text => :address.l } do
       = f.text_field :zip, :hide_label => true
 
-  %h2=:birthday_gender.l
-  = f.form_group :birthday_gender, label: { :text => :gender.l } do
-    = f.radio_button :gender, User::MALE, :label => :male.l, :inline => true
-    = f.radio_button :gender, User::FEMALE, :label => :female.l, :inline => true
+    %h2=:birthday_gender.l
+    = f.form_group :birthday_gender, label: { :text => :gender.l } do
+      = f.radio_button :gender, User::MALE, :label => :male.l, :inline => true
+      = f.radio_button :gender, User::FEMALE, :label => :female.l, :inline => true
 
   = f.date_select :birthday, {:start_year => 1926, :end_year => Time.now.year - 1}
 
   %h2=:about_me.l
   = f.text_area :description, :class => "rich_text_editor"
-
   = f.select :tag_list, User.allowed_tags_list.map { |t| [t[1], t[1]] }, { label: :tags.l}, { multiple: true }
   -content_for :end_javascript do
     = tag_auto_complete_field 'user_tag_list', {:url => { :controller => "tags", :action => 'auto_complete_for_tag_name'}, :tokens => [','] }
-
   = f.form_group :save_group do
     = f.primary :save_changes.l
