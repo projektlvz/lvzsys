@@ -196,8 +196,6 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :clippings
-
     resources :activities, :concerns => :paginatable do
       collection do
         get :network
