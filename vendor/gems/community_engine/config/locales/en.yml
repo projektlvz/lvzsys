@@ -1268,7 +1268,7 @@ en:
   edit_shop: Edit shop
   facebook_profile: Facebook profile
   send_me_a_collaboration: Propose collaboration
-  customers_friends: Customer
+  customers_friends: Customers
   shop_owner_friends: Shop owners
   send_me_a_critic: Send a critic
   send_a_recommendation: Recommend to a friend
@@ -1291,6 +1291,7 @@ en:
   choose_a_photo_for_your_post: 'Choose a photo for your post:'
   current_post_photo: 'Current post photo:'
   address: Address
+  top_users: Top users
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a

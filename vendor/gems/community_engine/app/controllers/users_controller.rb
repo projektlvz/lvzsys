@@ -5,7 +5,7 @@ class UsersController < BaseController
   before_action :login_required, :only => [:edit, :edit_account, :update, :welcome_photo, :welcome_about,
                                            :welcome_invite, :return_admin, :assume, :featured,
                                            :toggle_featured, :edit_pro_details, :update_pro_details, :dashboard, :deactivate,
-                                           :crop_profile_photo, :upload_profile_photo]
+                                           :crop_profile_photo, :upload_profile_photo, :top_users]
   before_action :find_user, :only => [:edit, :edit_pro_details, :show, :update, :statistics, :deactivate,
                                       :crop_profile_photo, :upload_profile_photo ]
   before_action :require_current_user, :only => [:edit, :update, :update_account,
@@ -460,6 +460,11 @@ class UsersController < BaseController
     end
     flash[:notice] = :the_selected_users_were_deleted.l
     redirect_to admin_users_path
+  end
+
+  def top_users
+    @shop_owners = User.where(customer: false).order('score DESC').limit(10)
+    @customers = User.where(customer: true).order('score DESC').limit(10)
   end
 
   protected

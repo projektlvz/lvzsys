@@ -1,0 +1,66 @@
+.well{style:'min-height: 600px;'}
+  .row{style:'min-height: 300px;'}
+    .col-sm-6
+      = link_to image_tag( top_user.avatar_photo_url(:medium), :class => "img-responsive" ), user_path(top_user)
+      %ul.list-unstyled
+        %li.view
+          =:view_count.l
+          = "(#{top_user.view_count})"
+        - if current_user && top_user.id != current_user.id
+          %li.compose= link_to(:send_me_a_message.l, new_user_message_path(current_user, :to=>top_user))
+      -unless top_user.tags.empty?
+        %p=raw top_user.tags[0...6].compact.collect{|t| link_to( t.name, tag_url(t), :class => "tag") }.join(" ")
+    .col-sm-6
+      %h4= link_to top_user.login, user_path(top_user)
+
+      %p
+        - if @search && @search['description']
+          = truncate_words_with_highlight top_user.description, @search['description']
+        - else
+          = truncate_words top_user.description, 18, '...'
+
+
+      %ul
+        - if !top_user.customer? && top_user.show_info?
+          %li
+            %b
+              = :first_name.l + ': '
+            = top_user.first_name
+          %li
+            %b
+              = :last_name.l + ': '
+            = top_user.last_name
+          -if top_user.facebook_link.present?
+            %li
+              %a{href: "#{top_user.facebook_link}", target: "_blank"}
+                = :facebook_profile.l
+          %br
+        %ul.list-unstyled
+          - if current_user and current_user.can_request_friendship_with(top_user)
+            %li{:class=>"addfriend_#{top_user.id}"}= add_friend_link(top_user)
+  - if top_user.shop.present?
+    .row{style:'min-height: 200px;'}
+      - shop = top_user.shop
+      .col-sm-6
+        %h4
+          = :shop_info.l
+        %ul
+          %li
+            %b
+              = :shop_name.l + ': '
+            = shop.name
+          %li
+            %b
+              = :shop_category.l + ': '
+            = shop.category.to_sym.l
+          %li
+            %b
+              = :shop_location.l + ': '
+            = [shop.country,  shop.region, shop.street].join(',')
+      .col-sm-6
+        %h4
+          = :shop_features.l
+        %ul
+          - Shop.features_list.with_indifferent_access.select {|key, value| shop.features.select { |k,v| v=='1' }.keys.include?(key) }.values.each do |feature|
+            %li
+              = feature

@@ -112,6 +112,8 @@ Rails.application.routes.draw do
   get '/tags/:id/:type' => 'tags#show', :as => :show_tag_type
   get '/search/tags' => 'tags#show', :as => :search_tags
 
+  get '/top_users' => 'users#top_users'
+
   resources :categories
   post '/categories/show_tips' => 'categories#show_tips', :as => :categories_show_tips
 
