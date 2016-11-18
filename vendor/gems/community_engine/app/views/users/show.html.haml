@@ -147,7 +147,6 @@
     %ul.list-unstyled.thumbnails
       - @clippings.each do |clipping|
         %li.col-sm-3=render :partial => 'clippings/clipping', :locals => {:clipping => clipping}
-    = link_to fa_icon('plus-circle', :text => :view_all_my_clippings.l), user_clippings_path(@user)
 
 .clearfix
   %h2=:profile_comments.l

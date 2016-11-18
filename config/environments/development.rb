@@ -39,7 +39,9 @@ Rails.application.configure do
   ENV['GOOGLE_MAPS_API_KEY'] = 'AIzaSyCPDQ4gMjIDzGnGZeMK_8IB5J7bjrG6Qr8'
   ENV['GMAIL_USERNAME'] = 'd.romanovskybox@gmail.com'
   ENV['GMAIL_APP_SPECIFIC_PASSWORD'] = 'kmnjsjwtrogfewmg'
-
+  ENV['S3_ACCESS_KEY'] = 'j6JE3hr38mYZma+RL06o8xJthskYYw5FzT8lRHJB'
+  ENV['S3_ACCESS_KEY_ID'] = 'AKIAJN35QGVT6SEIWS5A'
+  ENV['S3_BUCKET_NAME'] = 'vzbucket16'
 
   # Some email notifications.
   config.action_mailer.perform_deliveries = true
