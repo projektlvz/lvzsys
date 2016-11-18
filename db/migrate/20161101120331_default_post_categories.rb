@@ -1,17 +1,17 @@
 class DefaultPostCategories < ActiveRecord::Migration
   def change
     Category.create!({
-                        name: 'Bakery product',
-                        tips: 'Bakery product',
+                        name: 'Bakery Products',
+                        tips: 'Bakery Products',
                         new_post_text: 'Bakery product',
-                        nav_text: 'Bakery product',
+                        nav_text: 'Bakery Products',
                         slug:'bakery'
                     })
     Category.create!({
-                         name: 'Farm Product',
-                         tips: 'Farm Product',
+                         name: 'Farm Products',
+                         tips: 'Farm Products',
                          new_post_text: 'Farm Product',
-                         nav_text: 'Farm Product',
+                         nav_text: 'Farm Products',
                          slug:'farm'
                      })
     Category.create!({

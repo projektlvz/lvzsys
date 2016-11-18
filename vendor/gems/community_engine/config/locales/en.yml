@@ -232,7 +232,7 @@ en:
   #en: cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
   cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
   #en: categories: Categories
-  categories: Categories
+  categories: Products
   #en: category: Category
   category: Category
   #en: category_was_successfully_created: Category was successfully created.
@@ -416,7 +416,7 @@ en:
   #en: edit: Edit
   edit: Edit
   #en: edit_account: Edit account
-  edit_account: Edit account
+  edit_account: Edit Account
   #en: edit_event: Edit event
   edit_event: Edit event
   #en: edit_forum: Edit forum
@@ -426,7 +426,7 @@ en:
   #en: edit_post: Edit post
   edit_post: Edit post
   #en: edit_profile: Edit profile
-  edit_profile: Edit profile
+  edit_profile: Edit Profile
   #en: edit_rsvp_for: Edit RSVP for
   edit_rsvp_for: Edit RSVP for
   #en: edit_this_event: Edit this event
@@ -1265,7 +1265,7 @@ en:
   customer_organic_food: Interested in organic food
   customer_cook: Cook
   customer_diabetic: Diabetic
-  edit_shop: Edit shop
+  edit_shop: Edit Shop
   facebook_profile: Facebook profile
   send_me_a_collaboration: Propose collaboration
   customers_friends: Customers
@@ -1291,7 +1291,7 @@ en:
   choose_a_photo_for_your_post: 'Choose a photo for your post:'
   current_post_photo: 'Current post photo:'
   address: Address
-  top_users: Top users
+  top_users: Score
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a
@@ -1528,6 +1528,10 @@ en:
   view_comment: View Comment
   #en: view_my_blog: View my blog
   view_my_blog: View my blog
+  blogs: Blogs
+  reviews: Reviews
+  recepies: Recepies
+  news: News
   #en: voice: voice
   voice: voice
   #en: voices: Voices

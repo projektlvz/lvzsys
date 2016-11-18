@@ -9,11 +9,13 @@
 .navbar-collapse.collapse
   %ul.nav.navbar-nav
     = render 'categories/menu_item'
-    = render 'forums/menu_item'
-    = render 'posts/menu_item'
+    = render 'posts/menu_item_by_tag'
     = render 'users/menu_item'
-    = render 'users/top_users_menu_item'
     = render 'users/customers_menu_item'
+    = render 'users/top_users_menu_item'
+    = render 'forums/menu_item'
+
+
     - if @header_tabs.any?
       - for tab in @header_tabs
         %li= link_to tab.name, tab.url

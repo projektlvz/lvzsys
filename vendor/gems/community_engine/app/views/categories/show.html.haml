@@ -9,14 +9,6 @@
       - @active_users.each do |user|
         = render :partial => "users/sidebar_user", :locals => {:user => user} 
 
--unless @popular_posts.empty?
-  -widget do
-    %h4
-      .small=:popular_category.l(:name => @category.name)
-    %ul.list-unstyled
-      - @popular_posts.each do |post|
-        =render :partial => 'posts/sidebar_post', :locals => {:post => post}
-
 - if logged_in?
 - else
   %h2.signup= @category.display_new_post_text() || :write_new_post.l(:category=>@category.name)

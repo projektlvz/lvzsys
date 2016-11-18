@@ -14,7 +14,10 @@ class CategoriesController < BaseController
     @posts = Post.includes(:tags).where('category_id = ?', @category.id).order(order).page(params[:page])
     @posts = Post.includes(:tags).where(id: nearest_users_ids).where('category_id = ?', @category.id).order(order).page(params[:page]) if nearest_users_ids.present?
 
-    @popular_posts = @category.posts.order("view_count DESC").limit(10)
+    @posts = @posts.tagged_with(params[:tags]) if params[:tags]
+    @posts = @posts.where(owner_post: true) if params[:listings]
+
+    #@popular_posts = @category.posts.order("view_count DESC").limit(10)
     @popular_polls = Poll.find_popular_in_category(@category)
 
     @rss_title = "#{configatron.community_name}: #{@category.name} "+:posts.l
