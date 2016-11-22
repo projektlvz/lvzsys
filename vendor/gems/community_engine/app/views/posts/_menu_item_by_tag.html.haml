@@ -1,19 +1,18 @@
-- if current_user.present?
-  - if params[:listings] || params[:tags]
-    - css_class = 'active'
-  - else
-    - css_class = 'inactive'
+- if params[:listings] || params[:tags]
+  - css_class = 'active'
+- else
+  - css_class = 'inactive'
 
-  %li{:class => 'dropdown ' + css_class}
-    %a.dropdown-toggle{:href => popular_path, 'data-target' => '#', 'data-toggle' => 'dropdown'}
-      =:blogs.l
-      %b.caret
-    %ul.dropdown-menu
-      %li
-        = link_to :reviews.l, '/categories/blog_post?tags=Review'
-      %li.divider{role: "separator"}
-      %li
-        = link_to :recepies.l, '/categories/blog_post?tags=Recipe'
-      %li.divider{role: "separator"}
-      %li
-        = link_to :news.l, '/categories/blog_post?listings=true'
+%li{:class => 'dropdown ' + css_class}
+  %a.dropdown-toggle{:href => popular_path, 'data-target' => '#', 'data-toggle' => 'dropdown'}
+    =:blogs.l
+    %b.caret
+  %ul.dropdown-menu
+    %li
+      = link_to :reviews.l, '/categories/blog_post?tags=Review'
+    %li.divider{role: "separator"}
+    %li
+      = link_to :recepies.l, '/categories/blog_post?tags=Recipe'
+    %li.divider{role: "separator"}
+    %li
+      = link_to :news.l, '/categories/blog_post?listings=true'

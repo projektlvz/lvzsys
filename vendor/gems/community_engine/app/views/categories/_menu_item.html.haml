@@ -1,13 +1,12 @@
-- if current_user.present?
-  - if params[:controller] == 'categories' && !(params[:listings] || params[:tags])
-    - css_class = 'active'
-  - else
-    - css_class = 'inactive'
+- if params[:controller] == 'categories' && !(params[:listings] || params[:tags])
+  - css_class = 'active'
+- else
+  - css_class = 'inactive'
 
-  %li{:class => 'dropdown ' + css_class}
-    %a.dropdown-toggle{:href => categories_path, 'data-target' => '#', 'data-toggle' => 'dropdown'}
-      =:categories.l
-      %b.caret
-    %ul.dropdown-menu
-      -for category in Category.where(name: ['Bakery Products', 'Farm Products']).order('name')
-        %li=link_to category.name, category
+%li{:class => 'dropdown ' + css_class}
+  %a.dropdown-toggle{:href => categories_path, 'data-target' => '#', 'data-toggle' => 'dropdown'}
+    =:categories.l
+    %b.caret
+  %ul.dropdown-menu
+    -for category in Category.where(name: ['Bakery Products', 'Farm Products']).order('name')
+      %li=link_to category.name, category

@@ -59,14 +59,14 @@ class PostsController < BaseController
       if p.operation == 'plus'
         if p.score == 2
           @stats[:like] += 1
-          @current_user_grade = 'like' if p.giver_id == current_user.id && p.giver_type == 'User'
+          @current_user_grade = 'like' if current_user.present? && p.giver_id == current_user.id && p.giver_type == 'User'
         else
           @stats[:superlike] += 1
-          @current_user_grade = 'superlike' if p.giver_id == current_user.id && p.giver_type == 'User'
+          @current_user_grade = 'superlike' if current_user.present? && p.giver_id == current_user.id && p.giver_type == 'User'
         end
       else
         @stats[:dislike] += 1
-        @current_user_grade = 'dislike' if p.giver_id == current_user.id && p.giver_type == 'User'
+        @current_user_grade = 'dislike' if current_user.present? && p.giver_id == current_user.id && p.giver_type == 'User'
       end
     end
 
