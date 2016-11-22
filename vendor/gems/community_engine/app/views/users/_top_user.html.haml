@@ -4,22 +4,20 @@
       = link_to image_tag( top_user.avatar_photo_url(:medium), :class => "img-responsive" ), user_path(top_user)
       %ul.list-unstyled
         %li.view
-          =:view_count.l
-          = "(#{top_user.view_count})"
+          = "#{:top_place.l}: #{top_user_counter + 1}"
         - if current_user && top_user.id != current_user.id
           %li.compose= link_to(:send_me_a_message.l, new_user_message_path(current_user, :to=>top_user))
       -unless top_user.tags.empty?
         %p=raw top_user.tags[0...6].compact.collect{|t| link_to( t.name, tag_url(t), :class => "tag") }.join(" ")
     .col-sm-6
+      %div{style: 'text-align: center;'}
+        = render partial: 'shared/score_shower', locals: {score: top_user.score}
       %h4= link_to top_user.login, user_path(top_user)
-
       %p
         - if @search && @search['description']
           = truncate_words_with_highlight top_user.description, @search['description']
         - else
           = truncate_words top_user.description, 18, '...'
-
-
       %ul
         - if !top_user.customer? && top_user.show_info?
           %li
