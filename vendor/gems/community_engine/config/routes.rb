@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/base/:action' => 'base'
   post 'post/score' => 'posts#set_score'
+  post 'sb_post/score' => 'sb_posts#set_score'
 
   get '/forums/recent' => 'sb_posts#index', :as => :recent_forum_posts
   get '/photos/recent' => 'photos#recent', :as => :recent_photos

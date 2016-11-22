@@ -1,5 +1,5 @@
 class SbPostsController < BaseController
-  before_action :find_post,      :except => [:index, :monitored, :search, :new, :create]
+  before_action :find_post,      :except => [:index, :monitored, :search, :new, :create, :set_score]
   before_action :login_required, :except => [:index, :search, :show, :monitored, :create]
 
   before_action :only => [:create] do |controller|
@@ -145,12 +145,40 @@ class SbPostsController < BaseController
     end
   end
 
-  protected
-    def find_post
-      @post = SbPost.find_by_id_and_topic_id_and_forum_id(params[:id].to_i, params[:topic_id].to_i, params[:forum_id].to_i) || raise(ActiveRecord::RecordNotFound)
+  def set_score
+    return unless request.xhr?
+    old_point = Point.where(giver_id: params['giver_id'], giver_type: 'UserForum', post_id: params['post_id']).first
+    post = SbPost.where(id: params['post_id']).first
+
+    if post.present?
+      user_score = post.user.score
+      if old_point.present?
+        user_score -= old_point.score
+        old_point.delete
+      else
+        user_score += 2
+        Point.create{ |p|
+          p.giver_id = params['giver_id']
+          p.giver_type = 'UserForum'
+          p.post_id = params['post_id']
+          p.owner_id = post.user_id
+          p.owner_type = 'User'
+          p.score = 2
+          p.operation = 'plus'
+        }
+      end
     end
 
-    def sb_post_params
-      params[:sb_post].permit(:body, :author_email, :author_ip, :author_name, :author_url)
-    end
+    post.user.update_attribute(:score, user_score)
+    render :nothing => true, :status => 200, :content_type => 'text/html'
+  end
+
+  protected
+  def find_post
+    @post = SbPost.find_by_id_and_topic_id_and_forum_id(params[:id].to_i, params[:topic_id].to_i, params[:forum_id].to_i) || raise(ActiveRecord::RecordNotFound)
+  end
+
+  def sb_post_params
+    params[:sb_post].permit(:body, :author_email, :author_ip, :author_name, :author_url)
+  end
 end

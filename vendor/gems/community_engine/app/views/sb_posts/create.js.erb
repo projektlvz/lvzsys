@@ -6,7 +6,7 @@
 <% else %>
   reply = $('.reply');
   posts_table = $('#posts');
-  posts_table.append("<%= escape_javascript(render :partial => 'sb_posts/sb_post', :locals => {:post => @post}) %>")
+  posts_table.append("<%= escape_javascript(render :partial => 'sb_posts/sb_post', :locals => {:post => @post, liked: false}) %>")
 
   my_post = $('#post-body-<%= @post.id %>')
   my_post.scrollTo();

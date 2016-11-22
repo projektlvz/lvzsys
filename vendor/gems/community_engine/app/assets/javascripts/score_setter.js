@@ -12,3 +12,10 @@ function setScore(score, post_id, giver_id){
 
     });
 }
+function setForumScore(post_id, giver_id){
+    $.post( "/sb_post/score",{ post_id: post_id, giver_id: giver_id }, function() {
+        $('#like-div-' + post_id).toggleClass('selected_grade');
+    }).fail(function() {
+
+    });
+}

@@ -33,6 +33,15 @@ class TopicsController < BaseController
 
         @posts = @topic.sb_posts.recent.includes(:user).page(params[:page]).per(25)
 
+        @post_likes = {}
+        if current_user.present?
+          posts_with_points = Point.where(giver_type: 'UserForum', giver_id: current_user.id, post_id: @posts.pluck(:id)).pluck(:post_id)
+
+          @posts.each do |post|
+            @post_likes[post.id] = posts_with_points.include?(post.id) ? true : false
+          end
+        end
+
         @voices = @posts.map(&:user).compact.uniq
         @post   = SbPost.new(params[:post])
       end
@@ -105,23 +114,23 @@ class TopicsController < BaseController
   end
 
   protected
-    def assign_protected
-      @topic.sticky = @topic.locked = 0
-      @topic.forum_id = @forum.id
-      @topic.user = current_user if @topic.new_record?
+  def assign_protected
+    @topic.sticky = @topic.locked = 0
+    @topic.forum_id = @forum.id
+    @topic.user = current_user if @topic.new_record?
 
-      # admins and moderators can sticky and lock topics
-      return unless admin? or current_user.moderator_of?(@topic.forum)
-      @topic.sticky, @topic.locked = topic_params[:sticky], topic_params[:locked]
-      # only admins can move
-      return unless admin?
-      @topic.forum_id = topic_params[:forum_id] if topic_params[:forum_id]
-    end
+    # admins and moderators can sticky and lock topics
+    return unless admin? or current_user.moderator_of?(@topic.forum)
+    @topic.sticky, @topic.locked = topic_params[:sticky], topic_params[:locked]
+    # only admins can move
+    return unless admin?
+    @topic.forum_id = topic_params[:forum_id] if topic_params[:forum_id]
+  end
 
-    def find_forum_and_topic
-      @forum = Forum.find(params[:forum_id])
-      @topic = @forum.topics.find(params[:id]) if params[:id]
-    end
+  def find_forum_and_topic
+    @forum = Forum.find(params[:forum_id])
+    @topic = @forum.topics.find(params[:id]) if params[:id]
+  end
 
 
   def topic_params
