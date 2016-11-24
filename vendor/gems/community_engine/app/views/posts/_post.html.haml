@@ -13,7 +13,7 @@
         =image_tag (post.first_image_in_body || post.user.avatar_photo_url(:medium)), :class => 'img-responsive'
       %a{:href => "#{user_path(post.user)}", :class => "list-group-item"}
         =fa_icon "hand-o-right"
-        =post.user.login
+        = post.user.shop.present? ? post.user.shop.name : post.user.login
       %a{:href => user_post_path(post.user, post)+'#comments', :class => "list-group-item"}
         =fa_icon "comment"
         =:comments.l
