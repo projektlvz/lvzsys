@@ -3,24 +3,17 @@
     = link_to post.title, user_post_path(post.user, post), :rel => 'bookmark'
 
   .col-sm-9
-    .col-sm-3
+    .col-sm-6
       %a{:href => "#{user_post_path(post.user, post)}", :class => "photo list-group-item", :rel => "bookmark"}
         =image_tag (post.avatar_photo_url(:medium)), :class => 'img-responsive'
     = truncate_words(post.post, 200, '...' ).html_safe
   .col-sm-3
     .list-group
       %a{:href => "#{user_post_path(post.user, post)}", :class => "photo list-group-item", :rel => "bookmark"}
-        =image_tag (post.first_image_in_body || post.user.avatar_photo_url(:medium)), :class => 'img-responsive'
+        =image_tag (post.first_image_in_body || post.user.avatar_photo_url(:large)), :class => 'img-responsive'
       %a{:href => "#{user_path(post.user)}", :class => "list-group-item"}
         =fa_icon "hand-o-right"
         =post.user.login
-      %a{:href=>"#{user_post_path(post.user, post)}", :rel=>"bookmark", :class => "list-group-item"}
-        =fa_icon "calendar"
-        %abbr.published{:title=>"#{post.published_at}"}= post.published_at_display(:short_literal_date)
-      %li.list-group-item
-        =fa_icon "eye"
-        = :view_count.l
-        %span.badge=post.view_count
       %a{:href => user_post_path(post.user, post)+'#comments', :class => "list-group-item"}
         =fa_icon "comment"
         =:comments.l
