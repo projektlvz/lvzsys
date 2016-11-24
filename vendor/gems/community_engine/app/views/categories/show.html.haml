@@ -22,11 +22,7 @@
 
 %h2      
   =:show_category.l :category => @category.name
-=render :partial => 'categories/search_form', :locals => {:category => @category.id}
-%ul
-  %li= link_to :recent.l, category_path(@category), {:class => (params[:popular] ? '' : 'active')}
-  %li= link_to :popular.l, category_path(@category, :popular => 'DESC'), {:class => (params[:popular] ? 'active' : '')}  
-
-= render :partial => 'posts/post', :collection => @posts      
+= render :partial => 'categories/search_form', :locals => {:category => @category.id}
+= render :partial => 'posts/post', :collection => @posts
 = paginate @posts, :theme => 'bootstrap'
   
