@@ -12,7 +12,7 @@ class CategoriesController < BaseController
     nearest_users_ids = params['city'].present? ? User.nearest_users_by_city(params['city']) : []
 
     @posts = Post.includes(:tags).where('category_id = ?', @category.id).order(order).page(params[:page])
-    @posts = Post.includes(:tags).where(id: nearest_users_ids).where('category_id = ?', @category.id).order(order).page(params[:page]) if nearest_users_ids.present?
+    @posts = Post.includes(:tags).where(user_id: nearest_users_ids).where('category_id = ?', @category.id).order(order).page(params[:page]) if nearest_users_ids.present?
 
     @posts = @posts.tagged_with(params[:tags]) if params[:tags]
 
