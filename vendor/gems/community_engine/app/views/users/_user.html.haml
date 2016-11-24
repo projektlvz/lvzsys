@@ -22,7 +22,7 @@
         %li.geo
           = :from2.l
           = user.location
-      - if !user.customer? && user.show_info?
+      - if user.show_info?
         %li
           %b
             = :first_name.l + ': '
@@ -55,10 +55,6 @@
       %h4
         = :shop_info.l
       %ul
-        %li
-          %b
-            = :shop_name.l + ': '
-          = shop.name
         %li
           %b
             = :shop_category.l + ': '

@@ -23,9 +23,13 @@
   = f.password_field :password, :label => :password.l
   = f.password_field :password_confirmation, :label => :confirm_password.l, :help => :re_type_your_password_to_confirm.l
 
+  = f.text_field :first_name, :label => :first_name.l, :help => params[:customer] == "false" ? :optional_first_name.l : :required_first_name.l
+  = f.text_field :last_name, :label => :last_name.l, :help => params[:customer] == "false" ? :optional_last_name.l : :required_last_name.l
+
+  = f.form_group label: { text: :privacy_check.l } do
+    = f.check_box :show_info, :label => :show_info.l
+
   - if params[:customer] == "false"
-    = f.text_field :first_name, :label => :first_name.l, :help => :required_first_name.l
-    = f.text_field :last_name, :label => :last_name.l, :help => :required_last_name.l
     = f.text_field :facebook_link, :label => :facebook_link.l, :help => :required_facebook_link.l
     - if @user.shop && @user.shop.errors.full_messages.any?
       %div{:class => "alert alert-danger", :role => "alert"}
@@ -33,8 +37,6 @@
           %div
             = message
     - shop_params = params['user'].present? ? params['user']['shops'] : {}
-    = f.form_group label: { text: :privacy_check.l } do
-      = f.check_box :show_info, :label => :show_info.l
     = f.fields_for :shops do |sf|
       = sf.text_field :name, :label => :shop_name.l, :help => :required_shop_name.l, value: shop_params['name']
       = sf.text_field :country, :label => :shop_country.l, :help => :required_shop_country.l, value: shop_params['country']

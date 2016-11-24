@@ -1224,8 +1224,10 @@ en:
   farm_shop: Farm Shop
   first_name: First Name
   required_first_name: "(Required: Your first name must not contain spaces or special characters.)"
+  optional_first_name: "(Optional: Your first name must not contain spaces or special characters.)"
   last_name: Last Name
   required_last_name: "(Required: Your last name must not contain spaces or special characters.)"
+  optional_last_name: "(Optional: Your last name must not contain spaces or special characters.)"
   facebook_link: Facebook Link
   required_facebook_link: (Optional.Example - https://www.facebook.com/profile.php?id=100000504463883)
   privacy_check: Privacy Setting
