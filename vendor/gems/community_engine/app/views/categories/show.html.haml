@@ -20,9 +20,12 @@
         =:have_an_account.l
         =link_to fa_icon('arrow-right', :text => :login.l), login_url
 
-%h2      
+%h2
   =:show_category.l :category => @category.name
-= render :partial => 'categories/search_form', :locals => {:category => @category.id}
+- if params[:tags] || params[:listings] || params[:simple_search]
+  = render :partial => 'categories/search_form_blogs', :locals => {:category => @category.id}
+-else
+  = render :partial => 'categories/search_form', :locals => {:category => @category.id}
 = render :partial => 'posts/post', :collection => @posts
 = paginate @posts, :theme => 'bootstrap'
   

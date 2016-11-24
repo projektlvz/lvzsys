@@ -9,12 +9,18 @@ class CategoriesController < BaseController
 
     order = (params[:popular] ? "view_count #{params[:popular].eql?('DESC') ? 'DESC' : 'ASC'}": "published_at DESC")
 
-    nearest_users_ids = params['city'].present? ? User.nearest_users_by_city(params['city']) : nil
+    nearest_users_ids = params['city'].present? ? User.nearest_users_by_city(params['city']) : []
 
     @posts = Post.includes(:tags).where('category_id = ?', @category.id).order(order).page(params[:page])
     @posts = Post.includes(:tags).where(id: nearest_users_ids).where('category_id = ?', @category.id).order(order).page(params[:page]) if nearest_users_ids.present?
 
     @posts = @posts.tagged_with(params[:tags]) if params[:tags]
+
+    if params[:search_tags]
+      tags = Shop.features_list.select {|k,v| params[:search_tags].include?(k)}.values
+      @posts = @posts.tagged_with(tags)
+    end
+
     @posts = @posts.where(owner_post: true) if params[:listings]
 
     #@popular_posts = @category.posts.order("view_count DESC").limit(10)
@@ -29,10 +35,10 @@ class CategoriesController < BaseController
       format.html # show.rhtml
       format.rss {
         render_rss_feed_for(@posts, {:feed => {:title => "#{configatron.community_name}: #{@category.name} "+:posts.l, :link => category_url(@category)},
-          :item => {:title => :title,
-                    :link =>  Proc.new {|post| user_post_url(post.user, post)},
-                    :description => :post,
-                    :pub_date => :published_at} })
+                                     :item => {:title => :title,
+                                               :link =>  Proc.new {|post| user_post_url(post.user, post)},
+                                               :description => :post,
+                                               :pub_date => :published_at} })
       }
     end
   end
