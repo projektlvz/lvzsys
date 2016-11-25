@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   root to: "base#site_index"
 
 
+  get '/categories', to: redirect('/')
 
   # scope "/admin" do
   #   get 'dashboard' => 'homepage_features#index', :as => :admin_dashboard

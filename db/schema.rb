@@ -245,7 +245,6 @@ ActiveRecord::Schema.define(version: 20161113094432) do
     t.datetime "updated_at"
     t.integer  "parent_id"
     t.string   "severity"
-    t.string   "meeting_product"
     t.datetime "meeting_time"
     t.text     "friends_message"
     t.text     "message_type",      default: "message"
@@ -343,7 +342,6 @@ ActiveRecord::Schema.define(version: 20161113094432) do
     t.datetime "published_at"
     t.boolean  "send_comment_notifications",            default: true
     t.boolean  "owner_post",                            default: false
-    t.integer  "score",                                 default: 0
     t.integer  "avatar_id"
   end
 
@@ -509,7 +507,6 @@ ActiveRecord::Schema.define(version: 20161113094432) do
   add_index "users", ["activated_at"], name: "index_users_on_activated_at", using: :btree
   add_index "users", ["avatar_id"], name: "index_users_on_avatar_id", using: :btree
   add_index "users", ["created_at"], name: "index_users_on_created_at", using: :btree
-  add_index "users", ["customer"], name: "index_users_on_customer", using: :btree
   add_index "users", ["featured_writer"], name: "index_users_on_featured_writer", using: :btree
   add_index "users", ["last_request_at"], name: "index_users_on_last_request_at", using: :btree
   add_index "users", ["latitude", "longitude"], name: "index_users_on_latitude_and_longitude", using: :btree
