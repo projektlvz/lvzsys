@@ -210,6 +210,11 @@ class PostsController < BaseController
 
 
   def popular
+    if !current_user.present?
+      redirect_to root_path
+      return
+    end
+
     @posts = Post.find_popular({:limit => 15, :since => 20.days}).where(user_id: current_user.friendships.map{ |f| f.friend_id})
 
     @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where(user_id: current_user.friendships.map{ |f| f.friend_id})
