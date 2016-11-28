@@ -1229,6 +1229,7 @@ en:
   required_last_name: "(Required: Your last name must not contain spaces or special characters.)"
   optional_last_name: "(Optional: Your last name must not contain spaces or special characters.)"
   facebook_link: Facebook Link
+  no_results_for_city: 'No results found for your city. Try again later.'
   required_facebook_link: (Optional.Example - https://www.facebook.com/profile.php?id=100000504463883)
   privacy_check: Privacy Setting
   show_info: Allow other users to see your personal data.

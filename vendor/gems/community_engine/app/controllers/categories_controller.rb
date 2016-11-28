@@ -31,6 +31,8 @@ class CategoriesController < BaseController
 
     @active_users = User.includes(:posts).where("posts.category_id = ? AND posts.published_at > ?", @category.id, 14.days.ago).references(:posts).limit(5).order("users.view_count DESC").to_a
 
+    flash[:alert] = :no_results_for_city.l if nearest_users_ids.blank? && params['city'].present?
+
     respond_to do |format|
       format.html # show.rhtml
       format.rss {
