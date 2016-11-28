@@ -14,8 +14,6 @@ class CategoriesController < BaseController
     @posts = Post.includes(:tags).where('category_id = ?', @category.id).order(order).page(params[:page])
     @posts = Post.includes(:tags).where(user_id: nearest_users_ids).where('category_id = ?', @category.id).order(order).page(params[:page]) if nearest_users_ids.present?
 
-    @posts = @posts.tagged_with(params[:tags]) if params[:tags]
-
     if params[:search_tags]
       tags = Shop.features_list.select {|k,v| params[:search_tags].include?(k)}.values
       @posts = @posts.tagged_with(tags)

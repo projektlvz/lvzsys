@@ -357,8 +357,6 @@ class PostsController < BaseController
           customer_diabetis: :customer_diabetis.l,
           customer_lactose: :customer_lactose.l,
           customer_gmo: :customer_gmo.l,
-          recipe: :recipe.l,
-          review: :review.l
       }
     end
   end

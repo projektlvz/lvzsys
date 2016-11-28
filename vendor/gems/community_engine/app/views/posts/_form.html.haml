@@ -23,7 +23,7 @@
 
 = bootstrap_form_for(object, :url => url, :layout => :horizontal) do |f|
   = f.text_field :title, :class => 'col-sm-6'
-  - categories = @owner_post ? Category.all : Category.where(name: 'Blog Post').all
+  - categories = @owner_post ? Category.where(slug: ['bakery', 'farm', 'blog_post']).all : Category.where(slug: ['recipes', 'reviews']).all
   = f.collection_select(:category_id, categories, :id, :name, {}, {})
   = f.text_area :raw_post, :rows => 15, :class => "rich_text_editor", :required => false
   .form-group
