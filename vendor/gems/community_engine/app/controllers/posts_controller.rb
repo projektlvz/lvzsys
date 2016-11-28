@@ -215,13 +215,13 @@ class PostsController < BaseController
       return
     end
 
-    @posts = Post.find_popular({:limit => 15, :since => 20.days}).where(user_id: current_user.friendships.map{ |f| f.friend_id})
+    @posts = Post.find_popular({:limit => 15, :since => 20.days}).where(user_id: current_user.friendships.where('friendship_status_id = ?', FriendshipStatus[:accepted].id).map(&:friend_id))
 
-    @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where(user_id: current_user.friendships.map{ |f| f.friend_id})
+    @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where(user_id: current_user.friendships.where('friendship_status_id = ?', FriendshipStatus[:accepted].id).map(&:friend_id))
 
-    @related_tags = ActsAsTaggableOn::Tag.find_by_sql("SELECT tags.id, tags.name, count(*) AS count
-      FROM taggings, tags
-      WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name");
+    @related_tags = ActsAsTaggableOn::Tag.find_by_sql('SELECT tags.id, tags.name, count(*) AS count
+                                                       FROM taggings, tags
+                                                       WHERE tags.id = taggings.tag_id GROUP BY tags.id, tags.name');
 
     @rss_title = "#{configatron.community_name} "+:popular_posts.l
     @rss_url = popular_rss_url
