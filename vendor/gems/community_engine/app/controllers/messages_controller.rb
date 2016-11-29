@@ -35,6 +35,13 @@ class MessagesController < BaseController
     @message = Message.new_reply(@user, message_thread, params)
   end
 
+
+  ###########################################################################################
+  #
+  # Handles different types of messages - critic, meeting etc.
+  #
+  ###########################################################################################
+
   def create
     messages = []
 
@@ -45,6 +52,9 @@ class MessagesController < BaseController
       render :action => :new and return
     else
       @message = Message.new(message_params)
+
+      # This is the problematic place - takes login in downcase to find a user to send message to.
+      # In future can be changed to user id. But for this UI changes are required.
       @message.recipient= User.where('lower(login) = ?', params.require(:message)[:to].strip.downcase).first
       @message.sender = @user
       unless @message.valid?
@@ -54,6 +64,7 @@ class MessagesController < BaseController
 
         score = @user.score
 
+        #Recommendation
         if message_params['message_type'] == 'recommendation'
           @user.update_attribute(:score, score + 2)
           Point.create { |p|
@@ -64,6 +75,7 @@ class MessagesController < BaseController
             p.score = 2
             p.operation = 'plus'
           }
+        #Meeting
         elsif message_params['message_type'] == 'meeting'
           @user.update_attribute(:score, score + 4)
           Point.create { |p|
@@ -76,6 +88,7 @@ class MessagesController < BaseController
           }
         end
 
+        # If there are more friends into a meeting.
         if params['friends_to_invite'].present?
           params['friends_to_invite'].each do |friend_id|
             message = @message.dup

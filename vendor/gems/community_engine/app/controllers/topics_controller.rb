@@ -33,6 +33,7 @@ class TopicsController < BaseController
 
         @posts = @topic.sb_posts.recent.includes(:user).page(params[:page]).per(25)
 
+        # Handles correct displaying of current Like button state for a forum post.
         @post_likes = {}
         if current_user.present?
           posts_with_points = Point.where(giver_type: 'UserForum', giver_id: current_user.id, post_id: @posts.pluck(:id)).pluck(:post_id)

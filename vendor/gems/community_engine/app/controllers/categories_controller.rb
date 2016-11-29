@@ -2,6 +2,13 @@ class CategoriesController < BaseController
   before_action :login_required, :except => [:show, :most_viewed, :rss]
 
 
+
+  ###########################################################################################
+  #
+  # Show is the main controller method for Farm/Bakery products, Reviews, Recipes.
+  #
+  ###########################################################################################
+
   # GET /categories/1
   # GET /categories/1.xml
   def show
@@ -9,6 +16,7 @@ class CategoriesController < BaseController
 
     order = (params[:popular] ? "view_count #{params[:popular].eql?('DESC') ? 'DESC' : 'ASC'}": "published_at DESC")
 
+    # Search for shops and users using geocoding.
     nearest_users_ids = params['city'].present? ? User.nearest_users_by_city(params['city']) : []
 
     @posts = Post.includes(:tags).where('category_id = ?', @category.id).order(order).page(params[:page])

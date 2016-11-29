@@ -19,6 +19,13 @@ class PostsController < BaseController
     end
   end
 
+
+  ###########################################################################################
+  #
+  # Returns posts for blog posts.
+  #
+  ###########################################################################################
+
   def index
     @user = User.find(params[:user_id])
     @category = Category.find_by_name(params[:category_name]) if params[:category_name]
@@ -47,6 +54,13 @@ class PostsController < BaseController
     end
   end
 
+
+  ###########################################################################################
+  #
+  # Returns a post for 'show' action.
+  #
+  ###########################################################################################
+
   # GET /posts/1
   # GET /posts/1.xml
   def show
@@ -55,6 +69,7 @@ class PostsController < BaseController
     @stats = {dislike: 0, like: 0, superlike: 0}
     @current_user_grade = nil
 
+    #Handles current score.
     Point.where(post_id: params[:id]).each do |p|
       if p.operation == 'plus'
         if p.score == 2
@@ -116,20 +131,30 @@ class PostsController < BaseController
   def edit
     @post = Post.unscoped.find(params[:id])
     @owner_post = !@user.customer?
+
     @allowed_tags = get_allowed_tags(@owner_post)
     @avatar = (@post.avatar || @post.build_avatar)
   end
+
+  ###########################################################################################
+  #
+  # Returns shops for the map. Takes search attributes for filtering.
+  #
+  ###########################################################################################
 
   # POST /posts
   # POST /posts.xml
   def create
     @user = User.find(params[:user_id])
+
     post_parameters = post_params
     post_parameters[:owner_post] = params[:owner_post] == 'true'
     post_parameters[:avatar_attributes][:user_id] = @user.id if post_parameters[:avatar_attributes]
     post_parameters['tag_list'] = params['post']['tag_list'].reject { |c| c.empty? }.join(',')
+
     @post = Post.new(post_parameters)
     @post.user = @user
+    #The list of allowed tags for a post based on the user role.
     @allowed_tags = get_allowed_tags(@owner_post)
 
     respond_to do |format|
@@ -208,6 +233,11 @@ class PostsController < BaseController
     end
   end
 
+  ###########################################################################################
+  #
+  # Returns posts for My Friends posts.
+  #
+  ###########################################################################################
 
   def popular
     if !current_user.present?
@@ -217,6 +247,7 @@ class PostsController < BaseController
 
     @posts = Post.find_popular({:limit => 15, :since => 20.days}).where(user_id: current_user.friendships.where('friendship_status_id = ?', FriendshipStatus[:accepted].id).map(&:friend_id))
 
+    # 30 days limit for popular means that older posts are not shown.
     @monthly_popular_posts = Post.find_popular({:limit => 20, :since => 30.days}).where(user_id: current_user.friendships.where('friendship_status_id = ?', FriendshipStatus[:accepted].id).map(&:friend_id))
 
     @related_tags = ActsAsTaggableOn::Tag.find_by_sql('SELECT tags.id, tags.name, count(*) AS count
@@ -234,6 +265,12 @@ class PostsController < BaseController
       }
     end
   end
+
+  ###########################################################################################
+  #
+  # Returns recent posts.
+  #
+  ###########################################################################################
 
   def recent
     @posts = Post.where(user_id: current_user.friendships.map{ |f| f.friend_id}).recent.page(params[:page]).per(20)
@@ -276,6 +313,12 @@ class PostsController < BaseController
   rescue ActiveRecord::RecordNotFound
     render :partial => "categories/tips", :locals => {:category => nil}
   end
+
+  ###########################################################################################
+  #
+  # Sets score for a post and updates total score of a user.
+  #
+  ###########################################################################################
 
   def set_score
     return unless request.xhr?
@@ -323,7 +366,6 @@ class PostsController < BaseController
       post.user.update_attribute(:score, user_score)
       render :nothing => true, :status => 200, :content_type => 'text/html'
     end
-
   end
 
   private

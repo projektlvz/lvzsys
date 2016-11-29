@@ -2,6 +2,12 @@ class ShopsController < BaseController
   include Viewable
   before_action :login_required
 
+  ###########################################################################################
+  #
+  # This controller allows editing of shops after creation.
+  #
+  ###########################################################################################
+
   def edit
     @shop = current_user.shop
   end

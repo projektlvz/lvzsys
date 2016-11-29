@@ -43,6 +43,12 @@ class FriendshipsController < BaseController
   end
 
 
+  ###########################################################################################
+  #
+  # Shows the friendships based on customer or owner relation.
+  #
+  ###########################################################################################
+
   def accepted
     @user = User.find(params[:user_id])
     @friend_count = @user.accepted_friendships.count

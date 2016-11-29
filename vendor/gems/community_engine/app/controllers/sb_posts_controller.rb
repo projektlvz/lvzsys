@@ -52,6 +52,12 @@ class SbPostsController < BaseController
     end
   end
 
+  ###########################################################################################
+  #
+  # Creates forum post. Updates user score with +1.
+  #
+  ###########################################################################################
+
   def create
     @topic = Topic.includes(:forum).where(:id => params[:topic_id].to_i, :forum_id => params[:forum_id].to_i).first
     if @topic.locked?
@@ -69,7 +75,7 @@ class SbPostsController < BaseController
 
     @post.user = current_user if current_user
     @post.author_ip = request.remote_ip #save the ip address for everyone, just because
-
+    # Handles the score.
     if (logged_in? || verify_recaptcha(@post)) && @post.save
       if current_user
         score = current_user.score
@@ -144,6 +150,12 @@ class SbPostsController < BaseController
       format.xml { head 200 }
     end
   end
+
+  ###########################################################################################
+  #
+  # Handles Like button for a forum post.
+  #
+  ###########################################################################################
 
   def set_score
     return unless request.xhr?

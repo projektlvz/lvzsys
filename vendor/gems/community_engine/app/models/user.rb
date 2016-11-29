@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   friendly_id :login, :use => [:slugged, :finders], :slug_column => 'login_slug'
 
+  # Geocoding for user.
   geocoded_by :full_user_address
   after_validation :geocode , if: ->(obj){ obj.full_user_address.present? and obj.address_was_changed? }
 
@@ -53,11 +54,13 @@ class User < ActiveRecord::Base
   #validation
   validates_presence_of     :metro_area, :if => Proc.new { |user| user.state }
   validates_uniqueness_of   :login, :if => :requires_unique_login?
+  # Validation for user login. Use rubular to test.
   validates :login, format: {with: /\A\w*\z/, message: 'Login must not contain spaces or special characters.'}
   validates_exclusion_of    :login, :in => Proc.new{ configatron.reserved_logins }
 
   validate :valid_birthday, :if => :requires_valid_birthday?
   validate :check_spam
+  # Validation for facebook link. Use rubular to test.
   validates :facebook_link, format: {with: /\Ahttps:\/\/www.facebook.com\/profile/, allow_blank: true, message: 'Profile link is incorrect. Check example.'}
 
   #associations
@@ -501,6 +504,7 @@ class User < ActiveRecord::Base
     city_changed? || zip_changed?
   end
 
+  # Allowed customer tags
   def self.allowed_tags_list
     {
         customer_vegan: :customer_vegan.l,
@@ -513,6 +517,7 @@ class User < ActiveRecord::Base
     }
   end
 
+  # Returns users based on user or shop adress.
   def self.nearest_users_by_city(city)
     customers = User.near(city).map(&:id)
     shop_owners = Shop.near(city).map(&:user_id)

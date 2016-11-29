@@ -1,3 +1,4 @@
+-# Menu with all user options, like Edit Account, Manage blogs etc.
 -if logged_in?
   - if !current_page?(users_path) && (params[:controller] == 'users' && !@user.nil? && @user == current_user)
     - css_class = 'active'

@@ -1,3 +1,4 @@
+-# Score panel, shown on Score page, Map(shop info) and in main menu.
 - if current_user.present? && post.user_id != current_user.id
   %div.inline-block
     %div{class: ('selected_grade' if current_grade == 'like'),style: "float: none; display: inline-block; cursor: pointer;", id: 'like-div', 'data-toggle'=>"tooltip", title: "Like"}

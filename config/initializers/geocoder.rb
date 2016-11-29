@@ -1,3 +1,11 @@
+
+###########################################################################################
+#
+# Configuration for the geocoding gem.
+#
+###########################################################################################
+
+
 Geocoder.configure(
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)

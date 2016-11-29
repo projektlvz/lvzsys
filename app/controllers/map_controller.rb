@@ -1,5 +1,12 @@
 
 class MapController < ApplicationController
+
+  ###########################################################################################
+  #
+  # Returns shops for the map. Takes search attributes for filtering.
+  #
+  ###########################################################################################
+
   def get_shops
     @hash = nil
     if params[:search_params].present?

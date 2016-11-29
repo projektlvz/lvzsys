@@ -85,6 +85,7 @@ class Message < ActiveRecord::Base
     message
   end
 
+  # List of available critic subjects.
   def self.list_of_critic_subjects
     [
         [:hygiene.l,:hygiene.l],
@@ -94,6 +95,7 @@ class Message < ActiveRecord::Base
     ]
   end
 
+  # List of severities.
   def self.list_of_severities
     [
         [:expectations.l, :expectations.l],

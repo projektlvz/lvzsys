@@ -36,6 +36,12 @@ class UsersController < BaseController
     redirect_to login_path
   end
 
+  ###########################################################################################
+  #
+  # Returns users for Shops, People pages. Handles searches on them.
+  #
+  ###########################################################################################
+
   def index
     @customers = params['customers'] == 'true'
     @users, @search, @metro_areas, @states = User.search_conditions_with_metros_and_states(params)
@@ -45,21 +51,24 @@ class UsersController < BaseController
       @search_params = params.select{ |k,v| k.include?('s_')}
       @users = @users.joins(:shop)
 
+      # Find shops using geocoding.
       shops = Shop.where('latitude is not null and longitude is not null')
                   .near(params['s_city'], ENV['GOOGLE_MAP_SEARCH_RADIUS'] || 50)
                   .map {|s| s.id} if params['s_city'].present?
 
 
       @users = @users.where('shops.id in (?)', shops) if shops.present?
-
+      #Search by category
       @users = @users.where("shops.category = ?", params['s_shop_category']) if params['s_shop_category'].present?
 
+      # Search by features
       features_search = params.select {|k,v| k.include?('s_features_')}.keys
       features_search.each do |f|
         @users = @users.where("shops.features @> hstore(:key, '1')", key: f.sub('s_features_',''))
       end
     end
 
+    # Customer search - by city or tags. The tagz_ preffix is vital - do not change.
     if @customers && params.detect{ |k,v| k.include?('cust_')}.present?
       @search_params = params.select{ |k,v| k.include?('cust_')}
       tags_search = params.select {|k,v| k.include?('cust_tagz_')}.map{|k,v| k.sub('cust_tagz_','')}
@@ -111,6 +120,8 @@ class UsersController < BaseController
   def create
     shops_parameters = shop_params
     user_parameters = user_params
+
+    # Handles city, shop, country saving.
     user_parameters[:login].downcase!
     user_parameters[:shop_attributes] = shops_parameters if shops_parameters.present?
     user_parameters[:city] = params[:city]
@@ -142,6 +153,7 @@ class UsersController < BaseController
     tags = params[:user][:tag_list].reject { |c| c.empty? }.join(',') if params[:user] && params[:user][:tag_list]
     @user.tag_list = tags.present? ? tags : ''
 
+    #Handles score increase for each info portion of a customer, like gender or address.
     if user_params
       attributes = user_params.permit!
       attributes[:avatar_attributes][:user_id] = @user.id if attributes[:avatar_attributes]
