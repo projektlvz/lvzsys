@@ -1,1443 +1,853 @@
-en:
-  authorizations:
-    create:
-      success_existing_user: "Erfolgreich %{provider} Anmeldung hinzugefügt."
-      success_message: "Willkommen %{provider} Benutzer. Du bist angemeldet."      
-    failure:
-      notice: "Anmeldung nicht erfolgreich"
-    destroy:
-      notice: "Anmeldung von %{provider} erfolgreich gelöscht."
-  sessions:
-    new:
-      omniauth:
-        header: "Anmelden mit:"
-        button_alt: "Melden Sie sich mit Ihrem Konto von %{provider} an"
-  users:
-    edit_account:
-      omniauth:
-        confirm_remove: "Sind Sie sicher, das Sie Ihre Anmeldeoption von %{provider} entfernen möchten ?"
-        title_remove: "Entfernen von Anmeldeoption von %{provider} ?"
-  tags:
-    show:
-      users: Benutzer
-  sitemaps:
-    index:
-      users: Benutzer
 
-  date:
-    formats:
-      published_date: "%d.%m.%Y"
-      date_ago: "%b %Y"
-    order:
-    - :day
-    - :month
-    - :year
-    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
-    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
-    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
-    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
-  time:
-    formats:
-      published_date: "%d.%m.%Y"      
-      short_published_date: "%d.%m.%y"
-      literal_date: "%d %B, %Y"
-      short_literal_date: "%d %b, %Y"
-      short_date: "%d.%m.%y"
-      time_ago: "%H:%M"
 
-  activerecord:
-    attributes:
-      photo:
-        created_at: "erstellt am: "
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta content="origin-when-cross-origin" name="referrer" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-b5b2bdade1c8f08cb8817cb4e73677eec388f755aebad89e0d686904a0492b84.css" integrity="sha256-tbK9reHI8Iy4gXy05zZ37sOI91WuutieDWhpBKBJK4Q=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-c0275fa134df942016de78ad97f67ad822247f5c545d528f3d42b6a7130f117c.css" integrity="sha256-wCdfoTTflCAW3nitl/Z62CIkf1xUXVKPPUK2pxMPEXw=" media="all" rel="stylesheet" />
+    
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>lvzsys/en.yml at TEST · projektlvz/lvzsys</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars0.githubusercontent.com/u/24207134?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="projektlvz/lvzsys" name="twitter:title" /><meta content="Contribute to lvzsys development by creating an account on GitHub." name="twitter:description" />
+      <meta content="https://avatars0.githubusercontent.com/u/24207134?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="projektlvz/lvzsys" property="og:title" /><meta content="https://github.com/projektlvz/lvzsys" property="og:url" /><meta content="Contribute to lvzsys development by creating an account on GitHub." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTQwMDc1NTYzOmEyM2RhOTJmMWFjY2JlN2ExZGJhMjY5YzU0ODVjN2IwNTE0ODM0YTE0ZTM5YTMwMGNjM2EwZjY1YzBiYzQxMmM=--da6485b9fc6ef6b06a8d0b1caa5ef2fd87a5bf19">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+    <meta name="request-id" content="4E2A1368:2D69:A5FC8D4:58598D62" data-pjax-transient>
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="4E2A1368:2D69:A5FC8D4:58598D62" name="octolytics-dimension-request_id" /><meta content="24207134" name="octolytics-actor-id" /><meta content="projektlvz" name="octolytics-actor-login" /><meta content="851a34652063d189b9925a7b6959b30f7b74bf4c9104475dafa3753b038fcbac" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="projektlvz">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="NmNiNjViNmM5MzU1NWI5Zjg2Njc3NTNiNDJkM2ZiYzQwMzY1NjJlNmMwOWUxMmRiMzY1YmZjYTYxMzk3NjQwZnx7InJlbW90ZV9hZGRyZXNzIjoiNzguNDIuMTkuMTA0IiwicmVxdWVzdF9pZCI6IjRFMkExMzY4OjJENjk6QTVGQzhENDo1ODU5OEQ2MiIsInRpbWVzdGFtcCI6MTQ4MjI2MzkxMiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="e2a8f844be341d4ec3d53ca57830eda8773228df">
+    <meta content="e626e258fa09ddd32817597fef7866a19dfc6d65" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="7207e6b991bb080b2c3eddfb129ef571">
+    
+
+      
+  <meta name="description" content="Contribute to lvzsys development by creating an account on GitHub.">
+  <meta name="go-import" content="github.com/projektlvz/lvzsys git https://github.com/projektlvz/lvzsys.git">
+
+  <meta content="24207134" name="octolytics-dimension-user_id" /><meta content="projektlvz" name="octolytics-dimension-user_login" /><meta content="71775911" name="octolytics-dimension-repository_id" /><meta content="projektlvz/lvzsys" name="octolytics-dimension-repository_nwo" /><meta content="false" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="71775911" name="octolytics-dimension-repository_network_root_id" /><meta content="projektlvz/lvzsys" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/projektlvz/lvzsys/commits/TEST.atom?token=AXFfHg4fdbcQwjwkvdjvVfh5ScnbxzPEks62ZW5owA%3D%3D" rel="alternate" title="Recent Commits to lvzsys:TEST" type="application/atom+xml">
+
+
+      <link rel="canonical" href="https://github.com/projektlvz/lvzsys/blob/TEST/config/locales/en.yml" data-pjax-transient>
+  </head>
+
+
+  <body class="logged-in  env-production windows vis-private page-blob">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" version="1.1" viewBox="0 0 16 16" width="28"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/search" class="js-site-search-form" data-scoped-search-url="/projektlvz/lvzsys/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav float-left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" aria-label="Pull requests you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" aria-label="Issues you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav float-right" id="user-links">
+  <li class="header-nav-item">
+    
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus float-left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"/></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
         
-  greeting: "Hallo %{name}"
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="projektlvz/lvzsys">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/projektlvz/lvzsys/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+    <a class="dropdown-item" href="/projektlvz/lvzsys/settings/collaboration" data-ga-click="Header, create new collaborator">
+      New collaborator
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/projektlvz"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@projektlvz" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/24207134?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu dropdown-menu-sw">
+        <div class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">projektlvz</strong>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/projektlvz" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a>
+        <a class="dropdown-item" href="/projektlvz?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a>
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="48PEGMOiNWg65gShfIUXQ5iw9o8oPcscz2/8w6xHhYPXMicSzvk87ueSlQ0DtsX+qvppLTi/jUODFzyG3Fjlug==" /></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="/avIHAWozeTqzofBz6LwXHtbk5x2sDmNLe98CbOYVljJWisWCPPEYje6Fm2wkSLhSREMPmYyf9Jhl7xMw4c2YQ==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="71775911" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/projektlvz/lvzsys/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:blob#show">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count"
+            href="/projektlvz/lvzsys/watchers"
+            aria-label="1 user is watching this repository">
+            1
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/unstar" class="starred" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="wKa7Vy44Urb3EJ3ae8DtigWUAto0wv9kCo9Dg9I7bXH0V1hdI2NbMCpkDHYE8z83N96deCRAuTtG94PGoiQNSA==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar projektlvz/lvzsys"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/projektlvz/lvzsys/stargazers"
+           aria-label="0 users starred this repository">
+          0
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/star" class="unstarred" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="34xCe91sLOAkTSswcAXzvwLBMxZkZ3XUaEzoH3/6kv3rfaFx0DclZvk5upwPNiECMIustHTlM4skNChaD+XyxA==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star projektlvz/lvzsys"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/projektlvz/lvzsys/stargazers"
+           aria-label="0 users starred this repository">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/fork" class="btn-with-count" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="RVnv6kygbB2cKmDzQftjhWwK7BC+kvkQVqic8C10HnJxqAzgQftlm0Fe8V8+yLE4XkBzsq4Qv08a0Fy1XWt+Sw==" /></div>
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
+                title="Fork your own copy of projektlvz/lvzsys to your account"
+                aria-label="Fork your own copy of projektlvz/lvzsys to your account">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+              Fork
+            </button>
+</form>
+    <a href="/projektlvz/lvzsys/network" class="social-count"
+       aria-label="0 users forked this repository">
+      0
+    </a>
+  </li>
+</ul>
+
+    <h1 class="private ">
+  <svg aria-hidden="true" class="octicon octicon-lock" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 13H3v-1h1v1zm8-6v7c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h1V4c0-2.2 1.8-4 4-4s4 1.8 4 4v2h1c.55 0 1 .45 1 1zM3.8 6h4.41V4c0-1.22-.98-2.2-2.2-2.2-1.22 0-2.2.98-2.2 2.2v2H3.8zM11 7H2v7h9V7zM4 8H3v1h1V8zm0 2H3v1h1v-1z"/></svg>
+  <span class="author" itemprop="author"><a href="/projektlvz" class="url fn" rel="author">projektlvz</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/projektlvz/lvzsys" data-pjax="#js-repo-pjax-container">lvzsys</a></strong>
+    <span class="label label-private v-align-middle">Private</span>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/projektlvz/lvzsys/tree/TEST" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /projektlvz/lvzsys/tree/TEST" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/projektlvz/lvzsys/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /projektlvz/lvzsys/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">0</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/projektlvz/lvzsys/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /projektlvz/lvzsys/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/projektlvz/lvzsys/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /projektlvz/lvzsys/projects">
+    <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+    <a href="/projektlvz/lvzsys/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /projektlvz/lvzsys/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+
+  <a href="/projektlvz/lvzsys/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /projektlvz/lvzsys/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/projektlvz/lvzsys/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /projektlvz/lvzsys/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+    <a href="/projektlvz/lvzsys/settings" class="js-selected-navigation-item reponav-item" data-selected-links="repo_settings repo_branch_settings hooks integration_installations /projektlvz/lvzsys/settings">
+      <svg aria-hidden="true" class="octicon octicon-gear" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+      Settings
+</a>
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/projektlvz/lvzsys/blob/966e0c5582c5d5269e0b19d6732851d6bdddb575/config/locales/en.yml" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:b2fd98206ca93488608ef992441286f0 -->
+
+<div class="file-navigation js-zeroclipboard-container">
   
-  #en: a_few_seconds_ago:  a few seconds ago
-  a_few_seconds_ago:  vor ein paar Sekunden
-  #en: about_me: About Me
-  about_me: "\xC3\x9Cber mich"
-  #en: about_you: About You
-  about_you: "\xC3\x9Cber dich"
-  #en: accept: Accept
-  accept: Annehmen
-  #en: accepted: accepted
-  accepted: angenommen
-  #en: accepted_friendships: Accepted Friendships
-  accepted_friendships: Bestätigte Verbindungen
-  #en: accept_this_request: Accept this request
-  accept_this_request: Anfrage bestätigen
-  #en: account: account
-  account: Konto
-  #en: account_activation_error: Account activation failed. Your account may already be active. Try logging in or e-mail %{email} for help.
-  account_activation_error: Kontoaktivierungsfehler. Schick eine Mail an %{email}
-  #en: account_settings: Account settings
-  account_settings: Kontenoptionen
-  #en: actions: Actions
-  actions: Aktionen
-  #en: activate: Activate
-  activate: Aktivieren
-  #en: activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
-  activation_email_not_sent_message: Aktivierungs-EMail konnte nicht gesendet werden. Ist der Benutzer vielleicht schon aktiviert?
-  #en: activation_email_resent_message: An activation e-mail was resent to the e-mail address you used to sign up.
-  activation_email_resent_message: Die Aktivierungs-EMail wurde erneut an die EMail Adresse geschickt, mit der Sie sich angemeldet haben.
-  #en: active: active
-  active: Aktiv
-  #en: active_users: Active Users
-  active_users: Aktive Benutzer
-  #en: activity_from_your_network: Activity from your network
-  activity_from_your_network: "Aktivit\xC3\xA4ten in deinem Netzwerk"
-  #en: ad_was_successfully_created: Ad was successfully created.
-  ad_was_successfully_created: Anzeige wurde erfolgreich angelegt.
-  #en: ad_was_successfully_updated: Ad was successfully updated.
-  ad_was_successfully_updated: "Anzeige wurde erfolgreich ge\xC3\xA4ndert."
-  #en: add_a_photo: Add a photo
-  add_a_photo: "Foto hinzuf\xC3\xBCgen"
-  #en: add_a_poll: Add a poll
-  add_a_poll: Erstelle eine Umfrage
-  #en: add_comment: Add Comment
-  add_comment: "Kommentar hinzuf\xC3\xBCgen"
-  #en: add_from_my_address_book: "Add from my address book"
-  add_from_my_address_book: "Füge aus meinem Adressbuch hinzu"
-  #en: add_some_friends_to_get_started: Add some friends to get started!
-  add_some_friends_to_get_started: "Um zu beginnen, lade ein paar Freunde ein!"
-  #en: add_your_comment: Add Your Comment!
-  add_your_comment: "F\xC3\xBCgen deinen Kommentar hinzu!"
-  #en: added_a_clipping: "added a clipping:"
-  added_a_clipping: "Ein Clipping hinzuf\xC3\xBCgen:"
-  #en: added_to_a_forum_topic: "added to a forum topic:"
-  added_to_a_forum_topic: "zum Forenthema hinzugef\xC3\xBCgt:"
-  #en: admin: Admin
-  admin: Administrator
-  #en: admin_controls: Admin Controls
-  admin_controls: Admin Steuerung
-  #en: admin_dashboard: Admin dashboard
-  admin_dashboard: "Admin \xC3\x9Cbersicht"
-  #en: ads: Ads
-  ads: Anzeigen
-  #en: advertise: Advertise
-  advertise: Hier werben
-  #en: advertise_on: Advertise on
-  advertise_on: Werbung auf
-  #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
-  after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erh\xC3\xA4ltst du eine Best\xC3\xA4tigungsnachricht."
-  #en: all_clippings_tagged: All clippings tagged %{tag_name}
-  all_clippings_tagged: Alle Clippings zu diesem Schlagwort %{tag_name}
-  #en: all_comments: All comments
-  all_comments: Alle Kommentare
-  #en: all_photos_tagged: All photos tagged %{tag_name}
-  all_photos_tagged: Alle Fotos zu diesem Schlagwort %{tag_name}
-  #en: all_posts_tagged: All posts tagged %{tag_name}
-  all_posts_tagged: "Alle Eintr\xC3\xA4ge zu diesem Schlagwort %{tag_name}"
-  #en: all_tags: All tags
-  all_tags: Alle Schlagworte
-  #en: all_users_tagged: All users tagged %{tag_name}
-  all_users_tagged: Alle Benutzer zu diesem Schlagwort %{tag_name}
-  #en: already_have_an_account: Already have an account?
-  already_have_an_account: Hast du schon ein Konto?
-  #en: an_error_occurred: An error occurred
-  an_error_occurred: Es ist ein Fehler aufgetreten
-  #en: are_you_sure: Are you sure?
-  are_you_sure: Bist du dir sicher?
-  #en: are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"
-  are_you_sure_you_want_to_delete_this_photo: "Bist du dir sicher, das Foto zu löschen?"
-  #en: are_you_sure_you_want_to_delete_this_post: "Are you sure you want to delete this post?"
-  are_you_sure_you_want_to_delete_this_post: "Bist du dir sicher, den Beitrag zu löschen?"
-  #en: are_you_sure_you_want_to_permanently_delete_this_comment: "Are you sure you want to permanently delete this comment?"
-  are_you_sure_you_want_to_permanently_delete_this_comment: "Bist du dir sicher, den Kommentar permanent zu löschen?"
-  #en: are_you_sure_you_want_to_permanently_delete_this_user: Are you sure you want to permanently delete this user?
-  are_you_sure_you_want_to_permanently_delete_this_user: Bist du dir sicher, den Benutzer dauerhaft zu löschen?
-  #en: assume_id: Assume ID
-  assume_id: "ID \xC3\xBCbernehmen"
-  #en: assume_user_id: "Assume this user's ID"
-  assume_user_id: "Übernehmen der ID dieses Benutzers"
-  #en: assign_role: Assign role
-  assign_role: Rolle zuordnen
-  #en: audience: Audience
-  audience: Publikum
-  #en: author: Author
-  author: Autor
-  #en: back: Back
-  back: "Zur\xC3\xBCck"
-  #en: back_to_all_users: Back to all users
-  back_to_all_users: Zurück zu allen Benutzern
-  #en: back_to_my_photos: Back to my photos
-  back_to_my_photos: Zurück zu meinen Fotos
-  #en: back_to_all_statistics: Back to all statistics
-  back_to_all_statistics: Zurück zu den Statistiken
-  #en: banner_subtitle_required: "Banner subtitle (required):"
-  banner_subtitle_required: "Banneruntertitel (erforderlich):"
-  #en: banner_title_required: "Banner title (required):"
-  banner_title_required: "Bannertitel (erforderlich):"
-  #en: becomes: becomes.
-  becomes: werden.
-  #en: begin: begin
-  begin: Beginn
-  #en: begin_required: begin (required)
-  begin_required: Beginn (erforderlich)
-  #en: bigger_font_size_more_popular_tag: "Bigger font size = more popular tag"
-  bigger_font_size_more_popular_tag: "Je größer die Schrift, desto beliebter der Tag"
-  #en: birthday: Birthday
-  birthday: Geburtstag
-  #en: birthday_gender: Birthday & Gender
-  birthday_gender: Geburtsdatum und Geschlecht
-  #en: blog: Blog
-  blog: Blog
-  #en: blog_posts: Blog posts
-  blog_posts: Blogbeiträge
-  #en: body_text: Body Text
-  body_text: Haupttext
-  #en: body_text_reqiured: Body Text (required)
-  body_text_required: Haupttext (erforderlich)
-  #en: bookmarklet: bookmarklet
-  bookmarklet: Bookmarklet
-  #en: browse_all_members: browse all members
-  browse_all_members: Alle Mitglieder anzeigen
-  #en: browse_content_by_tags: Browse content by tags
-  browse_content_by_tags: Inhalt nach Tags anzeigen
-  #en: by: by
-  by: von
-  #en: by_looking_at_the: by looking at the
-  by_looking_at_the: durch das Betrachten
-  #en: cancel: Cancel
-  cancel: Abbrechen
-  #en: cancel_and_go_back_to: cancel and go back to
-  cancel_and_go_back_to: "abbrechen und zur\xC3\xBCck gehen"
-  #en: cancel_and_go_back_to_all_features: cancel and go back to all features
-  cancel_and_go_back_to_all_features: "abbrechen und zur\xC3\xBCck gehen"
-  #en: cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
-  cancel_and_go_back_to_my_clippings: "abbrechen und zur\xC3\xBCck gehen"
-  #en: cancel_and_go_back_to_my_photos: cancel and go back to my photos
-  cancel_and_go_back_to_my_photos: "abbrechen und zur\xC3\xBCck gehen"
-  #en: cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  cancel_and_go_back_to_my_posts: "abbrechen und zur\xC3\xBCck gehen"
-  #en: categories: Categories
-  categories: Produktkategorien
-  #en: category: Category
-  category: Kategorie
-  #en: category_was_successfully_created: Category was successfully created.
-  category_was_successfully_created: Kategorie erfolgreich angelegt
-  #en: choises: Choices
-  choises: Auswahl
-  #en: choose_a_photo_for_your_profile: "Choose a photo for your profile:"
-  choose_a_photo_for_your_profile: "W\xC3\xA4hle ein Foto f\xC3\xBCr dein Profil aus:"
-  #en: choose_a_photo_to_upload: "Choose a photo to upload:"
-  choose_a_photo_to_upload: "W\xC3\xA4hle ein Foto zum hochladen aus:"
-  #en: choose_your_location: Choose your location
-  choose_your_location: "W\xC3\xA4hle deinen Ort"
-  #en: click_here: click here
-  click_here: klicke hier
-  #en: click_here_to_retrieve_it: Click here to retrieve it
-  click_here_to_retrieve_it: Klicke hier; wir schicken eine E-Mail
-  #en: click_here_to_sign_up: Click here to sign up
-  click_here_to_sign_up: Klicke hier, um dich zu registrieren
-  #en: click_here_to_sign_up_for_an_account_and_enter: Click here to sign up for an account and enter
-  click_here_to_sign_up_for_an_account_and_enter: Klicke hier, um dich zu registrieren und fortzufahren
-  #en: click_here_to_upload_one: Click here to upload one!
-  click_here_to_upload_one: Klick hier, um ein Foto hochzuladen!
-  #en: click_here_to_view_as_a_list: Click here to view as a list
-  click_here_to_view_as_a_list: Klick hier zum Ansehen als Liste
-  #en: click_on_an_image_below_to_clip_it: Click on an image below to clip it
-  click_on_an_image_below_to_clip_it: Klick auf ein Bild unten, um es aufzunehmen
-  #en: click_the_activation_link_in_the_e_mail_to_log_in: Click the activation link in the e-mail to log in.
-  click_the_activation_link_in_the_e_mail_to_log_in: Klicke auf den Aktivierungslink in der E-Mail, um dich einzuloggen.
-  #en: click_to_accept_it: Click to accept it!
-  click_to_accept_id: Hier geht es zur Bestätigung.
-  #en: clipping_comments: Clipping Comments
-  clipping_comments: Clipping-Kommentare
-  #en: clipping_was_successfully_created: Clipping was successfully created.
-  clipping_was_successfully_created: Clipping wurde erfolgreich angelegt.
-  #en: clippings: Clippings
-  clippings: Clippings
-  #en: clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings are a way to save images you like from around the Web
-  clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings sind ein Weg, um colle Bilder aus dem Web zu speichern.
-  #en: clippings_let_you_to_save_cool_images_from_around_the_web: Clippings let you to save cool images from around the Web.
-  clippings_let_you_to_save_cool_images_from_around_the_web: Mit Clippings kannst du dir coole Bilder aus dem Web speichern.
-  #en: close_this_message: Close this message
-  close_this_message: Schliesse diese Nachricht
-  #en: comma_separated: (comma separated)
-  comma_separated: "(Komma getrennt)"
-  #en: comma_separated_keywords_that_describe_you: Comma-separated keywords that describe you.
-  comma_separated_keywords_that_describe_you: "Durch Komma getrennte Schl\xC3\xBCsselw\xC3\xB6rter, die dich beschreiben."
-  #en: comment_character_limit: (2000 character limit)
-  comment_character_limit: (Limit 2000 Zeichen)
-  #en: comment_could_not_be_deleted: Comment could not be deleted.
-  comment_could_not_be_deleted: "Kommentar kann nicht gel\xC3\xB6scht werden."
-  #en: comment_save_error: Your comment couldn't be saved.
-  comment_save_error: 'Fehler beim Speichern des Kommentars: %{error}'
-  #en: comment_was_successfully_created: Comment was successfully created.
-  comment_was_successfully_created: Kommentar wurde erfolgreich angelegt.
-  #en: comments: Comments
-  comments: Kommentare
-  #en: comments_rss: Comments RSS
-  comments_rss: Kommentar-RSS-Feed
-  #en: community_tagline: CommunityEngine Rocks!
-  community_tagline: LVZ ist Testprojekt/Prototyp. Impressum
-  #en: compose: Compose
-  compose: Verfassen
-  #en: compose_messages: Compose messages
-  compose_messages: Nachrichten verfassen
-  compose_message: Nachricht verfassen  
-  #en: confirm_password: Confirm Password
-  confirm_password: Kennwort bestätigen
-  #en: country: Country
-  country: Land
-  #en: create: Create
-  create: Erstellen
-  #en: create_an_account: Create an account
-  create_an_account: registrieren
-  #en: create_a_clipping: Create a clipping
-  create_a_clipping: Neues Clipping erstellen
-  #en: create_a_post: Create a post
-  create_a_post: Beitrag erstellen
-  #en: create_new_forum: Create new forum
-  create_new_forum: Neues Forum anlegen
-  #en: create_your_account: Create Your Account
-  create_your_account: Hol dir dein Konto
-  #en: created_at: Created at
-  created_at: erstellt am
-  #en: custom_friendly_local: custom, friendly, local
-  custom_friendly_local: "maßgeschneidert, freundlich, lokal"
-  #en: dashboard: Dashboard
-  dashboard: "Übersicht"
-  #en: dashboard_friends: Once you start adding friends, you'll be able to track their activity on %{site} here
-  dashboard_friends: Die Aktivitäten deiner Verbindungen kannst du hier auf %{site} verfolgen
-  #en: date_created: Date Created
-  date_created: Erstellungsdatum
-  #en: date_published: Date Published
-  date_published: "Veröffentlichungsdatum"
-  #en: days_ago: days ago
-  days_ago: Tage zuvor
-  #en: deactivate_link: Click here to deactivate your account
-  deactivate_link: Hiermit deaktivieren Sie ihr Konto.
-  #en: deactivate_tip: Deactivating your account will remove your profile from the site.
-  deactivate_tip: Die Deaktivierung Ihres Kontos löscht das Profile von dieser Seite.
-  #en: deactivate_confirmation: Are you sure you want to deactivate your account?
-  deactivate_confirmation: Sind Sie sicher, das Sie Ihr Konto deaktivieren möchten ?
-  #en: deactivate_completed: Thanks. Your account has been deactivated and you have been logged out.
-  deactivate_completed: Danke. Ihr Konto wurde deaktiviert und Sie sind abgemeldet worden.
-  #en: delete: Delete
-  delete: Löschen
-  #en: delete_selected: Delete selected
-  delete_selected: Ausgewählte löschen
-  #en: delete_this_event: Delete this event
-  delete_this_event: "Lösche das Ereignis"
-  #en: delete_this_forum: Delete this forum
-  delete_this_forum: "Lösche das Forum"
-  #en: delete_this_photo: Delete this photo
-  delete_this_photo: Lösche dieses Foto
-  #en: delete_this_post: Delete this post?
-  delete_this_post: Diesen Eintrag löschen?
-  #en: delete_this_topic_forever: Delete this topic forever?
-  delete_this_topic_forever: Das Thema für immer löschen?
-  #en: delete_this_user: Delete this user
-  delete_this_user: Benutzer löschen
-  #en: deny: Deny
-  deny: Ablehnen
-  #en: denied: denied
-  denied: abgelehnt
-  #en: denied_friendships: Denied Friendships
-  denied_friendships: abgelehnte Freundschaften
-  #en: description: Description
-  description: Beschreibung
-  #en: destroy: Destroy
-  destroy: "Löschen"
-  #en: dont_have_an_account: Don't have an account?
-  dont_have_an_account: Du hast noch kein Konto?
-  #en: dont_wait_its: Don't wait! It's
-  dont_wait_its: Warte nicht! Schreib an
-  #en: draft: draft
-  draft: Entwurf
-  #en: drag_the_bookmarklet: Drag the %{site}-It! bookmarklet to your bookmarks toolbar.
-  drag_the_bookmarklet: Zieh das %{site}-It! Bookmarklet in die Bookmark-Leiste.
-  #en: drag_this_to_your_bookmarks_toolbar: Drag this to your bookmarks toolbar
-  drag_this_to_your_bookmarks_toolbar: Ziehe es in die Bookmark-Leiste
-  #en: e_mail: E-mail
-  e_mail: E-Mail
-  #en: e_mail_address: E-mail address
-  e_mail_address: E-Mailadresse
-  #en: e_mail_notification: E-mail Notification
-  e_mail_notification: E-Mail-Benachrichtigungen
-  #en: edit: Edit
-  edit: Bearbeiten
-  #en: edit_account: Edit account
-  edit_account: Konto bearbeiten
-  #en: edit_event: Edit event
-  edit_event: Bearbeite das Ereignis
-  #en: edit_forum: Edit forum
-  edit_forum: Forum bearbeiten
-  #en: edit_post: Edit post
-  edit_post: Beitrag bearbeiten
-  #en: edit_profile: Edit profile
-  edit_profile: Profil bearbeiten
-  #en: edit_this_event: Edit this event
-  edit_this_event: Bearbeite dieses Ereignis
-  #en: edit_this_photo_details: Edit this photo's details
-  edit_this_photo_details: Bearbeite die Details dieses Fotos
-  #en: edit_topic: Edit topic
-  edit_topic: Thema bearbeiten
-  #en: edit_your_account_settings_instead: "Edit your account settings instead?"
-  edit_your_account_settings_instead: "Wolltest du deine Konteneinstellungen bearbeiten?"
-  #en: edit_your_user_profile: Edit your user profile?
-  edit_your_user_profile: Wolltest du dein Profil bearbeiten?
-  #en: editing_ad: Editing ad
-  editing_ad: Anzeige bearbeiten
-  #en: editing_category: Editing category
-  editing_category: Kategorie bearbeiten
-  #en: editing_clipping: Editing clipping
-  editing_clipping: Clipping bearbeiten
-  #en: editing_homepage_feature: Editing homepage feature
-  editing_homepage_feature: Homepage-Feature bearbeiten
-  #en: editing_metro_area: Editing Metro Area
-  editing_metro_area: "Metro Area's bearbeiten"
-  #en: editing_photo: Editing photo
-  editing_photo: Foto bearbeiten
-  #en: editing_post: Editing post
-  editing_post: Eintrag bearbeiten
-  #en: email: Email
-  email: Email
-  #en: email_addresses: Email Addresses
-  email_addresses: Email-Adressen
-  #en: email_signup_thanks: Thanks for signing up! You should receive an e-mail confirmation shortly at %{email}
-  email_signup_thanks: Danke für die Registrierung! Du erhälst umgehend eine e-mail zur Bestätigung unter %{email}
-  #en: email_this_story_to_friends: "E-mail this story to friends"
-  email_this_story_to_friends: "E-mail diese Geschichte deinen Freunden"
-  #en: email_to_friends: E-mail to friends
-  email_to_friends: E-mail an Freunde
-  #en: end: end
-  end: Ende
-  #en: end_date: End date
-  end_date: Endedatum
-  #en: end_required: end (required)
-  end_required: Ende (erforderlich)
-  #en: end_tome: End time
-  end_time: Endezeit
-  #en: enter_a_message: Enter a message
-  enter_a_message: Gib eine Nachricht ein
-  #en: enter_e_mail_addresses: Enter e-mail addresses
-  enter_e_mail_addresses: E-Mailadressen eintragen
-  #en: enter_e_mail_addresses_comma_sep: Enter e-mail addresses (comma-separated)
-  enter_e_mail_addresses_comma_sep: E-Mailadressen eintragen (durch Komma getrennt)
-  #en: enter_your_email_address: "Enter your email address"
-  enter_your_email_address: "Trage deine E-Mailadresse ein"
-  #en: error: Error!
-  error: Fehler!
-  #en: estimated_total_for_this_month: Estimated total for this month
-  estimated_total_for_this_month: Geschätzte Summe für diesen Monat
-  #en: estimated_writers_costs_this_month: "Estimated writers' costs this month"
-  estimated_writers_costs_this_month: "Geschätzte Kosten pro Verfasser diesen Monat"
-  #en: event_was_successfully_created: Event was successfully created.
-  event_was_successfully_created: Ereignis wurde erfolgreich angelegt.
-  #en: events: Events
-  events: Ereignisse
-  #en: every_person_has_something_to_say: Every single person has something to say, something to give, something that will help someone else.  Join in!
-  every_person_has_something_to_say: "Jeder hat etwas zu sagen, etwas zugeben oder etwas was anderen hilft.  Mach mit!"
-  #en: explore_site: Explore %{site}
-  explore_site: Site erkunden
-  #en: failed: failed
-  failed: Fehler
-  #en: favorites: Favorites
-  favorites: Favoriten
-  #en: favorite_this: Favorite this
-  favorite_this: Zu Favoriten hinzufügen
-  #en:featured_posts: Featured posts
-  featured_posts: Redaktionelle Beiträge
-  #en: featured_writer: Featured writer
-  featured_writer: Featured writer
-  #en: features: Features
-  features: Funktionen
-  #en: feel_free_to_embed_images_or_videos: Feel free to embed images or videos.
-  feel_free_to_embed_images_or_videos: Wenn du willst, füge Bilder und Videos deinen Beiträge hinzu.
-  #en: female: Female
-  female: Weiblich
-  #en: filename: Filename
-  filename: Dateiname
-  #en: find_an_expert: Find an Expert
-  find_an_expert: Finde einen Experten
-  #en: find_an_expert_in: Find an Expert in
-  find_an_expert_in: Finde einen Experten in
-  #en: find_experts: Find experts
-  find_experts: Finde Experten
-  #en: find_out_where_to_be_and_when_to_be_there: Find out where to be, and when to be there.
-  find_out_where_to_be_and_when_to_be_there: Finde raus, wann du wo sein musst.
-  #en: for_more_informationon_on_tags_check_out_the: For more information on Tags check out the
-  for_more_informationon_on_tags_check_out_the: Für mehr Informationen über Tags check die
-  #en: forgot_your_password: Forgot your password?
-  forgot_your_password: Passwort vergessen?
-  #en: forgot_your_username: Forgot your username?
-  forgot_your_username: Benutzernamen vergessen?
-  #en: forum: Forum
-  forum: Forum
-  #en: forums: Forums
-  forums: Foren
-  #en: found: found
-  found: gefunden
-  #en: frequency: Frequency
-  frequency: "Häufigkeit"
-  #en: frequent_asked_questions: Frequent Asked Questions
-  frequent_asked_questions: "Häufig gestellte Fragen"
-  #en: frequently_asked_questions: Frequently Asked Questions
-  frequently_asked_questions: "Häufig gestellte Fragen und Antworten"
-  #en: friend: friend
-  friend: Freund
-  #en: friends: Friends
-  friends: Verbindungen
-  #en: friendship_could_not_be_created: Friendship could not be created
-  friendship_could_not_be_created: Verbindung konnte nicht angelegt werden
-  #en: friendship_request_detail: Friendship request detail
-  friendship_request_detail: Details der Verbindungsanfrage
-  #en: friendship_requested: Requested friendship with %{friend}.
-  friendship_requested: Verbindung von %{friend} angefragt.
-  #en: from: From
-  from: Von
-  #en: from2: From
-  from2: Aus
-  #en: gender: Gender
-  gender: Geschlecht
-  #en: get_help_from_someone_who_knows: Get help from someone who knows
-  get_help_from_someone_who_knows: Hilfe von jemanden, der Bescheid weiß
-  #en: get_popular: Get popular.
-  get_popular: "Werde beliebt."
-  #en: get_started: "Get started:"
-  get_started: "Erste Schritte:"  
-  #en: get_started_banner: Get started with <a href="/">%{site}</a> today!
-  get_started_banner: Willkommen bei <a href="/">%{site}</a>!
-  #en: get_started_invite_some_friends: "Get Started: Invite some friends!"
-  get_started_invite_some_friends: "Fang an: lade ein paar Freudne ein!"
-  #en: get_started_tell_us_about_yourself: "Get Started: Tell us about yourself"
-  get_started_tell_us_about_yourself: "Fang an: erzähl uns über dich"
-  #en: get_started_upload_a_profile_photo: "Get Started: Upload a profile photo"
-  get_started_upload_a_profile_photo: "Fang an: lade ein Profilfoto hoch"
-  #en: go: Go
-  go: Gehe
-  #en: go_check_your_e_mail: Go check your e-mail!
-  go_check_your_e_mail: "Prüfe deine E-Mail!"
-  #en: go_to_the_forums: go to the forums
-  go_to_the_forums: Gehe zu den Foren
-  #en: go_to_your_clippings_page_to_get_started: Go to your clippings page to get started.
-  go_to_your_clippings_page_to_get_started: Um zu beginnen, geh zu deiner Clippings-Seite.
-  #en: go_to_your_profile: Go to your profile
-  go_to_your_profile: Geh zu deinem Profil
-  #en: have_an_account: "Have an account? "
-  have_an_account: Hast du ein Konto?
-  #en: have_something_to_contribute: Have something to contribute?
-  have_something_to_contribute: Hast du etwas, was du beitragen kannst?
-  #en: help: Help
-  help: Hilfe
-  #en: home: Home
-  home: Startseite
-  #en: homepage_banner_download_msg: Download it now and get started
-  homepage_banner_download_msg: Jetzt runterladen und anfangen
-  #en: homepage_banner_msg: CommunityEngine is the best way to go from zero to hero in no time
-  homepage_banner_msg: Diese Community ist der beste Weg, um in Null-Komma-Nichts zum Held zu werden
-  #en: homepage_banner_signup_prompt: See how it works
-  homepage_banner_signup_prompt: Und so geht es
-  #en: homepage_features: Homepage Features
-  homepage_features: Homepage Features
-  #en: hours_ago: hours ago
-  hours_ago: Stunden zuvor
-  #en: how_do_i_do_that: How do I do that?
-  how_do_i_do_that: Wie mach ich das?
-  #en: html: HTML
-  html: HTML
-  #en: image: Image
-  image: Bild
-  #en: image_url: Image URL
-  image_url: Bild-URL
-  #en: in_the_forums: In the forums
-  in_the_forums: In den Foren
-  #en: in_your_favorites: In your favorites
-  in_your_favorites: In deinen Favoriten
-  #en: inactive: inactive
-  inactive: inaktiv
-  #en: inbox: Inbox
-  inbox: Private Nachrichten
-  #en: insert: Insert
-  insert: Einfügen
-  #en: invite_a_friend: Invite a friend
-  invite_a_friend: Lade einen Freund ein
-  #en: invitation_was_successfully_created: Invitation was successfully created.
-  invitation_was_successfully_created: Einladung wurde erfolgreich angelegt.
-  #en: invite_message: The more people you invite the better %{site} becomes.
-  invite_message: Einladungsnachricht
-  #en: invite_some_customers: Invite some customers!
-  invite_some_customers: Lade einige Kunden ein!
-  #en: invite_your_friends_to_join: Invite Your Friends To Join!
-  invite_your_friends_to_join: Lade deine Freunde ein, sich zu beteiligen!
-  #en: is_great_check_it_out_youll_love_it: is great, check it out you'll love it!
-  is_great_check_it_out_youll_love_it: ist großartig, du wirst es lieben!
-  #en: items: Items
-  items: Inhalt
-  #en: joined: joined
-  joined: Mitglied seit
-  #en: joined_the_site: joined %{site}
-  joined_the_site: "%{site} beigetreten"
-  #en: just_uploading_one_photo: Just uploading one photo?
-  just_uploading_one_photo: Nur ein Foto hochladen?
-  #en: keywords: Keywords
-  keywords: Keywords
-  #en: large: Large
-  large: Groß
-  #en: last: last
-  last: letzte
-  #en: last_post: Last post
-  last_post: Letzter Beitrag
-  #en: left_a_comment: "left a comment:"
-  left_a_comment: "hat einen Kommentar hinterlassen:"
-  #en: links: Links
-  links: Links
-  #en: listing_invitations: Listing invitations
-  listing_invitations: Liste der Einladungen
-  #en: loading_images: Loading images
-  loading_images: Lade Bilder
-  #en: loading_recent_content: Loading recent content...
-  loading_recent_content: Lade letzten Inhalt...
-  #en: location: Location
-  location: Ort
-  #en: log_in: Log in
-  log_in: Anmelden
-  #en: log_in_to_create_a_new_topic: Log in to create a new topic
-  log_in_to_create_a_new_topic: Log dich ein, um ein neues Thema zu beginnen
-  #en: log_in_to_leave_a_comment: Log in to leave a comment
-  log_in_to_leave_a_comment: Zum Kommentarschreiben anmelden
-  #en: log_in_to_reply_to_this_topic: Log in to reply to this topic
-  log_in_to_reply_to_this_topic: Zum Antworten auf das Thema musst du dich anmelden
-  #en: log_in_to_vote: Log in to vote
-  log_in_to_vote: Zum Abstimmen musst du dich anmelden
-  #en: log_in_to_site: Log in to %{site}
-  log_in_to_site: Anmeldung bei %{site}
-  #en: log_in_to_your: Log in to your
-  log_in_to_your: Einloggen zu deinem
-  #en: log_out: Log Out
-  log_out: Abmelden
-  #en: log_out_of_your: Log out of your 
-  log_out_of_your: Abmelden vom
-  #en: logged_in: "Logged in:"
-  logged_in: "Angemeldet:"
-  #en: logged_into_the_site: logged into the site
-  logged_into_the_site: hat sich angemeldet
-  #en: login: Login
-  login: Anmeldung
-  #en: logins: Logins
-  logins: Anmeldungen
-  #en: location: Location
-  location: Ort
-  #en: locked: Locked
-  locked: Geschlossen
-  #en: locked2: (locked)
-  locked2: "(geschlossen)"
-  #en: look_for_a_message_from: Look for a message from:
-  look_for_a_message_from: "Schau nach einer Mitteilung von:"
-  #en looking_for_most_x: Looking for %{link}
-  looking_for_most_x: Suchst du nach %{link}?
-  #en: make_moderator: Make moderator
-  make_moderator: Zum Moderator machen
-  #en: make_my_profile_public: Make my profile public
-  make_my_profile_public: Mach mein Profil öffentlich
-  #en: make_this_my_profile_photo: Make this my profile photo
-  make_this_my_profile_photo: Als Profilfoto übernehmen
-  #en: male: Male
-  male: "Männlich"
-  #en: manage_posts: Manage Posts
-  manage_posts: "Einträge verwalten"
-  #en: medium: Medium
-  medium: Mittel
-  #en: megabyte_upload_limit: megabyte upload limit
-  megabyte_upload_limit: Megabyte Limit
-  #en: megabyte_upload_limit_per_file: megabyte upload limit per file.
-  megabyte_upload_limit_per_file: megabyte upload limit per file.
-  #en: member: Member
-  member: Mitglied
-  #en: members: Members
-  members: Mitglieder
-  #en: member_since: Member since
-  member_since: Mitglied seit
-  #en: message: Message
-  message: Nachricht
-  #en: messages_deleted: Messages deleted
-  messages_deleted: Nachricht gelöscht
-  #en: messages_sent: Messages sent!
-  messages_sent: Nachricht abgeschickt
-  #en: metro_area: Metro Area
-  metro_area: Metro Area
-  #en: metro_areas: Metro Areas
-  metro_areas: Metro Areas
-  #en: metro_area_was_successfully_created: MetroArea was successfully created.
-  metro_area_was_successfully_created: MetroArea wurde erfolgreich angelegt.
-  #en: minutes_ago: minutes ago
-  minutes_ago: Minuten zuvor
-  #en: moderator: Moderator
-  moderator: Moderator
-  #en: moderators: Moderators
-  moderators: Moderatoren
-  #en: monitored_topics: Monitored Topics
-  monitored_topics: beobachtete Themen
-  #en: month: Month
-  month: Monat
-  #en: more: More
-  more: Mehr
-  #en: most_active_1_month: Most active (1 month)
-  most_active_1_month: Am aktivsten (1 Monat)
-  #en: most_recent: most recent
-  most_recent: aktuellem
-  #en: most_popular: most popular
-  most_popular: beliebtesten
-  #en: my_details: My Details
-  my_details: Meine Details
-  #en: my_friends: My Friends
-  my_friends: Meine Verbindungen
-  #en: my_profile: My Profile
-  my_profile: Mein Profil
-  #en: my_recent_comments: My recent comments
-  my_recent_comments: Meine letzten Kommentare
-  #en: my_tags: My tags
-  my_tags: Meine Tags
-  #en: name: Name
-  name: Name
-  #en: navigation_menu_text: Navigation menu text
-  navigation_menu_text: "Navigationsmenütext"
-  #en: need_some_help_contact_our: Need some help?  Check out our
-  need_some_help_contact_our: Brauchst du Hilfe?  Check unseren
-  #en: need_to_contact_us: Need to contact us?
-  need_to_contact_us: Brauchst du Hilfe?
-  #en: new_ad: New Ad
-  new_ad: Neue Anzeige
-  #en: new_category: New category
-  new_category: Neue Kategorie
-  #en: new_clipping: New clipping
-  new_clipping: Neues Clipping
-  #en: new_event: New Event
-  new_event: Neues Ereignis
-  #en: new_forum: New Forum
-  new_forum: Neues Forum
-  #en: new_homepage_feature: New Homepage Feature
-  new_homepage_feature: Neues Homepage Feature
-  #en: new_invitation: New Invitation
-  new_invitation: Neue Einladung
-  #en: new_invitation_from: New Invitation from
-  new_invitation_from: Neue Einladung von
-  #en: new_metro_area: New Metro Area
-  new_metro_area: Neue Metro Area
-  #en: new_photo: New photo
-  new_photo: Neues Foto
-  #en: new_photos_&raquo;_multiple_uploader: "New Photos &raquo; Multiple Uploader"
-  new_photos_raquo_multiple_uploader: "Neue Fotos &raquo; Multiple Uploader"
-  #en: new_post: New post
-  new_post: Neuer Beitrag
-  #en: new_post_for_category: New %{category}
-  new_post_for_category: "Neuer Eintrag für Kategorie"
-  #en: new_post_text: New Post text
-  new_post_text: Text für den Link 'Neuer Beitrag'
-  #en: new_today: New today
-  new_today: Heute neu
-  #en: new_topic: New topic
-  new_topic: Neues Thema
-  #en: new_yesterday: New yesterday
-  new_yesterday: Gestern neu
-  #en: no_activation_email: No activation e-mail?
-  no_activation_email: Keine Aktivierungsmail bekommen ?
-  #en: no_comments_found: Sorry, we couldn't find any comments for that %{type}
-  no_comments_found: Kein Kommentar gefunden
-  #en: no_images_uploaded_yet: No images uploaded yet.
-  no_images_uploaded_yet: Bisher keine Bilder hochgeladen.
-  #en: no_messages: no messages
-  no_messages: keine Nachrichten
-  #en: no_profile_photo: "No profile photo?"
-  no_profile_photo: "Noch kein Profilfoto?" 
-  #en: no_recent_activity: No recent activity
-  no_recent_acitivity: Keine aktuellen Einträge
-  #en: no_tags: No tags
-  no_tags: "Keine Schlagwörter"
-  #en: notify_email_updates: Notify of community news
-  notify_email_updates: Benachrichtigung bei Community News
-  #en: notify_of_comments: Notify of comments
-  notify_of_comments: Benachrichtigung bei Kommentaren
-  #en: notify_of_friend_requests: Notify of friend requests
-  notify_of_friend_requests: Benachrichtigung bei Freundschaftsanfragen
-  #en: on: On
-  on: Zu
-  #en: on_commentable: On
-  on_commentable: 'An'
-  #en: one_day_ago: one day ago
-  one_day_ago: vor einem Tag
-  #en: one_hour_ago: one hour ago
-  one_hour_ago: vor einer Stunde
-  #en: one_minute_ago: one minute ago
-  one_minute_ago: vor einer Minute
-  #en: optional: (optional)
-  optional: (optional)
-  #en: optional_keywords_describing_this_clipping_separated_by_commas: optional keywords describing this clipping, separated by commas
-  optional_keywords_describing_this_clipping_separated_by_commas: "(optionale Schlüsselwörter, die diesen Ausschnitt beschreiben, durch Komma getrennt)"
-  #en: optional_keywords_describing_this_forum_separated_by_commas: optional keywords describing this forum, separated by commas
-  optional_keywords_describing_this_forum_separated_by_commas: "(optionale Schlüsselwörter, die das Forum beschreiben, durch Komma getrennt)"
-  #en: optional_keywords_describing_this_photo_separated_by_commas: optional keywords describing this photo, separated by commas
-  optional_keywords_describing_this_photo_separated_by_commas: "(optionale Schlüsselwörter, die dieses Foto beschreiben, durch Komma getrennt)"
-  #en: optional_keywords_describing_this_post_separated_by_commas: (optional keywords describing this post, separated by commas)
-  optional_keywords_describing_this_post_separated_by_commas: "(optionale Schlüsselwörter, die den Betrag beschreiben, durch Komma getrennt)"
-  #en: optional_keywords_describing_this_topic_separated_by_commas: optional keywords describing this topic, separated by commas
-  optional_keywords_describing_this_topic_separated_by_commas: "(optionale Schlüsselwörter, die das Thema beschreiben, durch Komma getrennt)"
-  #en: or: or
-  or: oder
-  #en: page: page
-  page: Seite
-  #en: pages: "Pages:"
-  pages: "Seiten:"
-  #en: password: Password
-  password: Kennwort
-  #en: pending: pending
-  pending: ausstehend
-  #en: pending_friendships: Pending Friendships
-  pending_friendships: zu bestätigende Freundschaften
-  #en: people: People
-  people: Leute
-  #en: people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: People who sign up using your invitation will automatically be added as your friends on
-  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: "Leute, die sich durch deine Einladung angemeldet haben, werden automatisch zu deinen Verbindungen gemacht." 
-  #en: permanently_delete_this_clipping: Permanently delete this clipping?
-  permanently_delete_this_clipping: "Soll das Clipping dauerhaft gelöscht werden?"
-  #en: permanently_delete_this_event: Permanently delete this event?
-  permanently_delete_this_event: "Soll das Ereignis dauerhaft gelöscht werden?"
-  #en: permanently_delete_this_post: Permanently delete this post?
-  permanently_delete_this_post: "Soll der Eintrag dauerhaft gelöscht werden?"
-  #en: photo_comments: Photo Comments
-  photo_comments: Fotokommentare
-  #en: photo_message: Your profile photo represents you on %{site}. You can change it later.
-  photo_message: Fotonachricht
-  #en: photo_was_successfully_created: Photo was successfully created.
-  photo_was_successfully_created: Foto wurde erfolgreich angelegt.
-  #en: photos: Photos
-  photos: Fotos
-  #en: photos_should_be_x_pixels: Photos should be 300x300 pixels.
-  photos_should_be_x_pixels: "Fotos sollten 300x300 Pixel groß sein."
-  #en: photo_tip_1: Photos show the world your creativity. Pick your best pics, and give them good titles and descriptions.
-  photo_tip_1: Fotos zeigen der Welt deine Kreativität. Nimm deine besten Bilder, gib ihnen einen guten Titel und Beschreibung.
-  #en: photo_tip_2: Use tags to organize your photos. Separate tags with commas.
-  photo_tip_2: Benutze Tags, um die Bilder zu organisieren. Trenne die Tags mit Kommas.
-  #en: please_log_in: Please log in.
-  please_log_in: Bitte anmelden.
-  #en: please_post_something_at_least: Please post something at least...
-  please_post_something_at_least: Please post something at least...
-  #en: plural_posts: "%{count} posts"
-  plural_posts: "Einträge"
-  #en: popular: Popular
-  popular: "Aktivitäten meiner Verbindungen"
-  #en: popular_catgory: Popular %{name}
-  popular_catgory: "beliebt in %{name}"
-  #en: popular_posts: Popular Posts
-  popular_posts: "beliebte Einträge"
-  #en: popular_posts_on: Popular Posts on
-  popular_posts_on: "beliebte Einträge auf"
-  #en: popular_polls: Popular Polls
-  popular_polls: beliebte Umfragen
-  #en position: Position
-  position: Position
-  #en: post: Post
-  post: "Beitrag"
-  post_found:
-    one: 1 Beitrag gefunden
-    other: "%{count} Beiträge gefunden"
-  #en: posts: Posts
-  posts: "Beiträge"
-  #en: post_a_new_topic: Post a new topic
-  post_a_new_topic: Fang ein neues Thema an
-  #en: post_an_event: Post an event
-  post_an_event: Ereignis erfassen
-  #en: post_created_for_category: Your '%{category}' post was successfully created.
-  post_created_for_category: "Eintrag für %{category} erstellt"
-  #en: post_comments: Post Comments
-  post_comments: Kommentare schreiben
-  #en: postal_code: "Postal code:"
-  postal_code: "Postleitzahl:"
-  #en: posting_tips: "Posting Tips"
-  posting_tips: "Tip zum Schreiben eines Beitrags"
-  #en: post_topic: Post topic
-  post_topic: Thema speichern
-  #en: posts_photos_and_bookmarks: %{name} posts, photos and bookmarks
-  posts_photos_and_bookmarks: "%{name} Beiträge, Fotos und Bookmarks"
-  #en: posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: Posts saved with 'draft' status won't appear in your blog until you publish them.
-  posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: "Einträge, die als Entwurf gespeichert wurden, erscheinen erst in deinem Blog, wenn du sie veröffentlichst."
-  post_not_published_yet: "Dieser Eintrag wurde noch nicht veröffentlicht."
-  #en: preview: Preview
-  preview: Vorschau
-  #en: previewing_your_post: Previewing your post
-  previewing_your_post: Vorschau deines Textes
-  #en: print: Print
-  print: Drucken
-  #en: print_this_story: "Print this story"
-  print_this_story: "Druck diese Geschichte"
-  #en: profile: Profile
-  profile: Profil
-  #en: profile_comments: Profile Comments
-  profile_comments: Profilkommentare
-  #en: profile_photo: Profile Photo
-  profile_photo: Profilfoto
-  #en: profile_privacy: Profile Privacy
-  profile_privacy: Privatsphäre
-  #en: profile_views: profile views
-  profile_views: Profilansichten
-  #en: pros: Pros
-  pros: Profis
-  #en: published: Published
-  published: "Veröffentlicht"
-  #en: question: Question
-  question: Frage
-  #en: re_type_your_password_to_confirm: "Re-type your password to confirm:"
-  re_type_your_password_to_confirm: "Erneute Passworteingabe zur Bestätigung:"
-  #en: read_more: read more
-  read_more: hier mehr
-  #en: recent: Recent
-  recent: Neu
-  #en: recent_activity: Recent activity
-  recent_activity: Letzte Beiträge
-  #en: recent_blog_posts: Recent Blog Posts
-  recent_blog_posts: "Neue Blogbeiträge"
-  #en: recent_posts: Recent Posts
-  recent_posts: "Neue Beiträge"
-  #en: recommended_posts: Recommended Posts
-  recommended_posts: "Empfohlene Einträge"
-  #en: related_clippings_all_members: Related Clippings (all members)
-  related_clippings_all_members: In Verbindung stehende Clippings (alle Mitglieder)
-  #en: related_photos_all_members: Related Photos (all members)
-  related_photos_all_members: In Verbindung stehende Fotos (alle Mitglieder)
-  #en: related_posts: Related Posts
-  related_posts: "In Verbindung stehende Einträge"
-  #en: related_tags: Related Tags
-  related_tags: "In Verbindung stehende Schlagwörter"
-  #en: remember_me: Remember me
-  remember_me: Angemeldet bleiben
-  #en: remember_you_can_always_change_this_later: Remember, you can always change this later.
-  remember_you_can_always_change_this_later: "Vergiss nicht, du kannst das auch jederzeit im Nachhinein Ändern"
-  #en: remove_moderator: Remove moderator
-  remove_moderator: Moderator wegnehmen
-  #en: remove_this_friend: Remove this friend
-  remove_this_friend: Diese Verbindung löschen
-  #en: reply: Reply
-  reply: Antworten
-  #en: reply_to_topic: Reply
-  reply_to_topic: Antworte auf das Thema
-  #en: request_friendship: Request friendship
-  request_friendship: Verbindungsanfrage
-  #en: requested: requested
-  requested: angefragt
-  #en: requested_friendship_with: Requested friendship with
-  requested_friendship_with: Freundschaft angefragt bei
-  #en: requesting_friendship: Requesting friendship
-  requesting_friendship: Verbindungsanfrage
-  #en: required: (required)
-  required: (erforderlich)
-  #en: required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
-  required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Erforderlich: Wir senden eine Bestätigungsmail an die eingegebene Adresse.)"
-  #en: required_you_must_be_at_least_years_old_to_sign_up: "(Required: you must be at least %{min_age} years old to sign up.)"
-  required_you_must_be_at_least_years_old_to_sign_up: "(Erfoderlich: Du musst mindestens %{min_age} Jahre alt sein, um dich zu registrieren.)"
-  #en: required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain numerals, spaces or special characters.)"
-  required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Erforderlich: Dein Benutzername sollte keine Zahlen, Leer- oder Sonderzeichen enthalten.)"
-  #en: resend_my_activation_e_mail: Resend my activation e-mail
-  resend_my_activation_e_mail: Schicke meine Aktivierungsmail erneut
-  #en: resend_your_activation_e_mail: Resend your activation e-mail
-  resend_your_activation_e_mail: Aktivierungsmail erneut schicken
-  #en: reset_my_password: Reset my password
-  reset_my_password: "Passwort zurücksetzen"
-  #en: rss: RSS
-  rss: RSS
-  #en: rss_feed: RSS feed
-  rss_feed: RSS feed
-  #en: run: Run
-  run: Start
-  #en: save: Save
-  save: Speichern
-  #en: save_and_continue_to_step_three: Save, and continue to step three
-  save_and_continue_to_step_three: Speicher und mach mit Schritt 3 weiter
-  #en: save_changes: Save Changes
-  save_changes: "Änderungen speichern"
-  #en: save_forum: Save Forum
-  save_forum: Forum speichern
-  #en: save_post_as: "Save post as:"
-  save_post_as: "Eintrag speichern als:"
-  #en: save_reply: Save reply
-  save_reply: Antwort speichern
-  #en: says: says
-  says: sagt
-  #en: sb_post_was_deleted: Post '%{title}' was deleted.
-  sb_post_was_deleted: Der Eintrag '%{title}' wurde gelöscht.
-  #en: scrapbook: Scrapbook
-  scrapbook: Album
-  #en: search: Search
-  search: Suche
-  #en: search_users: Search Users
-  search_users: Suche Benutzer
-  #en: searching_for: Searching for
-  searching_for: Suchen nach
-  #en: see_all: SEE ALL
-  see_all: Alles sehen
-  #en: see_all_activity: See all activity
-  see_all_activity: Alle Aktivitäten
-  #en: see_all_events: See all events
-  see_all_events: Sieh dir die Liste der Ereignisse an
-  #en: see_all_recent_posts: See all recent posts
-  see_all_recent_posts: Alle letzten Posts
-  #en: see_you_back_here_in_a_short_while: See you back here in a short while.
-  see_you_back_here_in_a_short_while: Wir sehen uns hoffentlich bald wieder.
-  #en: select_images_to_upload: Select Images to Upload
-  select_images_to_upload: Wähle Bilder zum Hochladen aus
-  #en: send: "Send"
-  send: "Senden"
-  #en: send_comment_notifications: Send comment notifications?
-  send_comment_notifications: Benachrichtigen bei Kommentaren ?
-  #en: send_invitations: Send Invitations!
-  send_invitations: Einladung verschicken!
-  #en: send_me_my_username: Send me my username
-  send_me_my_username: Zusendung des Benutzernamens
-  #en: sent_messages: Sent messages
-  sent_messages: gesendete Nachrichten
-  #en: send_this_story_to_friends: Send this message to friends
-  send_this_story_to_friends: Schick diese Nachricht an Freunde
-  #en: service_could_not_be_deleted: Service could not be deleted.
-  service_could_not_be_deleted: "Service kann nicht gelöscht werden."
-  #en: share_the_love: Share the love
-  share_the_love: Share the love
-  #en: show: Show
-  show: Zeigen
-  #en: show_category: "%{category}"
-  show_category: Zeige "%{category}"
-  #en: show_this_photo: Show this photo
-  show_this_photo: Zeige dieses Foto
-  #en: showing: Showing
-  showing: Zeige
-  #en: showing_ad: Showing Ad
-  showing_ad: Zeige Anzeige
-  #en: showing_categories: Showing categories
-  showing_categories: Zeige Kategorien 
-  #en: showing_metro_area_details: Showing Metro Area Details
-  showing_metro_area_details: Zeige Detals der MetroArea
-  #en: showing_users: Showing users
-  showing_users: Zeige Benutzer
-  #en: sign_up: Sign Up!
-  sign_up: Registrieren!
-  sign_up_customer: Als Kunde
-  sign_up_shop_owner: Als Ladenbetreiber
-  shop_category: Laden Kategorie
-  shop_location: Laden Anschrift
-  bakery_shop: Bäckerei
-  farm_shop: Hofladen
-  first_name: Vorname
-  required_first_name: "(Notwendig: Dein Vorname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
-  optional_first_name: "(Optional: Dein Vorname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
-  last_name: Nachname
-  required_last_name: "(Notwendig: Dein Nachname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
-  optional_last_name: "(Optional: Dein Nachname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
-  facebook_link: Facebook Link
-  required_facebook_link: (Optional. Zum Beispiel - https://www.facebook.com/fernunihagen/)
-  privacy_check: Einstellungen zur Privatsphaere
-  show_info: Anderen Gemeinschafts-Mitgliedern ermöglichen, deine persoenlichen Details zu sehen.
-  shop_name: Der Name deines Ladens
-  required_shop_name: "(Notwendig.)"
-  shop_street: Laden Strasse
-  required_shop_street: "(Die Adresse deines Ladens wird gebraucht.)"
-  shop_country: Land
-  required_shop_country: "(Notwendig: Land.)"
-  shop_region: Region
-  required_shop_region: "(Notwendig: Region.)"
-  shop_zip_code: PLZ
-  required_shop_zip_code: "(Notwendig: PLZ)"
-  shop_features: Laden Features
-  vegan: Vegane Produkte
-  gluten: Gluten-freie Produkte
-  diabetis: Diabetiker-freundliche Produkte
-  lactose: Laktose-freie Produkte
-  gmo: GVO-freie Produkte
-  self_made: Selbstgemachte Produkte
-  select_city: Deine Stadt
-  customer_vegan: Vegan
-  customer_gluten: Gluten-frei
-  customer_diabetis: Diabetiker freundlich
-  customer_lactose: Laktose-frei
-  customer_gmo: Ohne Gentechnik
-  recipe: Rezept
-  review: Erfahrungsbericht
-  shop_info: Laden Information
-  shops: Laeden
-  city: Stadt
-  customer_vegan: Veganer
-  customer_vegetarian: Vegetarier
-  customer_gluten: Gluten intolerant
-  customer_lactose: Laktose intolerant
-  customer_organic_food: An Gentechnik-freien Lebensmitteln interessiert
-  customer_cook: Koch
-  customer_diabetic: Diabetiker
-  edit_shop: Laden bearbeiten
-  facebook_profile: Facebook Profil
-  send_me_a_collaboration: Zusammenarbeit anbieten
-  send_me_a_message: Nachricht senden
-  customers_friends: Kunden
-  shop_owner_friends: Laeden
-  send_me_a_critic: Kritik senden
-  send_a_recommendation: Einem Freund empfehlen
-  organize_meeting: Verabredung ausmachen
-  meeting_time: Verabredungszeit
-  hygiene: Hygiene
-  top_place: Top Bewertung
-  staff: 'Staff/Friendliness'
-  food: Nahrungsmittel Qualitaet
-  organization: 'Organization/Opening Times'
-  expectations: Ich hatte etwas anderes erwartet
-  below_expectations: schlechter als erwartet
-  disappointed: unzufrieden
-  crucial_issue: Sehr unzufrieden
-  add_friends: Verbindungen zur Teilnahme auswaehlen
-  friends_message: Nachricht an deine Verbindungen
-  shop_owner_message: Nachricht an den Ladenbetreiber
-  search_stores_by_name_and_feature: Ladenname oder Kategorie
-  severity: 'Schwere des Vorfalls:'
-  shop_rating: 'Laden Bewertung: '
-  choose_a_photo_for_your_post: 'Waehle ein Foto fuer diesen Eintrag:'
-  current_post_photo: 'Aktuelles Beitragsfoto:'
-  address: Addresse
-  top_users: Highscore
-  #en: sign_up_for_an_account: Sign up for an account.
-  sign_up_for_an_account: Ein Konto registrieren.
-  #en: sign_up_for_a_: Sign up for a
-  sign_up_for_a_: Registriere dich für ein
-  #en: sign_up_reason_1: Some reason to sign up
-  sign_up_reason_1: Sei Teil der Welle
-  #en: sign_up_reason_2: Some reason to sign up
-  sign_up_reason_2: Da wo du bist, ist vorne
-  #en: singular_posts: "%{count} post"
-  singular_posts: Eintrag
-  #en: site_members: "%{site} members"
-  site_members: Mitglieder
-  #en: skip_this_and_go_to_your_profile: Skip this and go to your profile
-  skip_this_and_go_to_your_profile: "Überspringe und gehe zu deinem Profil"
-  #en: skip_this_step: Skip this step
-  skip_this_step: "Überspringe diesen Schritt"
-  #en: small_profile: "%{user} doesn't have much here yet. Stay tuned."
-  small_profile: Kurzprofil
-  #en: sorry_there_was_an_error: Sorry, there was an error.
-  sorry_there_was_an_error: Sorry, es ist ein Fehler aufgetreten.
-  #en: sorry_there_was_an_error_requesting_friendship: Sorry, there was an error requesting friendship.
-  sorry_there_was_an_error_requesting_friendship: Sorry, bei der Freundschaftsanfrage ist ein Fehler aufgetreten.
-  #en: sorry_there_was_an_error_uploading_the_photo: Sorry, there was an error uploading the photo.
-  sorry_there_was_an_error_uploading_the_photo: Sorry, beim Hochladen des Fotos ist ein Fehler aufgetreten.
-  #en: sorry_we_dont_recognize_that_email_address: Sorry. We don't recognize that email address.
-  sorry_we_dont_recognize_that_email_address: "Sorry, wir können die E-Mailadresse nicht erkennen."
-  #en: spread_the_word: Spread the word
-  spread_the_word: "Erzähl es weiter"
-  #en: start_date: Start date
-  start_date: Startdatum
-  #en: start_time: Start time
-  start_time: Startzeit
-  #en: started_a_topic: "started a topic:"
-  started_a_topic: "Thema begonnen:"
-  #en: state: State
-  state: Bundesland
-  #en: statistics: Statistics
-  statistics: Statistiken
-  #en: stats: Stats
-  stats: Statistiken
-  #en: status: Status
-  status: Status
-  #en: sticky: Sticky
-  sticky: Sticky
-  #en: subject: Subject
-  subject: Betreff
-  #en: subscribe_to: Subscribe to
-  subscribe_to: Abonniere
-  #en: tag_does_not_exists: The tag %{tag} does not exist
-  tag_does_not_exists: Schlagwort existiert nicht
-  #en: tag_name: Tag name
-  tag_name: Tag-Name
-  #en: tag_yourself: tag yourself
-  tag_yourself: Ordne dir Tags zu
-  #en: tags: Tags
-  tags: Tags
-  #en: tags_are_comma_separated_keywords_that_describe_you: Tags are comma-separated keywords that describe you.
-  tags_are_comma_separated_keywords_that_describe_you: "Tags sind durch Komma getrennte Schlüsselbegriffe, die dich beschreiben."
-  #en: tags_are_keywords_you_use_to_organize_your_clippings_separate_multiple_tags_with_commas: Tags are keywords you use to organize your clippings. Separate multiple tags with commas.
-  tags_are_keywords_you_use_to_organize_your_clippings_separate_multiple_tags_with_commas: Tags sind Schlüsselwörter mit denen du deine Clippings organisieren kannst. Mehrere Tags werden durch Komma getrennt.
-  #en: tags_are_keywords_you_use_to_organize_your_photos: Tags are keywords you use to organize your photos. Separate multiple tags with commas.
-  tags_are_keywords_you_use_to_organize_your_photos: Tags sind Schlüsselwörter mit denen du deine Fotos organisieren kannst. Mehrere Tags werden durch Komma getrennt.
-  #en: tags_are_one_word_descriptors_users_assign_to_blog_posts_pictures_and_clippings_on: Tags are one-word descriptors user assign to blog posts, pictures and clippings on
-  tags_are_one_word_descriptors_users_assign_to_blog_posts_pictures_and_clippings_on: Tags sind einzelne Begriffe, die von Benutzern ihren Beiträgen und Bildern zugeordnet werden auf
-  #en: tagged: tagged
-  tagged: markiert als
-  #en: tags_page: tags page
-  tags_page: Tag-Seite
-  #en: thanks_for_activating_your_account: Thanks for activating your account!
-  thanks_for_activating_your_account: "Danke für die Aktivierung deines Kontos!"
-  #en: thanks_youre_now_logged_in: Thanks! You're now logged in.
-  thanks_youre_now_logged_in: Danke! Du bist jetzt angemeldet.
-  #en: the_comment_was_deleted: The comment was deleted.
-  the_comment_was_deleted: "Der Kommentar wurde gelöscht."
-  #en: the_friendship_was_accepted: The friendship was accepted.
-  the_friendship_was_accepted: Die Verbindung wurde angenommen.
-  #en: the_friendship_was_denied: The friendship was denied.
-  the_friendship_was_denied: Die Verbindung wurde abgelehnt.
-  #en: the_more_people_you_invite_the_better: The more people you invite, the better
-  the_more_people_you_invite_the_better: Je mehr Menschen davon wissen, desto besser kann
-  #en: the_service_was_deleted: The service was deleted.
-  the_service_was_deleted: "Der Service wurde gelöscht."
-  #en: the_slideshow_is_disabled: The slideshow is disabled.
-  the_slideshow_is_disabled: Die Slideshow ist verfügbar.
-  #en: the_team: The %{site} Team <%{email}>
-  the_team: "Das %{site} Team <%{email}>"
-  #en: the_user_was_activated: The user was activated
-  the_user_was_activated: Der Benutzer wurde aktiviert
-  #en: the_user_was_deleted: The user was deleted.
-  the_user_was_deleted: "Der Benutzer wurde gelöscht."
-  #en: this_forum_is_still_getting_started: "This forum is still getting started ... here are some blog posts to get you thinking ..."
-  this_forum_is_still_getting_started: "Dieses Forum ist gerade erst gestartet ... hier ein paar Blogeinträge zur Anregung ..."
-  #en: this_friendship_is_pending: This Friendship is pending.
-  this_friendship_is_pending: Diese Verbindung ist noch nicht bestätigt.
-  #en: this_is_your_dashboard: This is your dashboard.
-  this_is_your_dashboard: "Das ist deine Übersicht."
-  #en: this_month_best: "This month's Best"
-  this_month_best: "Das Beste des Monats"
-  #en: this_story_is_awesome: "This story is awesome!"
-  this_story_is_awesome: "Diese Geschichte ist cool!"
-  #en: this_topic_is_locked: This topic is locked.
-  this_topic_is_locked: Das Thema ist gesperrt.
-  #en: private_user_profile_message: This user's profile is not public. You'll need to create an account and log in to access it.
-  private_user_profile_message: "Das Benutzerprofil ist nicht Öffentlich. Du musst angemeldet sein, um es sehen zu können."
-  #en: thumb: Thumb
-  thumb: Miniatur
-  #en: time_constrained: Time constrained
-  time_constrained: Zeit ist begrenzt
-  #en: tips: "Tips:"
-  tips: "Hinweise"
-  #en: title: Title
-  title: Titel
-  #en: title_required: "Title (required)"
-  title_required: Titel (erforderlich)
-  #en: to: To
-  to: An
-  #en: to_accept: to accept
-  to_accept: ", dass er bestätigt"
-  #en: to_get_recommended_content_on_your_dashboard: to start getting recommended content on your dashboard.
-  to_get_recommended_content_on_your_dashboard: "Zum Start bring Inhalt in deine Übersicht."
-  #en: to_get_started_with_clippings_first: To get started with clippings, first 
-  to_get_started_with_clippings_first: "Um mit den Clippings zu beginnen:" 
-  #en: to_start_adding_friends: To start adding friends, you can
-  to_start_adding_friends: "Um Verbindungen hinzuzufügen, kannst du"
-  #en: to_you: You
-  to_you: Dich
-  #en: toggle: Toggle
-  toggle: "An-/Ausschalten:"
-  #en_ top_pros: Top Pros
-  top_pros: Top Profis
-  #en: top_writers: Top Writers
-  top_writers: Top Verfasser
-  #en: topic: Topics
-  topic: Thema
-  #en: topics: Topics
-  topics: Themen
-  #en: topic_deleted: Topic '%{topic}' was deleted.
-  topic_deleted: "Thema gelöscht"
-  #en: topic_locked: Topic locked
-  topic_locked: "Thema gesperrt"
-  #en: total_users: Total users
-  total_users: Anzahl Benutzer
-  #en: total_votes: Total votes
-  total_votes: Anzahl Stimmen
-  #en: type_a_username: Type a username
-  type_a_username: Tippe einen Benutzernamen ein
-  #en: type_your_password: "Type your password:"
-  type_your_password: "Gib dein Passwort ein:"
-  #en: uh_oh_we_couldnt_log_you_in_with_the_username_and_password_you_entered_try_again: Uh oh. We couldn't log you in with the username and password you entered. Try again?
-  uh_oh_we_couldnt_log_you_in_with_the_username_and_password_you_entered_try_again: Uh oh. Die Kombination aus Benutzer und Passwort scheint nicht zu stimmen. Willst du es noch mal versuchen?
-  #en: un_favorite_this: Un-favorite this
-  un_favorite_this: Aus Favoriten entfernen
-  #en: unactivated_users: Unactivated users
-  unactivated_users: Nicht aktivierte Benutzer
-  #en: uncategorized: Uncategorized
-  uncategorized: Unkategorisiert
-  #en: update: Update
-  update: "Änderung"
-  #en: update_profile_and_tag_yourself: Update your profile and tag yourself
-  update_profile_and_tag_yourself: "Änder dein Profil und ergänze deine Tags."
-  #en: update_your_profile: update your profile
-  update_your_profile: Profilpflege
-  #en: updated_at: Updated at
-  updated_at: geändert am
-  #en: updated_their_profile: updated their profile
-  updated_their_profile: "hat das persönliche Profil geändert"
-  #en: upload_a_profile_photo: "Upload a profile photo"
-  upload_a_profile_photo: "Ein Profil Foto hochladen"  
-  #en: upload_an_image_for_your_post: Upload an image for your post
-  upload_an_image_for_your_post: Foto zum Eintrag hochladen
-  #en: upload_and_continue_to_step_two: Upload, and continue to step two
-  upload_and_continue_to_step_two: Lade hoch und mach mit Schritt 2 weiter
-  #en: uploaded_a_photo: "uploaded a photo:"
-  uploaded_a_photo: "hat folgendes Foto hochgeladen:"
-  #en: uploaded_by: uploaded by
-  uploaded_by: hochgeladen von
-  #en: url: Url
-  url: Url
-  #en: user_bio_help: "<p>Your bio is first thing people see on your profile. Some ideas:<ul><li> Describe your sense of style</li><li> Explain what you love about life.</li><li> What's the last thing you purchased for a friend?</li></ul></p>"
-  user_bio_help: "<p>Über Mich ist das Erste was die Leute sehen, wenn Sie dein Profile besuchen. Einige Ideen:<ul><li> Describe your sense of style</li><li> Erkläre was du am Leben liebst.</li><li> Was hast du als letztes für einen Freund gekauft?</li></ul></p>"
-  #en: username: Username
-  username: Benutzername
-  #en: user: User
-  user: Benutzer
-  #en: users: Users
-  users: Benutzer
-  #en: users_blog: "%{user}'s Blog"
-  users_blog: Eintrag von %{user}
-  #en: user_clippings: Clippings of %{user}
-  user_clippings: Clippings von %{user}
-  #en: user_information: %{site} User information
-  user_information: "%{site} User information"
-  #en: user_login: User login
-  user_login: Benutzerkennung
-  #en: users_online: Users online
-  users_online: Benutzer online
-  #en: users_photos: "%{user}'s Photos"
-  users_photos: Benutzerfotos
-  #en: view: View
-  view: Zeige
-  #en: views: Views
-  views: Aufrufe
-  #en: views_count: Views
-  view_count: Aufrufe
-  #en: view_all_my_clippings: View all my clippings
-  view_all_my_clippings: Alle meine Clippings
-  #en: view_all_my_friend_requests: View all my friend requests
-  view_all_my_friend_requests: Meine Verbindungsanfragen
-  #en: view_all_my_photos: View all my photos
-  view_all_my_photos: Alle meine Fotos
-  #en: MyFotos
-  my_photos: Meine Fotos
-  #en: view_comment: View Comment
-  view_comment: Zeige Kommentar
-  #en: view_my: "View my:"
-  view_my: "Zeige mein(e)"
-  #en: view_my_blog: View my blog
-  view_my_blog: Meine Beiträge/Produkte
-  #en: view_profile: View profile
-  view_profile: Profil anzeigen
-  #en: voice: voice
-  voice: Stimme
-  #en: voices: Voices
-  voices: Stimme(n)
-  #en_ vote: Vote
-  vote: deine Stimme
-  #en: vote_now: Vote now!
-  vote_now: Stimm jetzt ab!
-  #en: votes: votes
-  votes: Stimme(n)
-  #en: waiting_for: Waiting for
-  waiting_for: Warte auf
-  #en: walkthrough_complete: You've completed the %{site} walk-through. Now you can continue exploring!
-  walkthrough_complete: Du hast dir %{site} angeschaut. Mach hier weiter!
-  #en: want_to_be_popular: Want to be popular?
-  want_to_be_popular: Willst du ein Held sein?
-  #en: want_to_list_your_services_on: Want to list your services on
-  want_to_list_your_services_on: Want to list your services on
-  #en: want_to_post_in_this_category: Want to post in this category?
-  want_to_post_in_this_category: "Der Kategorie etwas hinzufügen?"
-  #en: want_to_upload_multiple_files_at_once: Want to upload multiple files at once?
-  want_to_upload_multiple_files_at_once: Willst du mehrere Datei gleichzeitig hochladen?
-  #en: watch: Watch
-  watch: beobachte
-  #en: watch_ing: ing
-  watch_ing: tes
-  #en: watch_topic: Watch topic
-  watch_topic: beobachte Thema
-  #en: watching_topic: Watching topic
-  watching_topic: Thema wird beobachtet
-  #en: we_just_sent_an_e_mail_to: "We just sent an e-mail to:" 
-  we_just_sent_an_e_mail_to: "Wir haben eine E-Mail geschickt an:"
-  #en: we_need_you: We need you
-  we_need_you: Wir brauchen dich
-  #en: welcome_message: Welcome! %{login_link} or %{signup_link}
-  welcome_message: Hallo! %{login_link} oder %{signup_link}
-  #en: what_are_tags: 'What are "Tags"?'
-  what_are_tags: 'Was sind "Tags"?'
-  #en: what_is_popular: What's Popular
-  what_is_popular: Was ist beliebt
-  #en: whats_fresh: What's fresh
-  whats_fresh: Was ist gerade so los
-  #en: whats_hot: What's Hot
-  whats_hot: "Was ist heiß"
-  #en: whats_popular: What's Popular
-  whats_popular: Was ist beliebt
-  #en: when_checked_your_profile_will_be_visible_to_anyone: "When checked, your profile will be visible to anyone."
-  when_checked_your_profile_will_be_visible_to_anyone: "Wenn markiert, ist das Profil für jeden sichtbar."
-  #en: when_unchecked_your_profile_will_only_be_visible_to_people_who_are_logged_in_to: When unchecked, your profile will only be visible to people who are logged in to
-  when_unchecked_your_profile_will_only_be_visible_to_people_who_are_logged_in_to: Wenn nicht markiert, ist dein Profil nur Leuten sichtbar, die angemeldet sind bei uns.
-  #en: when_you_see_an_image_you_like_on_the_web: When you see an image you like on the Web, click the bookmarklet to save it to %{site}
-  when_you_see_an_image_you_like_on_the_web: Wenn du ein Bild siehst, dass du haben willst, klick das Bookmarklet, um es zu sichern auf %{site}
-  #en: why_sign_up: Why Sign up?
-  why_sign_up: Warum Registrieren?
-  #en: write_a_blog_post: Write a blog post!
-  write_a_blog_post: Mache einen Eintrag!
-  #en: write_a_message: "Write a message:"
-  write_a_message: "Schreibe eine Nachricht:"
-  #en: write_new_post: Write a '%{category}' post
-  write_new_post: Schreibe einen neuen Eintrag
-  #en: wrote_a_post: "wrote a post:"
-  wrote_a_post: "schrieb folgenden Beitrag:"
-  #en: yesterday: Yesterday
-  yesterday: Gestern
-  #en: you_are_editing_your_account: You are editing your account.
-  you_are_editing_your_account: "Du bearbeitest gerade dein Konto."
-  #en: you_are_editing_your_profile: "You're editing your profile."
-  you_are_editing_your_profile: "Du änderst gerade dein Profil."
-  #en: you_can_browse_all_content_and_users_on: You can browse all content and users on
-  you_can_browse_all_content_and_users_on: Du kannst dir den Inhalt und alle Benutzer anzeigen unter
-  #en: you_cant_delete_that_user: You can't delete that user.
-  you_cant_delete_that_user: "Der Benutzer kann nicht gel\xC3\xB6scht werden."
-  #en: you_can_select_up_to_5_files_at_a_time: You can select up to 5 files at a time.
-  you_can_select_up_to_5_files_at_a_time: Du kannst bis zu 5 Dateien gleichzeitig auswählen.
-  #en: you_could_tag_yourself: You could tag yourself
-  you_could_tag_yourself: Verfasse eigene Tags
-  #en: you_have: You have
-  you_have: Du hast
-  #en: you_have_already_voted: You have already voted.
-  you_have_already_voted: Du hast schon abgestimmt.
-  #en: you_have_created: You have created
-  you_have_created: Du erstelltest
-  #en: you_have_left: You have left
-  you_have_left: Du hinterliest
-  #en: you_have_no_clippings_use_the_bookmarklet_on_the_right_to_add_some: You have no clippings. Use the bookmarklet on the right to add some.
-  you_have_no_clippings_use_the_bookmarklet_on_the_right_to_add_some: Du hast keine Clippings. Mit dem Bookmarlet rechts kannst du welche hinzufügen.
-  #en: you_have_no_network_activity_yet: You have no network activity yet.
-  you_have_no_network_activity_yet: "Du hast noch keine Aktivität in deiner Verbindungsliste."
-  #en: you_have_pending_friendship_requests: You have pending friendship requests.
-  you_have_pending_friendship_requests: Du hast ausstehende Verbindungsanfragen
-  #en: you_have_uploaded: You have uploaded
-  you_have_uploaded: "Uploads:"
-  #en: you_have_written: You have written
-  you_have_written: "Geschrieben:"
-  #en: you_last_logged_in_on: You last logged in on
-  you_last_logged_in_on: "Letzte Anmeldung:"
-  #en: you_may_want_to_use_your_company_logo_or_a_photo_of_one_of_your_products_: "You may want to use your company logo, or a photo of one of your products. "
-  you_may_want_to_use_your_company_logo_or_a_photo_of_one_of_your_products_: "Sie können Ihr Firmenlogo oder ein Produktfoto verwenden."
-  #en: you_must_vote_to_see_the_results: You must vote to see the resuts.
-  you_must_vote_to_see_the_results: Du musst abstimmen, um die Ergebnisse zu sehen.
-  #en: your_about_text_goes_here: Your About Text Goes Here
-  your_about_text_goes_here: "Der Über-uns-Text kommt hier hin"
-  #en: your_changes_were_saved: Your changes were saved.
-  your_changes_were_saved: "Die Änderungen wurden gespeichert."
-  #en:   your_password_reset_instructions_have_been_emailed_to_you: Your password has been reset and emailed to you.
-  your_password_reset_instructions_have_been_emailed_to_you: "Dein Passwort wurde zurückgesetzt und dir per E-Mail zugesendet."
-  #en: your_post_was_deleted: Your post was deleted.
-  your_post_was_deleted: "Dein Eintrag wurde gelöscht."
-  #en: your_post_was_successfully_created: Your post was successfully created.
-  your_post_was_successfully_created: Dein Eintrag wurde erfolgreich angelegt.
-  #en: your_profile_photo: "Your profile photo:"
-  your_profile_photo: "Dein Profilfoto:"
-  #en: your_username_was_emailed_to_you: Your username was emailed to you.
-  your_username_was_emailed_to_you: Dein Benutername wurde dir per E-Mail zugeschickt.
-  #en: youve_been_logged_out_hope_you_come_back_soon: You've been logged out. Hope you come back soon!
-  youve_been_logged_out_hope_you_come_back_soon: Du bist abgemeldet. Schau wieder vorbei!
-  #en: zippostal_code: "ZIP/Postal code:"
-  zippostal_code: "Postleitzahl:"
-  #en: my_blog: My Blog
-  my_blog: Meine Beiträge/Berichte
-  #en: view_my_blog: View my blog
-  view_my_blog: Meine Beiträge/Produkte
-  blogs: Blogs
-  reviews: Erfahrungsberichte
-  recepies: Rezepte
-  news: Neues
-  message_sent: Nachricht verschickt.
-  new: Neue Nachricht
-  would_like_you_to_join: Magst du Beitreten?
-  please activate your new account: Bitte aktivieren:
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">TEST</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Find or create a branch…" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Find or create a branch…" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/projektlvz/lvzsys/blob/Backup/config/locales/en.yml"
+               data-name="Backup"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                Backup
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/projektlvz/lvzsys/blob/NeuerTest/config/locales/en.yml"
+               data-name="NeuerTest"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                NeuerTest
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/projektlvz/lvzsys/blob/TEST/config/locales/en.yml"
+               data-name="TEST"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                TEST
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/projektlvz/lvzsys/blob/betatest/config/locales/en.yml"
+               data-name="betatest"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                betatest
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/projektlvz/lvzsys/blob/master/config/locales/en.yml"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="UC0YTAWPMG4Co3BSFWWtTW12kKAgJn7BMeSWZ3voo4Vk3PtGCNQ56N/X4f5qVn/wXzwPAjCkOJ59nFYiC/fDvA==" /></div>
+          <svg aria-hidden="true" class="octicon octicon-git-branch select-menu-item-icon" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+            <div class="select-menu-item-text">
+              <span class="select-menu-item-heading">Create branch: <span class="js-new-item-name"></span></span>
+              <span class="description">from ‘TEST’</span>
+            </div>
+            <input type="hidden" name="name" id="name" class="js-new-item-value">
+            <input type="hidden" name="branch" id="branch" value="TEST">
+            <input type="hidden" name="path" id="path" value="config/locales/en.yml">
+</form>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="BtnGroup float-right">
+    <a href="/projektlvz/lvzsys/find/TEST"
+          class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/projektlvz/lvzsys/tree/TEST"><span>lvzsys</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/projektlvz/lvzsys/tree/TEST/config"><span>config</span></a></span><span class="separator">/</span><span class="js-path-segment"><a href="/projektlvz/lvzsys/tree/TEST/config/locales"><span>locales</span></a></span><span class="separator">/</span><strong class="final-path">en.yml</strong>
+  </div>
+</div>
+
+
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/projektlvz/lvzsys/commit/e1a16df21023cb9dfe1ea04e684945d7b9310019" data-pjax>
+          e1a16df
+        </a>
+        <relative-time datetime="2016-10-24T10:03:40Z">Oct 24, 2016</relative-time>
+      </span>
+      <div>
+        <img alt="@denis-elinext" class="avatar" height="20" src="https://avatars2.githubusercontent.com/u/17759528?v=3&amp;s=40" width="20" />
+        <a href="/denis-elinext" class="user-mention" rel="contributor">denis-elinext</a>
+          <a href="/projektlvz/lvzsys/commit/e1a16df21023cb9dfe1ea04e684945d7b9310019" class="message" data-pjax="true" title="Initial commit of the project + working CE.">Initial commit of the project + working CE.</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      <button type="button" class="btn-link muted-link contributors-toggle" data-facebox="#blob_contributors_box">
+        <strong>1</strong>
+         contributor
+      </button>
+      
+    </div>
+
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list" data-facebox-id="facebox-description">
+          <li class="facebox-user-list-item">
+            <img alt="@denis-elinext" height="24" src="https://avatars0.githubusercontent.com/u/17759528?v=3&amp;s=48" width="24" />
+            <a href="/denis-elinext">denis-elinext</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a href="/projektlvz/lvzsys/raw/TEST/config/locales/en.yml" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="/projektlvz/lvzsys/blame/TEST/config/locales/en.yml" class="btn btn-sm js-update-url-with-hash BtnGroup-item">Blame</a>
+      <a href="/projektlvz/lvzsys/commits/TEST/config/locales/en.yml" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://windows.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:windows">
+            <svg aria-hidden="true" class="octicon octicon-device-desktop" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/edit/TEST/config/locales/en.yml" class="inline-form js-update-url-with-hash" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qcUif/X4Wk03QoDcAGF8SbeOAddDIqhpWPgNYu7gCS6dNMF1+KNTy+o2EXB/Uq70hcSedVOg7jYUgM0nnv9pFw==" /></div>
+          <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+            aria-label="Edit this file" data-hotkey="e" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+          </button>
+</form>        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/projektlvz/lvzsys/delete/TEST/config/locales/en.yml" class="inline-form" data-form-nonce="e626e258fa09ddd32817597fef7866a19dfc6d65" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="kPxQPzs2cG3XKsGCDy4FEeK1hVOVon3cYzbofnw3n3+kDbM1Nm156wpeUC5wHdes0P8a8YUgO4MvTig7DCj/Rg==" /></div>
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Delete this file" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      24 lines (22 sloc)
+      <span class="file-info-divider"></span>
+    634 Bytes
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-yaml">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Files in the config/locales directory are used for internationalization</span></td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> and are automatically loaded by Rails. If you want to use locales other</span></td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> than English, add the necessary files in this directory.</span></td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> To use the locales, use `I18n.t`:</span></td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span>     I18n.t &#39;hello&#39;</span></td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> In views, this is aliased to just `t`:</span></td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span>     &lt;%= t(&#39;hello&#39;) %&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> To use a different locale, set it with `I18n.locale`:</span></td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span>     I18n.locale = :es</span></td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> This would use the information in config/locales/es.yml.</span></td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span></span></td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> To learn more, please read the Rails Internationalization guide</span></td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> available at http://guides.rubyonrails.org/i18n.html.</span></td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-ent">en:</span></td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">  <span class="pl-ent">hello:</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Hello world<span class="pl-pds">&quot;</span></span></td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.09446s from github-fe126-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-qGcOKOeLPwGU3+T/SVUz+lI+fnAAbb9axOapfoqVer0=" src="https://assets-cdn.github.com/assets/frameworks-a8670e28e78b3f0194dfe4ff495533fa523e7e70006dbf5ac4e6a97e8a957abd.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-i28Sf4dlo1o0664ifALHi3SQSHK/WAdbTtwTTU6ywhg=" src="https://assets-cdn.github.com/assets/github-8b6f127f8765a35a34ebae227c02c78b74904872bf58075b4edc134d4eb2c218.js"></script>
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+
