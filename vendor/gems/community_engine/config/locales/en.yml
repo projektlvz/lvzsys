@@ -1008,86 +1008,86 @@ en:
   showing_users: Zeige Benutzer
   #en: sign_up: Sign Up!
   sign_up: Registrieren!
-  sign_up_customer: As Customer
-  sign_up_shop_owner: As Shop Owner
-  shop_category: Shop Category
-  shop_location: Shop Address
-  bakery_shop: Bakery
-  farm_shop: Farm Shop
-  first_name: First Name
-  required_first_name: "(Required: Your first name must not contain spaces or special characters.)"
-  optional_first_name: "(Optional: Your first name must not contain spaces or special characters.)"
+  sign_up_customer: Als Kunde
+  sign_up_shop_owner: Als Ladengeschaeft
+  shop_category: Laden Kategorie
+  shop_location: Laden Adresse
+  bakery_shop: Bäckerei
+  farm_shop: Hofladen
+  first_name: Vorname
+  required_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
+  optional_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   last_name: Last Name
-  required_last_name: "(Required: Your last name must not contain spaces or special characters.)"
-  optional_last_name: "(Optional: Your last name must not contain spaces or special characters.)"
+  required_last_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
+  optional_last_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   facebook_link: Facebook Link
-  no_results_for_city: 'No results found for your city. Try again later.'
-  required_facebook_link: (Optional.Example - https://www.facebook.com/profile.php?id=100000504463883)
-  privacy_check: Privacy Setting
-  show_info: Allow other users to see your personal data.
-  shop_name: Shop Name
-  required_shop_name: "(Required.)"
-  shop_street: Shop Street
-  required_shop_street: "(Required: street address of your shop.)"
-  shop_country: Country
-  required_shop_country: "(Required: country.)"
+  no_results_for_city: 'Keine Ergebnisse für diese Stadt.'
+  required_facebook_link: (z.B. Facebook.com/XYZ)
+  privacy_check: Privatsphaere-Einstellungen
+  show_info: Andere Nutzer sollen meine persoenlichen Daten sehen (Namen)
+  shop_name: Laden Name
+  required_shop_name: "(Erforderlich.)"
+  shop_street: Laden Anschrift (Strasse)
+  required_shop_street: "(Anschrift deines Ladens notwendig (Strasse))"
+  shop_country: Land
+  required_shop_country: "(Notwendig: Land.)"
   shop_region: Region
-  required_shop_region: "(Required: region.)"
-  shop_zip_code: Zip Code
-  required_shop_zip_code: "(Required: zip code.)"
-  shop_features: Shop Features
-  vegan: Vegan products
-  gluten: Gluten-free products
-  diabetis: Diabetis-friendly products
-  lactose: Lactose-free products
-  gmo: Gmo-free products
-  self_made: Self-made products
-  select_city: Your city
-  customer_vegan: Vegan
-  customer_gluten: Gluten-free
-  customer_diabetis: Diabeties-friendly
-  customer_lactose: Lactose-free
-  customer_gmo: None-GMO
-  recipe: Recipe
-  review: Review
-  shop_info: Shop Information
-  shops: Shops
-  city: City
+  required_shop_region: "(Notwendig: Region.)"
+  shop_zip_code: PLZ
+  required_shop_zip_code: "(Notwendig: PLZ)"
+  shop_features: Laden Merkmale
+  vegan: Vegane Produkte
+  gluten: Gluten-freie Produkte
+  diabetis: Diabetiker-freundliche Produkte
+  lactose: Laktose-freie Produkte
+  gmo: Gentechnikfreie Produkte
+  self_made: Selbstgemachte Produkte
+  select_city: Deine Stadt
+  customer_vegan: Veganer
+  customer_gluten: Gluten-frei lebend
+  customer_diabetis: Diabetiker
+  customer_lactose: Laktose-frei lebend
+  customer_gmo: Interessiert an gentechnikfreien Produkten
+  recipe: Rezept
+  review: Erfahrungsbericht
+  shop_info: Laden Informationen
+  shops: Laeden
+  city: Stadt
   customer_vegan: Vegan
   customer_vegetarian: Vegetarian
   customer_gluten: Gluten intolerant
   customer_lactose: Lactose intollerant
-  customer_organic_food: Interested in organic food
-  customer_cook: Cook
+  customer_organic_food: Interessiert an gentechnikfreien Produkten
+  customer_cook: Koch
   customer_diabetic: Diabetic
-  edit_shop: Edit Shop
-  facebook_profile: Facebook profile
-  send_me_a_collaboration: Propose collaboration
-  customers_friends: Customers
-  shop_owner_friends: Shop owners
-  send_me_a_critic: Send a critic
-  send_a_recommendation: Recommend to a friend
-  organize_meeting: Organize a meeting
-  meeting_time: Meeting Time
+  edit_shop: Laden bearbeiten
+  facebook_profile: Facebook Profil
+  send_me_a_collaboration: Zusammenarbeit vorschlagen
+  customers_friends: Kunden
+  shop_owner_friends: Ladengeschaefte
+  send_me_a_critic: Kritik senden
+  send_a_recommendation: Einem Freund empfehlen
+  organize_meeting: Ein Treffen ausmachen
+  meeting_time: Zeitpunkt des Treffens
   hygiene: Hygiene
-  top_place: Top rating
-  staff: 'Staff/Friendliness'
-  food: Food Quality
-  organization: 'Organization/Opening Times'
-  expectations: I expected something else
-  below_expectations: Below expectations
-  disappointed: Disappointing
-  crucial_issue: Crucial issue
-  add_friends: Select friends to participate
-  friends_message: Message to your friends
-  shop_owner_message: Message to the shop owner
-  search_stores_by_name_and_feature: Shop name or category
-  severity: 'Critic severity:'
-  shop_rating: 'Shop rating: '
-  choose_a_photo_for_your_post: 'Choose a photo for your post:'
-  current_post_photo: 'Current post photo:'
-  address: Address
-  top_users: Score
+  top_place: Spitzenbewertung
+  staff: 'Mitarbeiter/Freundlichkeit'
+  food: Qualitaet der Nahrungsmittel
+  organization: 'Organisation/Oeffnungszeiten'
+  expectations: Ich habe etwas anderes erwartet
+  below_expectations: Schlechter als erwartet
+  disappointed: Enttaeuschend
+  crucial_issue: Schwerwiegende Missstaende
+  add_friends: Verbindungen auswaehlen zum mitmachen
+  friends_message: Nachricht an deine Verbindungen
+  shop_owner_message: Nachricht an den Laden
+  search_stores_by_name_and_feature: Ladenname oder Kategorie
+  severity: 'Gewichtung der Kritik:'
+  shop_rating: 'Laden Bewertung: '
+  choose_a_photo_for_your_post: 'Foto fuer den Beitrag auswaehlen:'
+  current_post_photo: 'Aktuelles Beitragsfoto:'
+  address: Addresse
+  top_users: High Score
  #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Ein Konto registrieren.
   #en: sign_up_for_a_: Sign up for a
