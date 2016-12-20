@@ -37,7 +37,7 @@ en:
       literal_date: "%B %d, %Y"
       short_literal_date: "%b %d, %Y"
       time_ago: "%l:%M%p"
-
+d
   activerecord:
     attributes:
       photo:
@@ -52,13 +52,13 @@ en:
   #en: a_few_seconds_ago:  a few seconds ago
   a_few_seconds_ago:  a few seconds ago
   #en: about_me: About Me
-  about_me: About Me
+  about_me: Aboutsadasdfsadd  Me
   #en: about_you: About You
-  about_you: About You
+  about_you: Aboufsdfsdff t You
   #en: admin_pages: Pages
-  admin_pages: Pages
+  admin_pages: Pages fdsfdsfdsf 
   #en: accept: Accept
-  accept: Accept
+  accept: Accept fdsfdsf
   #en: accepted: accepted
   accepted: accepted
   #en: accepted_friendships: %{count} Accepted Friendships
