@@ -66,211 +66,187 @@ en:
     one: 1 Accepted Friendship
     other: "%{count} Accepted Friendships"
   #en: accept_this_request: Accept this request
-  accept_this_request: Accept this request
+  accept_this_request: Anfrage bestätigen
   #en: account: account
-  account: account
+  account: Konto
   #en: account_activation_error: Account activation failed. Your account may already be active. Try logging in or e-mail %{email} for help.
-  account_activation_error: "Account activation failed. Your account may already be active. Try logging in or e-mail %{email} for help."
+  account_activation_error: Kontoaktivierungsfehler. Schick eine Mail an %{email}
   #en: account_settings: Account settings
-  account_settings: Account settings
+  account_settings: Kontenoptionen
   #en: actions: Actions
-  actions: Actions
+  actions: Aktionen
   #en: activate: Activate
-  activate: Activate
+  activate: Aktivieren
   #en: activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
-  activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
+  activation_email_not_sent_message: Aktivierungs-EMail konnte nicht gesendet werden. Ist der Benutzer vielleicht schon aktiviert?
   #en: activation_email_resent_message: An activation e-mail was resent to the e-mail address you used to sign up.
-  activation_email_resent_message: An activation e-mail was resent to the e-mail address you used to sign up.  
+  activation_email_resent_message: Die Aktivierungs-EMail wurde erneut an die EMail Adresse geschickt, mit der Sie sich angemeldet haben.
   #en: active: active
-  active: active
+  active: Aktiv
   #en: active_users: Active Users
-  active_users: Active Users
+  active_users: Aktive Benutzer
   #en: activity_from_your_network: Activity from your network
-  activity_from_your_network: Activity from your network
+  activity_from_your_network: "Aktivit\xC3\xA4ten in deinem Netzwerk"
   #en: ad_was_successfully_created: Ad was successfully created.
-  ad_was_successfully_created: Ad was successfully created.
+  ad_was_successfully_created: Anzeige wurde erfolgreich angelegt.
   #en: ad_was_successfully_updated: Ad was successfully updated.
-  ad_was_successfully_updated: Ad was successfully updated.
+  ad_was_successfully_updated: "Anzeige wurde erfolgreich ge\xC3\xA4ndert."
   #en: add_a_photo: Add a photo
-  add_a_photo: Add a photo
+  add_a_photo: "Foto hinzuf\xC3\xBCgen"
   #en: add_a_poll: Add a poll
-  add_a_poll: Add a poll
+  add_a_poll: Erstelle eine Umfrage
   #en: add_comment: Add Comment
-  add_comment: Add Comment
+  add_comment: "Kommentar hinzuf\xC3\xBCgen"
   #en: add_from_my_address_book: "Add from my address book"
-  add_from_my_address_book: "Add from my address book"
+  add_from_my_address_book: "Füge aus meinem Adressbuch hinzu"
   #en: add_some_friends_to_get_started: Add some friends to get started!
-  add_some_friends_to_get_started: Add some friends to get started!
+  add_some_friends_to_get_started: "Um zu beginnen, lade ein paar Freunde ein!"
   #en: add_your_comment: Add Your Comment!
-  add_your_comment: Add Your Comment!
+  add_your_comment: "F\xC3\xBCgen deinen Kommentar hinzu!"
   #en: added_a_clipping: "added a clipping:"
-  added_a_clipping: "added a clipping:"
+  added_a_clipping: "Ein Clipping hinzuf\xC3\xBCgen:"
   #en: added_to_a_forum_topic: "added to a forum topic:"
-  added_to_a_forum_topic: "added to a forum topic:"
+  added_to_a_forum_topic: "zum Forenthema hinzugef\xC3\xBCgt:"
   #en: admin: Admin
-  admin: Admin
+  admin: Administrator
   #en: admin_controls: Admin Controls
-  admin_controls: Admin Controls
+  admin_controls: Admin Steuerung
   #en: admin_dashboard: Admin dashboard
-  admin_dashboard: Admin dashboard
-  #en: administer_events: Administer events
-  administer_events: Administer events
+  admin_dashboard: "Admin \xC3\x9Cbersicht"
   #en: ads: Ads
-  ads: Ads
+  ads: Anzeigen
   #en: advertise: Advertise
-  advertise: Advertise
+  advertise: Hier werben
   #en: advertise_on: Advertise on
-  advertise_on: Advertise on
+  advertise_on: Werbung auf
   #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
-  after_signing_up_youll_receive_an_e_mail_confirmation_message: "After signing up, you'll receive an e-mail confirmation message."
+  after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erh\xC3\xA4ltst du eine Best\xC3\xA4tigungsnachricht."
   #en: all_clippings_tagged: All clippings tagged %{tag_name}
-  all_clippings_tagged: "All clippings tagged %{tag_name}"
+  all_clippings_tagged: Alle Clippings zu diesem Schlagwort %{tag_name}
   #en: all_comments: All comments
-  all_comments: All comments
+  all_comments: Alle Kommentare
   #en: all_photos_tagged: All photos tagged %{tag_name}
-  all_photos_tagged: "All photos tagged %{tag_name}"
+  all_photos_tagged: Alle Fotos zu diesem Schlagwort %{tag_name}
   #en: all_posts_tagged: All posts tagged %{tag_name}
-  all_posts_tagged: "All posts tagged %{tag_name}"
+  all_posts_tagged: "Alle Eintr\xC3\xA4ge zu diesem Schlagwort %{tag_name}"
   #en: all_tags: All tags
-  all_tags: All tags
+  all_tags: Alle Schlagworte
   #en: all_users_tagged: All users tagged %{tag_name}
-  all_users_tagged: "All users tagged %{tag_name}"
-  #en: allow_rsvp: Allow RSVPs
-  allow_rsvp: Allow RSVPs
+  all_users_tagged: Alle Benutzer zu diesem Schlagwort %{tag_name}
   #en: already_have_an_account: Already have an account?
-  already_have_an_account: Already have an account?
-  #en: anonymous: Anonymous
-  anonymous: Anonymous  
+  already_have_an_account: Hast du schon ein Konto?
   #en: an_error_occurred: An error occurred
-  an_error_occurred: An error occurred
-  #en: are_attending_this_event: are attending this event
-  are_attending_this_event: are attending this event
-  #en: is_attending_this_event: is attending this event
-  is_attending_this_event: is attending this event
+  an_error_occurred: Es ist ein Fehler aufgetreten
   #en: are_you_sure: Are you sure?
-  are_you_sure: Are you sure?
-  #en: are_you_sure_you_want_to_delete_this_page: "Are you sure you want to delete this page?"
-  are_you_sure_you_want_to_delete_this_page: "Are you sure you want to delete this page?"
-  #en: are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"  
-  are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"
+  are_you_sure: Bist du dir sicher?
+  #en: are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"
+  are_you_sure_you_want_to_delete_this_photo: "Bist du dir sicher, das Foto zu löschen?"
   #en: are_you_sure_you_want_to_delete_this_post: "Are you sure you want to delete this post?"
-  are_you_sure_you_want_to_delete_this_post: "Are you sure you want to delete this post?"
+  are_you_sure_you_want_to_delete_this_post: "Bist du dir sicher, den Beitrag zu löschen?"
   #en: are_you_sure_you_want_to_permanently_delete_this_comment: "Are you sure you want to permanently delete this comment?"
-  are_you_sure_you_want_to_permanently_delete_this_comment: "Are you sure you want to permanently delete this comment?"
+  are_you_sure_you_want_to_permanently_delete_this_comment: "Bist du dir sicher, den Kommentar permanent zu löschen?"
   #en: are_you_sure_you_want_to_permanently_delete_this_user: Are you sure you want to permanently delete this user?
-  are_you_sure_you_want_to_permanently_delete_this_user: Are you sure you want to permanently delete this user?
-  #en: are_you_sure_you_want_to_permanently_delete_this_user_and_mark_as_spam: Are you sure you want to permanently delete this user and mark it as spam!?
-  are_you_sure_you_want_to_permanently_delete_this_user_and_mark_as_spam: Are you sure you want to permanently delete this user and mark it as spam!?
+  are_you_sure_you_want_to_permanently_delete_this_user: Bist du dir sicher, den Benutzer dauerhaft zu löschen?
   #en: assume_id: Assume ID
-  assume_id: Assume ID
+  assume_id: "ID \xC3\xBCbernehmen"
   #en: assume_user_id: "Assume this user's ID"
-  assume_user_id: "Assume this user's ID"
+  assume_user_id: "Übernehmen der ID dieses Benutzers"
   #en: assign_role: Assign role
-  assign_role: Assign role
-  #en: attendees: Attendees
-  attendees: Attendees
+  assign_role: Rolle zuordnen
   #en: audience: Audience
-  audience: Audience
+  audience: Publikum
   #en: author: Author
-  author: Author
+  author: Autor
   #en: back: Back
-  back: Back
+  back: "Zur\xC3\xBCck"
   #en: back_to_all_users: Back to all users
-  back_to_all_users: Back to all users
+  back_to_all_users: Zurück zu allen Benutzern
   #en: back_to_my_photos: Back to my photos
-  back_to_my_photos: Back to my photos
+  back_to_my_photos: Zurück zu meinen Fotos
   #en: back_to_all_statistics: Back to all statistics
-  back_to_all_statistics: Back to all statistics
+  back_to_all_statistics: Zurück zu den Statistiken
   #en: banner_subtitle_required: "Banner subtitle (required):"
-  banner_subtitle_required: "Banner subtitle (required):"
+  banner_subtitle_required: "Banneruntertitel (erforderlich):"
   #en: banner_title_required: "Banner title (required):"
-  banner_title_required: "Banner title (required):"
+  banner_title_required: "Bannertitel (erforderlich):"
+  #en: becomes: becomes.
+  becomes: werden.
   #en: begin: begin
-  begin: begin
+  begin: Beginn
   #en: begin_required: begin (required)
-  begin_required: begin (required)
+  begin_required: Beginn (erforderlich)
   #en: bigger_font_size_more_popular_tag: "Bigger font size = more popular tag"
-  bigger_font_size_more_popular_tag: "Bigger font size = more popular tag"
+  bigger_font_size_more_popular_tag: "Je größer die Schrift, desto beliebter der Tag"
   #en: birthday: Birthday
-  birthday: Birthday
+  birthday: Geburtstag
   #en: birthday_gender: Birthday & Gender
-  birthday_gender: "Birthday & Gender"
+  birthday_gender: Geburtsdatum und Geschlecht
   #en: blog: Blog
   blog: Blog
+  #en: blog_posts: Blog posts
+  blog_posts: Blogbeiträge
   #en: body_text: Body Text
-  body_text: Body Text
+  body_text: Haupttext
   #en: body_text_reqiured: Body Text (required)
-  body_text_required: Body Text (required)
+  body_text_required: Haupttext (erforderlich)
   #en: bookmarklet: bookmarklet
-  bookmarklet: bookmarklet
+  bookmarklet: Bookmarklet
   #en: browse_all_members: browse all members
-  browse_all_members: browse all members
+  browse_all_members: Alle Mitglieder anzeigen
   #en: browse_content_by_tags: Browse content by tags
-  browse_content_by_tags: Browse content by tags
-  #en: by: by %{login}
-  by: "by %{login}"
+  browse_content_by_tags: Inhalt nach Tags anzeigen
+  #en: by: by
+  by: von
   #en: by_looking_at_the: by looking at the
-  by_looking_at_the: by looking at the
-  #en: cache_cleared: The cache was cleared
-  cache_cleared: The cache was cleared
-  #en: cache_clear_link: Clear the cache
-  cache_clear_link: Clear the cache  
+  by_looking_at_the: durch das Betrachten
   #en: cancel: Cancel
-  cancel: Cancel
+  cancel: Abbrechen
   #en: cancel_and_go_back_to: cancel and go back to
-  cancel_and_go_back_to: cancel and go back to
+  cancel_and_go_back_to: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_all_features: cancel and go back to all features
-  cancel_and_go_back_to_all_features: cancel and go back to all features
+  cancel_and_go_back_to_all_features: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
-  cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
+  cancel_and_go_back_to_my_clippings: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_photos: cancel and go back to my photos
-  cancel_and_go_back_to_my_photos: cancel and go back to my photos
+  cancel_and_go_back_to_my_photos: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  #en: cancel_and_go_back_to_pages: cancel and go back to pages
-  cancel_and_go_back_to_pages: cancel and go back to pages
-  #en: cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
-  cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
+  cancel_and_go_back_to_my_posts: "abbrechen und zur\xC3\xBCck gehen"
   #en: categories: Categories
-  categories: Products
+  categories: Kategorien
   #en: category: Category
-  category: Category
+  category: Kategorie
   #en: category_was_successfully_created: Category was successfully created.
-  category_was_successfully_created: Category was successfully created.
-  #en: check_out_this_story_on: Check out this story on %{site}
-  check_out_this_story_on: Check out this story on %{site}
-  #en: choices: Choices
-  choices: Choices
+  category_was_successfully_created: Kategorie erfolgreich angelegt
+  #en: choises: Choices
+  choises: Auswahl
   #en: choose_a_photo_for_your_profile: "Choose a photo for your profile:"
-  choose_a_photo_for_your_profile: "Choose a photo for your profile:"
+  choose_a_photo_for_your_profile: "W\xC3\xA4hle ein Foto f\xC3\xBCr dein Profil aus:"
   #en: choose_a_photo_to_upload: "Choose a photo to upload:"
-  choose_a_photo_to_upload: "Choose a photo to upload:"
+  choose_a_photo_to_upload: "W\xC3\xA4hle ein Foto zum hochladen aus:"
   #en: choose_your_location: Choose your location
-  choose_your_location: Choose your location
+  choose_your_location: "W\xC3\xA4hle deinen Ort"
   #en: click_here: click here
-  click_here: click here
+  click_here: klicke hier
   #en: click_here_to_retrieve_it: Click here to retrieve it
-  click_here_to_retrieve_it: Click here to retrieve it
+  click_here_to_retrieve_it: Klicke hier; wir schicken eine E-Mail
   #en: click_here_to_sign_up: Click here to sign up
-  click_here_to_sign_up: Click here to sign up
+  click_here_to_sign_up: Klicke hier, um dich zu registrieren
   #en: click_here_to_sign_up_for_an_account_and_enter: Click here to sign up for an account and enter
-  click_here_to_sign_up_for_an_account_and_enter: Click here to sign up for an account and enter
+  click_here_to_sign_up_for_an_account_and_enter: Klicke hier, um dich zu registrieren und fortzufahren
   #en: click_here_to_upload_one: Click here to upload one!
-  click_here_to_upload_one: Click here to upload one!
+  click_here_to_upload_one: Klick hier, um ein Foto hochzuladen!
   #en: click_here_to_view_as_a_list: Click here to view as a list
-  click_here_to_view_as_a_list: Click here to view as a list
+  click_here_to_view_as_a_list: Klick hier zum Ansehen als Liste
   #en: click_on_an_image_below_to_clip_it: Click on an image below to clip it
-  click_on_an_image_below_to_clip_it: Click on an image below to clip it
+  click_on_an_image_below_to_clip_it: Klick auf ein Bild unten, um es aufzunehmen
   #en: click_the_activation_link_in_the_e_mail_to_log_in: Click the activation link in the e-mail to log in.
-  click_the_activation_link_in_the_e_mail_to_log_in: Click the activation link in the e-mail to log in.
+  click_the_activation_link_in_the_e_mail_to_log_in: Klicke auf den Aktivierungslink in der E-Mail, um dich einzuloggen.
   #en: click_to_accept_it: Click to accept it!
-  click_to_accept_it: Click to accept it!
+  click_to_accept_id: Hier geht es zur Bestätigung.
   #en: clipping_comments: Clipping Comments
-  clipping_comments: Clipping Comments
-  #en: clipping_from_user: Clipping from %{user}
-  clipping_from_user: "Clipping from %{user}"
+  clipping_comments: Clipping-Kommentare
   #en: clipping_was_successfully_created: Clipping was successfully created.
-  clipping_was_successfully_created: Clipping was successfully created.
+  clipping_was_successfully_created: Clipping wurde erfolgreich angelegt.
   #en: clippings: Clippings
   clippings: Clippings
   #en: clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings are a way to save images you like from around the Web
