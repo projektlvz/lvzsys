@@ -52,9 +52,9 @@ en:
   #en: a_few_seconds_ago:  a few seconds ago
   a_few_seconds_ago:  Vor ein paar Sekunden
   #en: about_me: About Me
-  about_me: Uber mich
+  about_me: Über mich
   #en: about_you: About You
-  about_you: Ueber dich
+  about_you: Über dich
   #en: admin_pages: Pages
   admin_pages: Seiten
   #en: accept: Accept
@@ -100,7 +100,7 @@ en:
   #en: add_from_my_address_book: "Add from my address book"
   add_from_my_address_book: "Füge aus meinem Adressbuch hinzu"
   #en: add_some_friends_to_get_started: Add some friends to get started!
-  add_some_friends_to_get_started: "Um zu beginnen, lade ein paar Freunde ein!"
+  add_some_friends_to_get_started: "Um zu beginnen, lade ein paar deiner Freunde als Verbindungen ein!"
   #en: add_your_comment: Add Your Comment!
   add_your_comment: "Neuer Kommentar erstellen!"
   #en: added_a_clipping: "added a clipping:"
@@ -300,7 +300,7 @@ en:
   #en: dashboard: Dashboard
   dashboard: "Übersicht"
   #en: dashboard_friends: Once you start adding friends, you'll be able to track their activity on %{site} here
-  dashboard_friends: Die Aktivitäten deiner Freunde kannst du hier auf %{site} verfolgen
+  dashboard_friends: Die Aktivitäten deiner Verbindungen kannst du hier auf %{site} verfolgen
   #en: date_created: Date Created
   date_created: Erstellungsdatum
   #en: date_published: Date Published
@@ -336,7 +336,7 @@ en:
   #en: denied: denied
   denied: abgelehnt
   #en: denied_friendships: Denied Friendships
-  denied_friendships: abgelehnte Freundschaften
+  denied_friendships: abgelehnte Verbindungen
   #en: description: Description
   description: Beschreibung
   #en: destroy: Destroy
@@ -400,9 +400,9 @@ en:
   #en: email_signup_thanks: Thanks for signing up! You should receive an e-mail confirmation shortly at %{email}
   email_signup_thanks: Danke für die Registrierung! Du erhälst umgehend eine e-mail zur Bestätigung unter %{email}
   #en: email_this_story_to_friends: "E-mail this story to friends"
-  email_this_story_to_friends: "E-mail diese Geschichte deinen Freunden"
+  email_this_story_to_friends: "E-mail diese Geschichte deinen Freunden und Bekannten"
   #en: email_to_friends: E-mail to friends
-  email_to_friends: E-mail an Freunde
+  email_to_friends: E-mail
   #en: end: end
   end: Ende
   #en: end_date: End date
@@ -478,15 +478,15 @@ en:
   #en: frequently_asked_questions: Frequently Asked Questions
   frequently_asked_questions: "Häufig gestellte Fragen und Antworten"
   #en: friend: friend
-  friend: Freund
+  friend: Verbindung
   #en: friends: Friends
-  friends: Freunde
+  friends: Verbindungen
   #en: friendship_could_not_be_created: Friendship could not be created
-  friendship_could_not_be_created: Freundschaft konnte nicht angelegt werden
+  friendship_could_not_be_created: Verbindung konnte nicht angelegt werden
   #en: friendship_request_detail: Friendship request detail
-  friendship_request_detail: Details der Freundschaftsanfrage
+  friendship_request_detail: Details der Verbindungsanfrage
   #en: friendship_requested: Requested friendship with %{friend}.
-  friendship_requested: Freundschaft von %{friend} angefragt.
+  friendship_requested: Verbindung von %{friend} angefragt.
   #en: from: From
   from: Von
   #en: from2: From
@@ -554,7 +554,7 @@ en:
   #en: insert: Insert
   insert: Einfügen
   #en: invite_a_friend: Invite a friend
-  invite_a_friend: Lade einen Freund ein
+  invite_a_friend: Lade einee Verbindung ein
   #en: invitation_was_successfully_created: Invitation was successfully created.
   invitation_was_successfully_created: Einladung wurde erfolgreich angelegt.
   #en: invite_message: The more people you invite the better %{site} becomes.
@@ -562,7 +562,7 @@ en:
   #en: invite_some_customers: Invite some customers!
   invite_some_customers: Lade einige Kunden ein!
   #en: invite_your_friends_to_join: Invite Your Friends To Join!
-  invite_your_friends_to_join: Lade deine Freunde ein, sich zu beteiligen!
+  invite_your_friends_to_join: Lade deine Verbindungen ein, sich zu beteiligen!
   #en: is_great_check_it_out_youll_love_it: is great, check it out you'll love it!
   is_great_check_it_out_youll_love_it: ist großartig, du wirst es lieben!
   #en: items: Items
@@ -638,7 +638,7 @@ en:
   #en: male: Male
   male: "Männlich"
   #en: manage_posts: Manage Posts
-  manage_posts: "Einträge verwalten"
+  manage_posts: "Eigene Beiträge verwalten"
   #en: medium: Medium
   medium: Mittel
   #en: megabyte_upload_limit: megabyte upload limit
@@ -684,7 +684,7 @@ en:
   #en: my_details: My Details
   my_details: Meine Details
   #en: my_friends: My Friends
-  my_friends: Meine Freunde
+  my_friends: Meine Verbindungen
   #en: my_profile: My Profile
   my_profile: Mein Profil
   #en: my_recent_comments: My recent comments
@@ -752,7 +752,7 @@ en:
   #en: notify_of_comments: Notify of comments
   notify_of_comments: Benachrichtigung bei Kommentaren
   #en: notify_of_friend_requests: Notify of friend requests
-  notify_of_friend_requests: Benachrichtigung bei Freundschaftsanfragen
+  notify_of_friend_requests: Benachrichtigung bei Verbindungsanfragen
   #en: on: On
   on: Zu
   #en: on_commentable: On
@@ -786,11 +786,11 @@ en:
   #en: pending: pending
   pending: ausstehend
   #en: pending_friendships: Pending Friendships
-  pending_friendships: zu bestätigende Freundschaften
+  pending_friendships: zu bestätigende Verbindungsanfragen
   #en: people: People
   people: Leute
   #en: people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: People who sign up using your invitation will automatically be added as your friends on
-  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: "Leute, die sich durch deine Einladung angemeldet haben, werden automatisch zu deinen Freunden hinzugef\xEF\xBF\xBD auf" 
+  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: "Leute, die sich durch deine Einladung angemeldet haben, werden automatisch zu deinen Verbindungen hinzugefuegt" 
   #en: permanently_delete_this_clipping: Permanently delete this clipping?
   permanently_delete_this_clipping: "Soll das Clipping dauerhaft gelöscht werden?"
   #en: permanently_delete_this_event: Permanently delete this event?
@@ -905,19 +905,19 @@ en:
   #en: remove_moderator: Remove moderator
   remove_moderator: Moderator wegnehmen
   #en: remove_this_friend: Remove this friend
-  remove_this_friend: Diesen Freund löschen
+  remove_this_friend: Diese Verbindung löschen
   #en: reply: Reply
   reply: Antworten
   #en: reply_to_topic: Reply
   reply_to_topic: Antworte auf das Thema
   #en: request_friendship: Request friendship
-  request_friendship: Freundschaftsanfrage
+  request_friendship: Verbindungsanfrage
   #en: requested: requested
   requested: angefragt
   #en: requested_friendship_with: Requested friendship with
-  requested_friendship_with: Freundschaft angefragt bei
+  requested_friendship_with: Verbindung angefragt bei
   #en: requesting_friendship: Requesting friendship
-  requesting_friendship: Freundschaftsanfrage
+  requesting_friendship: Verbindungsanfrage
   #en: required: (required)
   required: (erforderlich)
   #en: required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
@@ -985,7 +985,7 @@ en:
   #en: sent_messages: Sent messages
   sent_messages: gesendete Nachrichten
   #en: send_this_story_to_friends: Send this message to friends
-  send_this_story_to_friends: Schick diese Nachricht an Freunde
+  send_this_story_to_friends: Empfehlen
   #en: service_could_not_be_deleted: Service could not be deleted.
   service_could_not_be_deleted: "Service kann nicht gelöscht werden."
   #en: share_the_love: Share the love
@@ -1015,8 +1015,8 @@ en:
   bakery_shop: Bäckerei
   farm_shop: Hofladen
   first_name: Vorname
-  my_blog: Meine Beitraege
-  post_found: Beitraege gefunden
+  my_blog: Meine Beiträge
+  post_found: Beiträge gefunden
   required_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   optional_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   last_name: Nachname
@@ -1048,6 +1048,7 @@ en:
   customer_vegan: Veganer
   customer_gluten: Gluten-frei lebend
   customer_diabetis: Diabetiker
+  my_photos: Meine Bilder
   customer_lactose: Laktose-frei lebend
   customer_gmo: Interessiert an gentechnikfreien Produkten
   recipe: Rezept
@@ -1072,7 +1073,7 @@ en:
   customers_friends: Kunden
   shop_owner_friends: Ladengeschaefte
   send_me_a_critic: Kritik senden
-  send_a_recommendation: Einem Freund empfehlen
+  send_a_recommendation: Einer Verbindung empfehlen
   organize_meeting: Ein Treffen ausmachen
   meeting_time: Zeitpunkt des Treffens
   hygiene: Hygiene
@@ -1116,7 +1117,7 @@ en:
   #en: sorry_there_was_an_error: Sorry, there was an error.
   sorry_there_was_an_error: Sorry, es ist ein Fehler aufgetreten.
   #en: sorry_there_was_an_error_requesting_friendship: Sorry, there was an error requesting friendship.
-  sorry_there_was_an_error_requesting_friendship: Sorry, bei der Freundschaftsanfrage ist ein Fehler aufgetreten.
+  sorry_there_was_an_error_requesting_friendship: Sorry, bei der Verbindungsanfrage ist ein Fehler aufgetreten.
   #en: sorry_there_was_an_error_uploading_the_photo: Sorry, there was an error uploading the photo.
   sorry_there_was_an_error_uploading_the_photo: Sorry, beim Hochladen des Fotos ist ein Fehler aufgetreten.
   #en: sorry_we_dont_recognize_that_email_address: Sorry. We don't recognize that email address.
@@ -1170,9 +1171,9 @@ en:
   #en: the_comment_was_deleted: The comment was deleted.
   the_comment_was_deleted: "Der Kommentar wurde gelöscht."
   #en: the_friendship_was_accepted: The friendship was accepted.
-  the_friendship_was_accepted: Die Freundschaft wurde angenommen.
+  the_friendship_was_accepted: Die Verbindung wurde eingegangen.
   #en: the_friendship_was_denied: The friendship was denied.
-  the_friendship_was_denied: Die Freundschaft wurde abgelehnt.
+  the_friendship_was_denied: Die Verbindung wurde abgelehnt.
   #en: the_more_people_you_invite_the_better: The more people you invite, the better
   the_more_people_you_invite_the_better: Je mehr Menschen davon wissen, desto besser kann
   #en: the_service_was_deleted: The service was deleted.
@@ -1188,7 +1189,7 @@ en:
   #en: this_forum_is_still_getting_started: "This forum is still getting started ... here are some blog posts to get you thinking ..."
   this_forum_is_still_getting_started: "Dieses Forum ist gerade erst gestartet ... hier ein paar Blogeinträge zur Anregung ..."
   #en: this_friendship_is_pending: This Friendship is pending.
-  this_friendship_is_pending: Diese Freundschaft ist noch nicht bestätigt.
+  this_friendship_is_pending: Diese Verbindung ist noch nicht bestätigt.
   #en: this_is_your_dashboard: This is your dashboard.
   this_is_your_dashboard: "Das ist deine Übersicht."
   #en: this_month_best: "This month's Best"
@@ -1218,7 +1219,7 @@ en:
   #en: to_get_started_with_clippings_first: To get started with clippings, first 
   to_get_started_with_clippings_first: "Um mit den Clippings zu beginnen:" 
   #en: to_start_adding_friends: To start adding friends, you can
-  to_start_adding_friends: "Um Freunde hinzuzufügen, kannst du"
+  to_start_adding_friends: "Um Verbindungen hinzuzufügen, kannst du"
   #en: to_you: You
   to_you: Dich
   #en: toggle: Toggle
@@ -1302,7 +1303,7 @@ en:
   #en: view_all_my_clippings: View all my clippings
   view_all_my_clippings: Alle meine Clippings
   #en: view_all_my_friend_requests: View all my friend requests
-  view_all_my_friend_requests: Meine Freundschaftsanfragen
+  view_all_my_friend_requests: Meine Verbindungsanfragen
   #en: view_all_my_photos: View all my photos
   view_all_my_photos: Alle meine Fotos
   #en: view_comment: View Comment
@@ -1402,7 +1403,7 @@ en:
   #en: you_have_no_network_activity_yet: You have no network activity yet.
   you_have_no_network_activity_yet: "Du hast noch keine Aktivität in deinem Netzwerk."
   #en: you_have_pending_friendship_requests: You have pending friendship requests.
-  you_have_pending_friendship_requests: Du hast ausstehende Freundschaftsanfragen
+  you_have_pending_friendship_requests: Du hast ausstehende Verbindungsanfragen
   #en: you_have_uploaded: You have uploaded
   you_have_uploaded: "Uploads:"
   #en: you_have_written: You have written
