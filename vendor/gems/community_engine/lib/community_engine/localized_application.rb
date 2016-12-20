@@ -5,7 +5,7 @@ module LocalizedApplication
   # If none of these works, the Globalite default locale is set (en-*)
   def set_locale
     if Rails.env.eql?('test')
-      configatron.community_locale = 'en'
+      configatron.community_locale = 'de'
     end
     # Get the current path and request method (useful in the layout for changing the language)
     @current_path = request.env['PATH_INFO']
