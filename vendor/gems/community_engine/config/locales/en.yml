@@ -86,33 +86,33 @@ en:
   #en: active_users: Active Users
   active_users: Aktive Benutzer
   #en: activity_from_your_network: Activity from your network
-  activity_from_your_network: "Aktivit\xC3\xA4ten in deinem Netzwerk"
+  activity_from_your_network: "Neuigkeiten in der Community"
   #en: ad_was_successfully_created: Ad was successfully created.
   ad_was_successfully_created: Anzeige wurde erfolgreich angelegt.
   #en: ad_was_successfully_updated: Ad was successfully updated.
   ad_was_successfully_updated: "Anzeige wurde erfolgreich ge\xC3\xA4ndert."
   #en: add_a_photo: Add a photo
-  add_a_photo: "Foto hinzuf\xC3\xBCgen"
+  add_a_photo: "Neues Foto"
   #en: add_a_poll: Add a poll
   add_a_poll: Erstelle eine Umfrage
   #en: add_comment: Add Comment
-  add_comment: "Kommentar hinzuf\xC3\xBCgen"
+  add_comment: "Neuer Kommentar"
   #en: add_from_my_address_book: "Add from my address book"
   add_from_my_address_book: "Füge aus meinem Adressbuch hinzu"
   #en: add_some_friends_to_get_started: Add some friends to get started!
   add_some_friends_to_get_started: "Um zu beginnen, lade ein paar Freunde ein!"
   #en: add_your_comment: Add Your Comment!
-  add_your_comment: "F\xC3\xBCgen deinen Kommentar hinzu!"
+  add_your_comment: "Neuer Kommentar erstellen!"
   #en: added_a_clipping: "added a clipping:"
   added_a_clipping: "Ein Clipping hinzuf\xC3\xBCgen:"
   #en: added_to_a_forum_topic: "added to a forum topic:"
-  added_to_a_forum_topic: "zum Forenthema hinzugef\xC3\xBCgt:"
+  added_to_a_forum_topic: "zum Forenthema addiert"
   #en: admin: Admin
   admin: Administrator
   #en: admin_controls: Admin Controls
   admin_controls: Admin Steuerung
   #en: admin_dashboard: Admin dashboard
-  admin_dashboard: "Admin \xC3\x9Cbersicht"
+  admin_dashboard: "Admin Uebersicht"
   #en: ads: Ads
   ads: Anzeigen
   #en: advertise: Advertise
@@ -120,7 +120,7 @@ en:
   #en: advertise_on: Advertise on
   advertise_on: Werbung auf
   #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
-  after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erh\xC3\xA4ltst du eine Best\xC3\xA4tigungsnachricht."
+  after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erhaeltst du eine Bestaetigungsnachricht."
   #en: all_clippings_tagged: All clippings tagged %{tag_name}
   all_clippings_tagged: Alle Clippings zu diesem Schlagwort %{tag_name}
   #en: all_comments: All comments
@@ -128,7 +128,7 @@ en:
   #en: all_photos_tagged: All photos tagged %{tag_name}
   all_photos_tagged: Alle Fotos zu diesem Schlagwort %{tag_name}
   #en: all_posts_tagged: All posts tagged %{tag_name}
-  all_posts_tagged: "Alle Eintr\xC3\xA4ge zu diesem Schlagwort %{tag_name}"
+  all_posts_tagged: "Alle Eintraege zu diesem Schlagwort %{tag_name}"
   #en: all_tags: All tags
   all_tags: Alle Schlagworte
   #en: all_users_tagged: All users tagged %{tag_name}
@@ -158,7 +158,7 @@ en:
   #en: author: Author
   author: Autor
   #en: back: Back
-  back: "Zur\xC3\xBCck"
+  back: "Zurueck"
   #en: back_to_all_users: Back to all users
   back_to_all_users: Zurück zu allen Benutzern
   #en: back_to_my_photos: Back to my photos
@@ -202,15 +202,15 @@ en:
   #en: cancel: Cancel
   cancel: Abbrechen
   #en: cancel_and_go_back_to: cancel and go back to
-  cancel_and_go_back_to: "abbrechen und zur\xC3\xBCck gehen"
+  cancel_and_go_back_to: "abbrechen und zurueck gehen"
   #en: cancel_and_go_back_to_all_features: cancel and go back to all features
-  cancel_and_go_back_to_all_features: "abbrechen und zur\xC3\xBCck gehen"
+  cancel_and_go_back_to_all_features: "abbrechen und zurueck gehen"
   #en: cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
-  cancel_and_go_back_to_my_clippings: "abbrechen und zur\xC3\xBCck gehen"
+  cancel_and_go_back_to_my_clippings: "abbrechen und zurueck gehen"
   #en: cancel_and_go_back_to_my_photos: cancel and go back to my photos
-  cancel_and_go_back_to_my_photos: "abbrechen und zur\xC3\xBCck gehen"
+  cancel_and_go_back_to_my_photos: "abbrechen und zurueck gehen"
   #en: cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  cancel_and_go_back_to_my_posts: "abbrechen und zur\xC3\xBCck gehen"
+  cancel_and_go_back_to_my_posts: "abbrechen und zurueck gehen"
   #en: categories: Categories
   categories: Kategorien
   #en: category: Category
@@ -220,11 +220,11 @@ en:
   #en: choises: Choices
   choises: Auswahl
   #en: choose_a_photo_for_your_profile: "Choose a photo for your profile:"
-  choose_a_photo_for_your_profile: "W\xC3\xA4hle ein Foto f\xC3\xBCr dein Profil aus:"
+  choose_a_photo_for_your_profile: "Profilfoto selektieren:"
   #en: choose_a_photo_to_upload: "Choose a photo to upload:"
-  choose_a_photo_to_upload: "W\xC3\xA4hle ein Foto zum hochladen aus:"
+  choose_a_photo_to_upload: "Foto zum hochladen selektieren:"
   #en: choose_your_location: Choose your location
-  choose_your_location: "W\xC3\xA4hle deinen Ort"
+  choose_your_location: "Waehle deinen Ort"
   #en: click_here: click here
   click_here: klicke hier
   #en: click_here_to_retrieve_it: Click here to retrieve it
@@ -1015,9 +1015,11 @@ en:
   bakery_shop: Bäckerei
   farm_shop: Hofladen
   first_name: Vorname
+  my_blog: Meine Beitraege
+  post_found: Beitraege gefunden:
   required_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   optional_first_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
-  last_name: Last Name
+  last_name: Nachname
   required_last_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   optional_last_name: "(Darf keine Leerzeichen oder Sonderzeichen enthalten)"
   facebook_link: Facebook Link
@@ -1052,14 +1054,18 @@ en:
   review: Erfahrungsbericht
   shop_info: Laden Informationen
   shops: Laeden
+  blogs: Blogs
+  reviews: Erfahrungsberichte
+  recepies: Rezepte
+  news: Neuigkeiten von Laeden
   city: Stadt
-  customer_vegan: Vegan
-  customer_vegetarian: Vegetarian
-  customer_gluten: Gluten intolerant
-  customer_lactose: Lactose intollerant
+  customer_vegan: Veganer
+  customer_vegetarian: Vegetarier
+  customer_gluten: Vermeidet Gluten
+  customer_lactose: Vermeidet Laktose
   customer_organic_food: Interessiert an gentechnikfreien Produkten
   customer_cook: Koch
-  customer_diabetic: Diabetic
+  customer_diabetic: Diabetiker
   edit_shop: Laden bearbeiten
   facebook_profile: Facebook Profil
   send_me_a_collaboration: Zusammenarbeit vorschlagen
@@ -1070,7 +1076,8 @@ en:
   organize_meeting: Ein Treffen ausmachen
   meeting_time: Zeitpunkt des Treffens
   hygiene: Hygiene
-  top_place: Spitzenbewertung
+  top_place: Platzierung
+  send_me_a_message: Private Nachricht senden
   staff: 'Mitarbeiter/Freundlichkeit'
   food: Qualitaet der Nahrungsmittel
   organization: 'Organisation/Oeffnungszeiten'
@@ -1377,7 +1384,7 @@ en:
   #en: you_can_browse_all_content_and_users_on: You can browse all content and users on
   you_can_browse_all_content_and_users_on: Du kannst dir den Inhalt und alle Benutzer anzeigen unter
   #en: you_cant_delete_that_user: You can't delete that user.
-  you_cant_delete_that_user: "Der Benutzer kann nicht gel\xC3\xB6scht werden."
+  you_cant_delete_that_user: "Der Benutzer kann nicht geloescht werden."
   #en: you_can_select_up_to_5_files_at_a_time: You can select up to 5 files at a time.
   you_can_select_up_to_5_files_at_a_time: Du kannst bis zu 5 Dateien gleichzeitig auswählen.
   #en: you_could_tag_yourself: You could tag yourself
