@@ -49,1253 +49,1048 @@ en:
 
   greeting: "Hello %{name}"
 
-  #en: a_few_seconds_ago:  a few seconds ago
-  a_few_seconds_ago:  a few seconds ago
+#en: a_few_seconds_ago:  a few seconds ago
+  a_few_seconds_ago:  vor ein paar Sekunden
   #en: about_me: About Me
-  about_me: About Me
+  about_me: "Ueber mich"
   #en: about_you: About You
-  about_you: About You
-  #en: admin_pages: Pages
-  admin_pages: Pages
+  about_you: "Ueber dich"
   #en: accept: Accept
-  accept: Accept
+  accept: Annehmen
   #en: accepted: accepted
-  accepted: accepted
-  #en: accepted_friendships: %{count} Accepted Friendships
-  accepted_friendships:
-    one: 1 Accepted Friendship
-    other: "%{count} Accepted Friendships"
+  accepted: angenommen
+  #en: accepted_friendships: Accepted Friendships
+  accepted_friendships: Bestätigte Verbindungen
+    one: 1 akzeptierte Verbindung
+    other: "%{count} akzeptierte Verbindungen"
   #en: accept_this_request: Accept this request
-  accept_this_request: Accept this request
+  accept_this_request: Anfrage bestätigen
   #en: account: account
-  account: account
+  account: Konto
   #en: account_activation_error: Account activation failed. Your account may already be active. Try logging in or e-mail %{email} for help.
-  account_activation_error: "Account activation failed. Your account may already be active. Try logging in or e-mail %{email} for help."
+  account_activation_error: Kontoaktivierungsfehler. Schick eine Mail an %{email}
   #en: account_settings: Account settings
-  account_settings: Account settings
+  account_settings: Kontenoptionen
   #en: actions: Actions
-  actions: Actions
+  actions: Aktionen
   #en: activate: Activate
-  activate: Activate
+  activate: Aktivieren
   #en: activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
-  activation_email_not_sent_message: Activation e-mail could not be sent. Perhaps that user is already active?
+  activation_email_not_sent_message: Aktivierungs-EMail konnte nicht gesendet werden. Ist der Benutzer vielleicht schon aktiviert?
   #en: activation_email_resent_message: An activation e-mail was resent to the e-mail address you used to sign up.
-  activation_email_resent_message: An activation e-mail was resent to the e-mail address you used to sign up.  
+  activation_email_resent_message: Die Aktivierungs-EMail wurde erneut an die EMail Adresse geschickt, mit der Sie sich angemeldet haben.
   #en: active: active
-  active: active
+  active: Aktiv
   #en: active_users: Active Users
-  active_users: Active Users
+  active_users: Aktive Benutzer
   #en: activity_from_your_network: Activity from your network
-  activity_from_your_network: Activity from your network
+  activity_from_your_network: "Aktivitaeten in deinem Netzwerk"
   #en: ad_was_successfully_created: Ad was successfully created.
-  ad_was_successfully_created: Ad was successfully created.
+  ad_was_successfully_created: Anzeige wurde erfolgreich angelegt.
   #en: ad_was_successfully_updated: Ad was successfully updated.
-  ad_was_successfully_updated: Ad was successfully updated.
+  ad_was_successfully_updated: "Anzeige wurde erfolgreich geaendert."
   #en: add_a_photo: Add a photo
-  add_a_photo: Add a photo
+  add_a_photo: "Foto hinzufuegen"
   #en: add_a_poll: Add a poll
-  add_a_poll: Add a poll
+  add_a_poll: Erstelle eine Umfrage
   #en: add_comment: Add Comment
-  add_comment: Add Comment
+  add_comment: "Kommentar hinzufuegen"
   #en: add_from_my_address_book: "Add from my address book"
-  add_from_my_address_book: "Add from my address book"
+  add_from_my_address_book: "Füge aus meinem Adressbuch hinzu"
   #en: add_some_friends_to_get_started: Add some friends to get started!
-  add_some_friends_to_get_started: Add some friends to get started!
+  add_some_friends_to_get_started: "Um zu beginnen, lade ein paar Freunde ein!"
   #en: add_your_comment: Add Your Comment!
-  add_your_comment: Add Your Comment!
+  add_your_comment: "F\xC3\xBCgen deinen Kommentar hinzu!"
   #en: added_a_clipping: "added a clipping:"
-  added_a_clipping: "added a clipping:"
+  added_a_clipping: "Ein Clipping hinzuf\xC3\xBCgen:"
   #en: added_to_a_forum_topic: "added to a forum topic:"
-  added_to_a_forum_topic: "added to a forum topic:"
+  added_to_a_forum_topic: "zum Forenthema hinzugefuegt:"
   #en: admin: Admin
-  admin: Admin
+  admin: Administrator
   #en: admin_controls: Admin Controls
-  admin_controls: Admin Controls
+  admin_controls: Admin Steuerung
   #en: admin_dashboard: Admin dashboard
-  admin_dashboard: Admin dashboard
-  #en: administer_events: Administer events
-  administer_events: Administer events
+  admin_dashboard: "Admin Uebersicht"
   #en: ads: Ads
-  ads: Ads
+  ads: Anzeigen
   #en: advertise: Advertise
-  advertise: Advertise
+  advertise: Hier werben
   #en: advertise_on: Advertise on
-  advertise_on: Advertise on
+  advertise_on: Werbung auf
   #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
-  after_signing_up_youll_receive_an_e_mail_confirmation_message: "After signing up, you'll receive an e-mail confirmation message."
+  after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erh\xC3\xA4ltst du eine Best\xC3\xA4tigungsnachricht."
   #en: all_clippings_tagged: All clippings tagged %{tag_name}
-  all_clippings_tagged: "All clippings tagged %{tag_name}"
+  all_clippings_tagged: Alle Clippings zu diesem Schlagwort %{tag_name}
   #en: all_comments: All comments
-  all_comments: All comments
+  all_comments: Alle Kommentare
   #en: all_photos_tagged: All photos tagged %{tag_name}
-  all_photos_tagged: "All photos tagged %{tag_name}"
+  all_photos_tagged: Alle Fotos zu diesem Schlagwort %{tag_name}
   #en: all_posts_tagged: All posts tagged %{tag_name}
-  all_posts_tagged: "All posts tagged %{tag_name}"
+  all_posts_tagged: "Alle Eintr\xC3\xA4ge zu diesem Schlagwort %{tag_name}"
   #en: all_tags: All tags
-  all_tags: All tags
+  all_tags: Alle Schlagworte
   #en: all_users_tagged: All users tagged %{tag_name}
-  all_users_tagged: "All users tagged %{tag_name}"
-  #en: allow_rsvp: Allow RSVPs
-  allow_rsvp: Allow RSVPs
+  all_users_tagged: Alle Benutzer zu diesem Schlagwort %{tag_name}
   #en: already_have_an_account: Already have an account?
-  already_have_an_account: Already have an account?
-  #en: anonymous: Anonymous
-  anonymous: Anonymous  
+  already_have_an_account: Hast du schon ein Konto?
   #en: an_error_occurred: An error occurred
-  an_error_occurred: An error occurred
-  #en: are_attending_this_event: are attending this event
-  are_attending_this_event: are attending this event
-  #en: is_attending_this_event: is attending this event
-  is_attending_this_event: is attending this event
+  an_error_occurred: Es ist ein Fehler aufgetreten
   #en: are_you_sure: Are you sure?
-  are_you_sure: Are you sure?
-  #en: are_you_sure_you_want_to_delete_this_page: "Are you sure you want to delete this page?"
-  are_you_sure_you_want_to_delete_this_page: "Are you sure you want to delete this page?"
-  #en: are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"  
-  are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"
+  are_you_sure: Bist du dir sicher?
+  #en: are_you_sure_you_want_to_delete_this_photo: "Are you sure you want to delete this photo?"
+  are_you_sure_you_want_to_delete_this_photo: "Bist du dir sicher, das Foto zu löschen?"
   #en: are_you_sure_you_want_to_delete_this_post: "Are you sure you want to delete this post?"
-  are_you_sure_you_want_to_delete_this_post: "Are you sure you want to delete this post?"
+  are_you_sure_you_want_to_delete_this_post: "Bist du dir sicher, den Beitrag zu löschen?"
   #en: are_you_sure_you_want_to_permanently_delete_this_comment: "Are you sure you want to permanently delete this comment?"
-  are_you_sure_you_want_to_permanently_delete_this_comment: "Are you sure you want to permanently delete this comment?"
+  are_you_sure_you_want_to_permanently_delete_this_comment: "Bist du dir sicher, den Kommentar permanent zu löschen?"
   #en: are_you_sure_you_want_to_permanently_delete_this_user: Are you sure you want to permanently delete this user?
-  are_you_sure_you_want_to_permanently_delete_this_user: Are you sure you want to permanently delete this user?
-  #en: are_you_sure_you_want_to_permanently_delete_this_user_and_mark_as_spam: Are you sure you want to permanently delete this user and mark it as spam!?
-  are_you_sure_you_want_to_permanently_delete_this_user_and_mark_as_spam: Are you sure you want to permanently delete this user and mark it as spam!?
+  are_you_sure_you_want_to_permanently_delete_this_user: Bist du dir sicher, den Benutzer dauerhaft zu löschen?
   #en: assume_id: Assume ID
-  assume_id: Assume ID
+  assume_id: "ID \xC3\xBCbernehmen"
   #en: assume_user_id: "Assume this user's ID"
-  assume_user_id: "Assume this user's ID"
+  assume_user_id: "Übernehmen der ID dieses Benutzers"
   #en: assign_role: Assign role
-  assign_role: Assign role
-  #en: attendees: Attendees
-  attendees: Attendees
+  assign_role: Rolle zuordnen
   #en: audience: Audience
-  audience: Audience
+  audience: Publikum
   #en: author: Author
-  author: Author
+  author: Autor
   #en: back: Back
-  back: Back
+  back: "Zur\xC3\xBCck"
   #en: back_to_all_users: Back to all users
-  back_to_all_users: Back to all users
+  back_to_all_users: Zurück zu allen Benutzern
   #en: back_to_my_photos: Back to my photos
-  back_to_my_photos: Back to my photos
+  back_to_my_photos: Zurück zu meinen Fotos
   #en: back_to_all_statistics: Back to all statistics
-  back_to_all_statistics: Back to all statistics
+  back_to_all_statistics: Zurück zu den Statistiken
   #en: banner_subtitle_required: "Banner subtitle (required):"
-  banner_subtitle_required: "Banner subtitle (required):"
+  banner_subtitle_required: "Banneruntertitel (erforderlich):"
   #en: banner_title_required: "Banner title (required):"
-  banner_title_required: "Banner title (required):"
+  banner_title_required: "Bannertitel (erforderlich):"
+  #en: becomes: becomes.
+  becomes: werden.
   #en: begin: begin
-  begin: begin
+  begin: Beginn
   #en: begin_required: begin (required)
-  begin_required: begin (required)
+  begin_required: Beginn (erforderlich)
   #en: bigger_font_size_more_popular_tag: "Bigger font size = more popular tag"
-  bigger_font_size_more_popular_tag: "Bigger font size = more popular tag"
+  bigger_font_size_more_popular_tag: "Je größer die Schrift, desto beliebter der Tag"
   #en: birthday: Birthday
-  birthday: Birthday
+  birthday: Geburtstag
   #en: birthday_gender: Birthday & Gender
-  birthday_gender: "Birthday & Gender"
+  birthday_gender: Geburtsdatum und Geschlecht
   #en: blog: Blog
   blog: Blog
+  #en: blog_posts: Blog posts
+  blog_posts: Blogbeiträge
   #en: body_text: Body Text
-  body_text: Body Text
+  body_text: Haupttext
   #en: body_text_reqiured: Body Text (required)
-  body_text_required: Body Text (required)
+  body_text_required: Haupttext (erforderlich)
   #en: bookmarklet: bookmarklet
-  bookmarklet: bookmarklet
+  bookmarklet: Bookmarklet
   #en: browse_all_members: browse all members
-  browse_all_members: browse all members
+  browse_all_members: Alle Mitglieder anzeigen
   #en: browse_content_by_tags: Browse content by tags
-  browse_content_by_tags: Browse content by tags
-  #en: by: by %{login}
-  by: "by %{login}"
+  browse_content_by_tags: Inhalt nach Tags anzeigen
+  #en: by: by
+  by: von
   #en: by_looking_at_the: by looking at the
-  by_looking_at_the: by looking at the
-  #en: cache_cleared: The cache was cleared
-  cache_cleared: The cache was cleared
-  #en: cache_clear_link: Clear the cache
-  cache_clear_link: Clear the cache  
+  by_looking_at_the: durch das Betrachten
   #en: cancel: Cancel
-  cancel: Cancel
+  cancel: Abbrechen
   #en: cancel_and_go_back_to: cancel and go back to
-  cancel_and_go_back_to: cancel and go back to
+  cancel_and_go_back_to: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_all_features: cancel and go back to all features
-  cancel_and_go_back_to_all_features: cancel and go back to all features
+  cancel_and_go_back_to_all_features: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
-  cancel_and_go_back_to_my_clippings: cancel and go back to my clippings
+  cancel_and_go_back_to_my_clippings: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_photos: cancel and go back to my photos
-  cancel_and_go_back_to_my_photos: cancel and go back to my photos
+  cancel_and_go_back_to_my_photos: "abbrechen und zur\xC3\xBCck gehen"
   #en: cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  cancel_and_go_back_to_my_posts: cancel and go back to my posts
-  #en: cancel_and_go_back_to_pages: cancel and go back to pages
-  cancel_and_go_back_to_pages: cancel and go back to pages
-  #en: cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
-  cannot_rsvp_for_an_event_that_has_already_happened: Cannot RSVP for an event that has already happened.
+  cancel_and_go_back_to_my_posts: "abbrechen und zur\xC3\xBCck gehen"
   #en: categories: Categories
-  categories: Products
+  categories: Produktkategorien
   #en: category: Category
-  category: Category
+  category: Kategorie
   #en: category_was_successfully_created: Category was successfully created.
-  category_was_successfully_created: Category was successfully created.
-  #en: check_out_this_story_on: Check out this story on %{site}
-  check_out_this_story_on: Check out this story on %{site}
-  #en: choices: Choices
-  choices: Choices
+  category_was_successfully_created: Kategorie erfolgreich angelegt
+  #en: choises: Choices
+  choises: Auswahl
   #en: choose_a_photo_for_your_profile: "Choose a photo for your profile:"
-  choose_a_photo_for_your_profile: "Choose a photo for your profile:"
+  choose_a_photo_for_your_profile: "W\xC3\xA4hle ein Foto f\xC3\xBCr dein Profil aus:"
   #en: choose_a_photo_to_upload: "Choose a photo to upload:"
-  choose_a_photo_to_upload: "Choose a photo to upload:"
+  choose_a_photo_to_upload: "W\xC3\xA4hle ein Foto zum hochladen aus:"
   #en: choose_your_location: Choose your location
-  choose_your_location: Choose your location
+  choose_your_location: "W\xC3\xA4hle deinen Ort"
   #en: click_here: click here
-  click_here: click here
+  click_here: klicke hier
   #en: click_here_to_retrieve_it: Click here to retrieve it
-  click_here_to_retrieve_it: Click here to retrieve it
+  click_here_to_retrieve_it: Klicke hier; wir schicken eine E-Mail
   #en: click_here_to_sign_up: Click here to sign up
-  click_here_to_sign_up: Click here to sign up
+  click_here_to_sign_up: Klicke hier, um dich zu registrieren
   #en: click_here_to_sign_up_for_an_account_and_enter: Click here to sign up for an account and enter
-  click_here_to_sign_up_for_an_account_and_enter: Click here to sign up for an account and enter
+  click_here_to_sign_up_for_an_account_and_enter: Klicke hier, um dich zu registrieren und fortzufahren
   #en: click_here_to_upload_one: Click here to upload one!
-  click_here_to_upload_one: Click here to upload one!
+  click_here_to_upload_one: Klick hier, um ein Foto hochzuladen!
   #en: click_here_to_view_as_a_list: Click here to view as a list
-  click_here_to_view_as_a_list: Click here to view as a list
+  click_here_to_view_as_a_list: Klick hier zum Ansehen als Liste
   #en: click_on_an_image_below_to_clip_it: Click on an image below to clip it
-  click_on_an_image_below_to_clip_it: Click on an image below to clip it
+  click_on_an_image_below_to_clip_it: Klick auf ein Bild unten, um es aufzunehmen
   #en: click_the_activation_link_in_the_e_mail_to_log_in: Click the activation link in the e-mail to log in.
-  click_the_activation_link_in_the_e_mail_to_log_in: Click the activation link in the e-mail to log in.
+  click_the_activation_link_in_the_e_mail_to_log_in: Klicke auf den Aktivierungslink in der E-Mail, um dich einzuloggen.
   #en: click_to_accept_it: Click to accept it!
-  click_to_accept_it: Click to accept it!
+  click_to_accept_id: Hier geht es zur Bestätigung.
   #en: clipping_comments: Clipping Comments
-  clipping_comments: Clipping Comments
-  #en: clipping_from_user: Clipping from %{user}
-  clipping_from_user: "Clipping from %{user}"
+  clipping_comments: Clipping-Kommentare
   #en: clipping_was_successfully_created: Clipping was successfully created.
-  clipping_was_successfully_created: Clipping was successfully created.
+  clipping_was_successfully_created: Clipping wurde erfolgreich angelegt.
   #en: clippings: Clippings
   clippings: Clippings
   #en: clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings are a way to save images you like from around the Web
-  clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings are a way to save images you like from around the Web
+  clippings_are_a_way_to_save_images_you_like_from_around_the_web: Clippings sind ein Weg, um colle Bilder aus dem Web zu speichern.
   #en: clippings_let_you_to_save_cool_images_from_around_the_web: Clippings let you to save cool images from around the Web.
-  clippings_let_you_to_save_cool_images_from_around_the_web: Clippings let you to save cool images from around the Web.
-  #en: clone: Clone
-  clone: Clone
-  #en: clippings_tagged: Clippings tagged
-  clippings_tagged: "Clippings tagged"
+  clippings_let_you_to_save_cool_images_from_around_the_web: Mit Clippings kannst du dir coole Bilder aus dem Web speichern.
   #en: close_this_message: Close this message
-  close_this_message: Close this message
+  close_this_message: Schliesse diese Nachricht
   #en: comma_separated: (comma separated)
-  comma_separated: (comma separated)
+  comma_separated: "(Komma getrennt)"
   #en: comma_separated_keywords_that_describe_you: Comma-separated keywords that describe you.
-  comma_separated_keywords_that_describe_you: Comma-separated keywords that describe you.
-  #en: commentable_type: "Commentable Type (Post, User, etc.)"
-  commentable_type: "Commentable Type (Post, User, etc.)"
-  #en: commentable_id: "Commentable ID"
-  commentable_id: "Commentable ID"
+  comma_separated_keywords_that_describe_you: "Durch Komma getrennte Schl\xC3\xBCsselw\xC3\xB6rter, die dich beschreiben."
   #en: comment_character_limit: (2000 character limit)
-  comment_character_limit: (2000 character limit)
+  comment_character_limit: (Limit 2000 Zeichen)
   #en: comment_could_not_be_deleted: Comment could not be deleted.
-  comment_could_not_be_deleted: Comment could not be deleted.
-  #en: comment_notifications_off: Comment notifications are currently off
-  comment_notifications_off: Comment notifications are currently off  
+  comment_could_not_be_deleted: "Kommentar kann nicht gel\xC3\xB6scht werden."
   #en: comment_save_error: Your comment couldn't be saved.
-  comment_save_error: "Your comment couldn't be saved: %{error}"
+  comment_save_error: 'Fehler beim Speichern des Kommentars: %{error}'
   #en: comment_was_successfully_created: Comment was successfully created.
-  comment_was_successfully_created: Comment was successfully created.
-  #en: comment_author_email_required: Required, won't be shown on the site.
-  comment_author_email_required: "Required, won't be shown on the site."
-  #en: comment_web_site_label: "Web site (include http://)"
-  comment_web_site_label: "Web site (include http://)"  
-  #en: comment_spam_error: "Comment was flagged as spam. Please make sure you aren't including any spammy words or links and try again."  
-  comment_spam_error: "Comment was flagged as spam. Make sure you don't include spammy words or links and try again"  
+  comment_was_successfully_created: Kommentar wurde erfolgreich angelegt.
   #en: comments: Comments
-  comments: Comments
-  #en: comments_count: %{count} comments
-  comments_count: 
-    one: One comment
-    other: "%{count} comments"
-  #en: comments_deleted: Comments deleted
-  comments_deleted: Comments deleted
+  comments: Kommentare
   #en: comments_rss: Comments RSS
-  comments_rss: Comments RSS
+  comments_rss: Kommentar-RSS-Feed
   #en: community_tagline: CommunityEngine Rocks!
-  community_tagline: CommunityEngine Rocks!
-  #en: comment_unsubscribe_succeeded: Thanks, you have been unsubscribed from notifications on this comment.  
-  comment_unsubscribe_succeeded: "Thanks, you have been unsubscribed from notifications on this comment."
+  community_tagline: LVZ ist Testprojekt/Prototyp. Impressum
   #en: compose: Compose
-  compose: Compose
-  #en: compose_message: Compose message
-  compose_message: Compose message
+  compose: Verfassen
+  #en: compose_messages: Compose messages
+  compose_messages: Nachrichten verfassen
+  compose_message: Nachricht verfassen  
   #en: confirm_password: Confirm Password
-  confirm_password: Confirm Password
+  confirm_password: Kennwort bestätigen
   #en: country: Country
-  country: Country
+  country: Land
   #en: create: Create
-  create: Create
+  create: Erstellen
   #en: create_an_account: Create an account
-  create_an_account: Create an account
+  create_an_account: registrieren
   #en: create_a_clipping: Create a clipping
-  create_a_clipping: Create a clipping
+  create_a_clipping: Neues Clipping erstellen
   #en: create_a_post: Create a post
-  create_a_post: Create a post
+  create_a_post: Beitrag erstellen
   #en: create_new_forum: Create new forum
-  create_new_forum: Create new forum
+  create_new_forum: Neues Forum anlegen
   #en: create_your_account: Create Your Account
-  create_your_account: Create Your Account
+  create_your_account: Hol dir dein Konto
   #en: created_at: Created at
-  created_at: Created at
+  created_at: erstellt am
   #en: custom_friendly_local: custom, friendly, local
-  custom_friendly_local: "custom, friendly, local"
+  custom_friendly_local: "maßgeschneidert, freundlich, lokal"
   #en: dashboard: Dashboard
-  dashboard: Dashboard
+  dashboard: "Übersicht"
   #en: dashboard_friends: Once you start adding friends, you'll be able to track their activity on %{site} here
-  dashboard_friends: "Once you start adding friends, you'll be able to track their activity on %{site} here"
-  #en: date: Date
-  date_title: Date
+  dashboard_friends: Die Aktivitäten deiner Verbindungen kannst du hier auf %{site} verfolgen
   #en: date_created: Date Created
-  date_created: Date Created
+  date_created: Erstellungsdatum
   #en: date_published: Date Published
-  date_published: Date Published
-  #en: days_ago: %{count} days ago
-  days_ago: 
-    one: "one day ago"
-    other: "%{count} days ago"
+  date_published: "Veröffentlichungsdatum"
+  #en: days_ago: days ago
+  days_ago: Tage zuvor
   #en: deactivate_link: Click here to deactivate your account
-  deactivate_link: Click here to deactivate your account
-  #en: deactivate_tip: Deactivating your account will remove your profile from the site. 
-  deactivate_tip: Deactivating your account will remove your profile from the site. 
+  deactivate_link: Hiermit deaktivieren Sie ihr Konto.
+  #en: deactivate_tip: Deactivating your account will remove your profile from the site.
+  deactivate_tip: Die Deaktivierung Ihres Kontos löscht das Profile von dieser Seite.
   #en: deactivate_confirmation: Are you sure you want to deactivate your account?
-  deactivate_confirmation: Are you sure you want to deactivate your account?
+  deactivate_confirmation: Sind Sie sicher, das Sie Ihr Konto deaktivieren möchten ?
   #en: deactivate_completed: Thanks. Your account has been deactivated and you have been logged out.
-  deactivate_completed: Thanks. Your account has been deactivated and you have been logged out.
+  deactivate_completed: Danke. Ihr Konto wurde deaktiviert und Sie sind abgemeldet worden.
   #en: delete: Delete
-  delete: Delete
+  delete: Löschen
   #en: delete_selected: Delete selected
-  delete_selected: Delete selected
-  #en: delete_selected_mark_as_spam: Delete selected and mark spam
-  delete_selected_mark_as_spam: Mark as spam  
+  delete_selected: Ausgewählte löschen
   #en: delete_this_event: Delete this event
-  delete_this_event: Delete this event
+  delete_this_event: "Lösche das Ereignis"
   #en: delete_this_forum: Delete this forum
-  delete_this_forum: Delete this forum
+  delete_this_forum: "Lösche das Forum"
   #en: delete_this_photo: Delete this photo
-  delete_this_photo: Delete this photo
-  #en: delete_this_page: Delete this page
-  delete_this_page: Delete this page
+  delete_this_photo: Lösche dieses Foto
   #en: delete_this_post: Delete this post?
-  delete_this_post: Delete this post?
+  delete_this_post: Diesen Eintrag löschen?
   #en: delete_this_topic_forever: Delete this topic forever?
-  delete_this_topic_forever: Delete this topic forever?
+  delete_this_topic_forever: Das Thema für immer löschen?
   #en: delete_this_user: Delete this user
-  delete_this_user: Delete this user
+  delete_this_user: Benutzer löschen
   #en: deny: Deny
-  deny: Deny
+  deny: Ablehnen
   #en: denied: denied
-  denied: denied
+  denied: abgelehnt
   #en: denied_friendships: Denied Friendships
-  denied_friendships: Denied Friendships
+  denied_friendships: abgelehnte Freundschaften
   #en: description: Description
-  description: Description
+  description: Beschreibung
   #en: destroy: Destroy
-  destroy: Destroy
+  destroy: "Löschen"
   #en: dont_have_an_account: Don't have an account?
-  dont_have_an_account: Don't have an account?
+  dont_have_an_account: Du hast noch kein Konto?
   #en: dont_wait_its: Don't wait! It's
-  dont_wait_its: Don't wait! It's
+  dont_wait_its: Warte nicht! Schreib an
   #en: draft: draft
-  draft: draft
+  draft: Entwurf
   #en: drag_the_bookmarklet: Drag the %{site}-It! bookmarklet to your bookmarks toolbar.
-  drag_the_bookmarklet: "Drag the %{site}-It! bookmarklet to your bookmarks toolbar."
+  drag_the_bookmarklet: Zieh das %{site}-It! Bookmarklet in die Bookmark-Leiste.
   #en: drag_this_to_your_bookmarks_toolbar: Drag this to your bookmarks toolbar
-  drag_this_to_your_bookmarks_toolbar: Drag this to your bookmarks toolbar
+  drag_this_to_your_bookmarks_toolbar: Ziehe es in die Bookmark-Leiste
   #en: e_mail: E-mail
-  e_mail: E-mail
+  e_mail: E-Mail
   #en: e_mail_address: E-mail address
-  e_mail_address: E-mail address
+  e_mail_address: E-Mailadresse
   #en: e_mail_notification: E-mail Notification
-  e_mail_notification: E-mail Notification
+  e_mail_notification: E-Mail-Benachrichtigungen
   #en: edit: Edit
-  edit: Edit
+  edit: Bearbeiten
   #en: edit_account: Edit account
-  edit_account: Edit Account
+  edit_account: Konto bearbeiten
   #en: edit_event: Edit event
-  edit_event: Edit event
+  edit_event: Bearbeite das Ereignis
   #en: edit_forum: Edit forum
-  edit_forum: Edit forum
-  #en: edit_page: Edit page
-  edit_page: Edit page
+  edit_forum: Forum bearbeiten
   #en: edit_post: Edit post
-  edit_post: Edit post
+  edit_post: Beitrag bearbeiten
   #en: edit_profile: Edit profile
-  edit_profile: Edit Profile
-  #en: edit_rsvp_for: Edit RSVP for
-  edit_rsvp_for: Edit RSVP for
+  edit_profile: Profil bearbeiten
   #en: edit_this_event: Edit this event
-  edit_this_event: Edit this event
+  edit_this_event: Bearbeite dieses Ereignis
   #en: edit_this_photo_details: Edit this photo's details
-  edit_this_photo_details: Edit this photo's details
+  edit_this_photo_details: Bearbeite die Details dieses Fotos
   #en: edit_topic: Edit topic
-  edit_topic: Edit topic
+  edit_topic: Thema bearbeiten
   #en: edit_your_account_settings_instead: "Edit your account settings instead?"
-  edit_your_account_settings_instead: "Edit your account settings instead?"
+  edit_your_account_settings_instead: "Wolltest du deine Konteneinstellungen bearbeiten?"
   #en: edit_your_user_profile: Edit your user profile?
-  edit_your_user_profile: Edit your user profile?
+  edit_your_user_profile: Wolltest du dein Profil bearbeiten?
   #en: editing_ad: Editing ad
-  editing_ad: Editing ad
+  editing_ad: Anzeige bearbeiten
   #en: editing_category: Editing category
-  editing_category: Editing category
+  editing_category: Kategorie bearbeiten
   #en: editing_clipping: Editing clipping
-  editing_clipping: Editing clipping
+  editing_clipping: Clipping bearbeiten
   #en: editing_homepage_feature: Editing homepage feature
-  editing_homepage_feature: Editing homepage feature
+  editing_homepage_feature: Homepage-Feature bearbeiten
   #en: editing_metro_area: Editing Metro Area
-  editing_metro_area: Editing Metro Area
+  editing_metro_area: "Metro Area's bearbeiten"
   #en: editing_photo: Editing photo
-  editing_photo: Editing photo
+  editing_photo: Foto bearbeiten
   #en: editing_post: Editing post
-  editing_post: Editing post
-  #en: editing_tag: Editing tag
-  editing_tag: Editing tag
+  editing_post: Eintrag bearbeiten
   #en: email: Email
   email: Email
   #en: email_addresses: Email Addresses
-  email_addresses: Email Addresses
+  email_addresses: Email-Adressen
   #en: email_signup_thanks: Thanks for signing up! You should receive an e-mail confirmation shortly at %{email}
-  email_signup_thanks: "Thanks for signing up! You should receive an e-mail confirmation shortly at %{email}"
+  email_signup_thanks: Danke für die Registrierung! Du erhälst umgehend eine e-mail zur Bestätigung unter %{email}
   #en: email_this_story_to_friends: "E-mail this story to friends"
-  email_this_story_to_friends: "E-mail this story to friends"
+  email_this_story_to_friends: "E-mail diese Geschichte deinen Freunden"
   #en: email_to_friends: E-mail to friends
-  email_to_friends: E-mail to friends
+  email_to_friends: E-mail an Freunde
   #en: end: end
-  end: end
+  end: Ende
   #en: end_date: End date
-  end_date: End date
+  end_date: Endedatum
   #en: end_required: end (required)
-  end_required: end (required)
-  #en: end_time: End time
-  end_time: End time
+  end_required: Ende (erforderlich)
+  #en: end_tome: End time
+  end_time: Endezeit
   #en: enter_a_message: Enter a message
-  enter_a_message: Enter a message
+  enter_a_message: Gib eine Nachricht ein
   #en: enter_e_mail_addresses: Enter e-mail addresses
-  enter_e_mail_addresses: Enter email addresses
+  enter_e_mail_addresses: E-Mailadressen eintragen
   #en: enter_e_mail_addresses_comma_sep: Enter e-mail addresses (comma-separated)
-  enter_e_mail_addresses_comma_sep: Enter email addresses (comma-separated)
+  enter_e_mail_addresses_comma_sep: E-Mailadressen eintragen (durch Komma getrennt)
   #en: enter_your_email_address: "Enter your email address"
-  enter_your_email_address: "Enter your email address"
+  enter_your_email_address: "Trage deine E-Mailadresse ein"
   #en: error: Error!
-  error: Error!
+  error: Fehler!
   #en: estimated_total_for_this_month: Estimated total for this month
-  estimated_total_for_this_month: Estimated total for this month
+  estimated_total_for_this_month: Geschätzte Summe für diesen Monat
   #en: estimated_writers_costs_this_month: "Estimated writers' costs this month"
-  estimated_writers_costs_this_month: "Estimated writers' costs this month"
-  #en: event_details: Event Details
-  event_details: Event Details
-  #en: event_comments: Event Comments
-  event_comments: Event Comments
-  #en: event_does_not_allow_rsvp: This event does not allow RSVPs.
-  event_does_not_allow_rsvp: This event does not allow RSVPs.
+  estimated_writers_costs_this_month: "Geschätzte Kosten pro Verfasser diesen Monat"
   #en: event_was_successfully_created: Event was successfully created.
-  event_was_successfully_created: Event was successfully created.
+  event_was_successfully_created: Ereignis wurde erfolgreich angelegt.
   #en: events: Events
-  events: Events
+  events: Ereignisse
   #en: every_person_has_something_to_say: Every single person has something to say, something to give, something that will help someone else.  Join in!
-  every_person_has_something_to_say: "Every single person has something to say, something to give, something that will help someone else.  Join in!"
-  #en: expert_in: expert in
-  expert_in: expert in
+  every_person_has_something_to_say: "Jeder hat etwas zu sagen, etwas zugeben oder etwas was anderen hilft.  Mach mit!"
   #en: explore_site: Explore %{site}
-  explore_site: "Explore %{site}"
+  explore_site: Site erkunden
   #en: failed: failed
-  failed: failed
-  #en: favorited: favorited
-  favorited: favorited
+  failed: Fehler
   #en: favorites: Favorites
-  favorites: Favorites
+  favorites: Favoriten
   #en: favorite_this: Favorite this
-  favorite_this: Favorite this
-  #en: featured_posts: Featured posts
-  featured_posts: Featured posts
+  favorite_this: Zu Favoriten hinzufügen
+  #en:featured_posts: Featured posts
+  featured_posts: Redaktionelle Beiträge
   #en: featured_writer: Featured writer
   featured_writer: Featured writer
-  #en: featured_writers: Featured writers
-  featured_writers: Featured writers
   #en: features: Features
-  features: Features
+  features: Funktionen
   #en: feel_free_to_embed_images_or_videos: Feel free to embed images or videos.
-  feel_free_to_embed_images_or_videos: Feel free to embed images or videos.
+  feel_free_to_embed_images_or_videos: Wenn du willst, füge Bilder und Videos deinen Beiträge hinzu.
   #en: female: Female
-  female: Female
+  female: Weiblich
   #en: filename: Filename
-  filename: Filename
+  filename: Dateiname
   #en: find_an_expert: Find an Expert
-  find_an_expert: Find an Expert
+  find_an_expert: Finde einen Experten
   #en: find_an_expert_in: Find an Expert in
-  find_an_expert_in: Find an Expert in
+  find_an_expert_in: Finde einen Experten in
   #en: find_experts: Find experts
-  find_experts: Find experts
+  find_experts: Finde Experten
   #en: find_out_where_to_be_and_when_to_be_there: Find out where to be, and when to be there.
-  find_out_where_to_be_and_when_to_be_there: "Find out where to be, and when to be there."
-  #en: for_more_information_on_tags_check_out_the: For more information on tags check out the
-  for_more_information_on_tags_check_out_the: For more information on tags check out the
+  find_out_where_to_be_and_when_to_be_there: Finde raus, wann du wo sein musst.
+  #en: for_more_informationon_on_tags_check_out_the: For more information on Tags check out the
+  for_more_informationon_on_tags_check_out_the: Für mehr Informationen über Tags check die
   #en: forgot_your_password: Forgot your password?
-  forgot_your_password: Forgot your password?
+  forgot_your_password: Passwort vergessen?
   #en: forgot_your_username: Forgot your username?
-  forgot_your_username: Forgot your username?
+  forgot_your_username: Benutzernamen vergessen?
   #en: forum: Forum
   forum: Forum
   #en: forums: Forums
-  forums: Forums
-  #en: post_found: %{count} posts found
-  post_found:
-    one: 1 Post found
-    other: "%{count} Posts found"
+  forums: Foren
+  #en: found: found
+  found: gefunden
   #en: frequency: Frequency
-  frequency: Frequency
+  frequency: "Häufigkeit"
   #en: frequent_asked_questions: Frequent Asked Questions
-  frequent_asked_questions: Frequent Asked Questions
+  frequent_asked_questions: "Häufig gestellte Fragen"
   #en: frequently_asked_questions: Frequently Asked Questions
-  frequently_asked_questions: Frequently Asked Questions
+  frequently_asked_questions: "Häufig gestellte Fragen und Antworten"
   #en: friend: friend
-  friend: friend
+  friend: Freund
   #en: friends: Friends
-  friends: Friends
+  friends: Verbindungen
   #en: friendship_could_not_be_created: Friendship could not be created
-  friendship_could_not_be_created: Friendship could not be created
-  #en: friendship_request_accepted: Friendship request accepted!
-  friendship_request_accepted: Friendship request accepted!
+  friendship_could_not_be_created: Verbindung konnte nicht angelegt werden
   #en: friendship_request_detail: Friendship request detail
-  friendship_request_detail: Friendship request detail
+  friendship_request_detail: Details der Verbindungsanfrage
   #en: friendship_requested: Requested friendship with %{friend}.
-  friendship_requested: "Requested friendship with %{friend}."
+  friendship_requested: Verbindung von %{friend} angefragt.
   #en: from: From
-  from: From
+  from: Von
   #en: from2: From
-  from2: From
+  from2: Aus
   #en: gender: Gender
-  gender: Gender
+  gender: Geschlecht
   #en: get_help_from_someone_who_knows: Get help from someone who knows
-  get_help_from_someone_who_knows: Get help from someone who knows
+  get_help_from_someone_who_knows: Hilfe von jemanden, der Bescheid weiß
   #en: get_popular: Get popular.
-  get_popular: Get popular.
+  get_popular: "Werde beliebt."
   #en: get_started: "Get started:"
-  get_started: "Get started:"
+  get_started: "Erste Schritte:"  
   #en: get_started_banner: Get started with <a href="/">%{site}</a> today!
-  get_started_banner: "Get started with <a href='/'>%{site}</a> today!"
-  #en: invite_some_friends: "Invite some friends!"
-  invite_some_friends: "Invite some friends!"
-  #en: tell_us_about_yourself: "Tell us about yourself"
-  tell_us_about_yourself: "Tell us about yourself"
-  #en: upload_a_profile_photo: "Upload a profile photo"
-  upload_a_profile_photo: "Upload a profile photo"
+  get_started_banner: Willkommen bei <a href="/">%{site}</a>!
+  #en: get_started_invite_some_friends: "Get Started: Invite some friends!"
+  get_started_invite_some_friends: "Fang an: lade ein paar Freudne ein!"
+  #en: get_started_tell_us_about_yourself: "Get Started: Tell us about yourself"
+  get_started_tell_us_about_yourself: "Fang an: erzähl uns über dich"
+  #en: get_started_upload_a_profile_photo: "Get Started: Upload a profile photo"
+  get_started_upload_a_profile_photo: "Fang an: lade ein Profilfoto hoch"
   #en: go: Go
-  go: Go
+  go: Gehe
   #en: go_check_your_e_mail: Go check your e-mail!
-  go_check_your_e_mail: Go check your e-mail!
+  go_check_your_e_mail: "Prüfe deine E-Mail!"
   #en: go_to_the_forums: go to the forums
-  go_to_the_forums: go to the forums
+  go_to_the_forums: Gehe zu den Foren
   #en: go_to_your_clippings_page_to_get_started: Go to your clippings page to get started.
-  go_to_your_clippings_page_to_get_started: Go to your clippings page to get started.
+  go_to_your_clippings_page_to_get_started: Um zu beginnen, geh zu deiner Clippings-Seite.
   #en: go_to_your_profile: Go to your profile
-  go_to_your_profile: Go to your profile
-  #en: has_commented_on_something_that_you_also_commented_on: %{user} has commented on a %{item} that you also commented on.
-  has_commented_on_something_that_you_also_commented_on: "%{user} has commented on a %{item} that you also commented on."
-  #en: has_posted_in_a_thread_you_are_monitoring: %{user} has posted in a thread you are monitoring.
-  has_posted_in_a_thread_you_are_monitoring: "%{user} has posted in a thread you are monitoring."
-  #en: has_something_to_say_to_you_on: %{user} has something to say to you on %{site}!
-  has_something_to_say_to_you_on: "%{user} has something to say to you on %{site}!"
+  go_to_your_profile: Geh zu deinem Profil
   #en: have_an_account: "Have an account? "
-  have_an_account: "Have an account? "
+  have_an_account: Hast du ein Konto?
   #en: have_something_to_contribute: Have something to contribute?
-  have_something_to_contribute: Have something to contribute?
-  #en: his: his
-  his: his
-  #en: her: her
-  her: her
+  have_something_to_contribute: Hast du etwas, was du beitragen kannst?
   #en: help: Help
-  help: Help
+  help: Hilfe
   #en: home: Home
-  home: Home
+  home: Startseite
   #en: homepage_banner_download_msg: Download it now and get started
-  homepage_banner_download_msg: Download it now and get started
+  homepage_banner_download_msg: Jetzt runterladen und anfangen
   #en: homepage_banner_msg: CommunityEngine is the best way to go from zero to hero in no time
-  homepage_banner_msg: CommunityEngine is the best way to go from zero to hero in no time
+  homepage_banner_msg: Diese Community ist der beste Weg, um in Null-Komma-Nichts zum Held zu werden
   #en: homepage_banner_signup_prompt: See how it works
-  homepage_banner_signup_prompt: See how it works
+  homepage_banner_signup_prompt: Und so geht es
   #en: homepage_features: Homepage Features
   homepage_features: Homepage Features
-  #en: homepage_feature_created: Homepage feature created
-  homepage_feature_created: Homepage feature created  
-  #en: hours_ago: %{count} hours ago
-  hours_ago:
-    one: "one hour ago"
-    other: "%{count} hours ago"
+  #en: hours_ago: hours ago
+  hours_ago: Stunden zuvor
   #en: how_do_i_do_that: How do I do that?
-  how_do_i_do_that: How do I do that?
+  how_do_i_do_that: Wie mach ich das?
   #en: html: HTML
   html: HTML
   #en: image: Image
-  image: Image
+  image: Bild
   #en: image_url: Image URL
-  image_url: Image URL
+  image_url: Bild-URL
   #en: in_the_forums: In the forums
-  in_the_forums: In the forums
+  in_the_forums: In den Foren
   #en: in_your_favorites: In your favorites
-  in_your_favorites: In your favorites
+  in_your_favorites: In deinen Favoriten
   #en: inactive: inactive
-  inactive: inactive
+  inactive: inaktiv
   #en: inbox: Inbox
-  inbox: Inbox
+  inbox: Private Nachrichten
   #en: insert: Insert
-  insert: Insert
+  insert: Einfügen
   #en: invite_a_friend: Invite a friend
-  invite_a_friend: Invite a friend
+  invite_a_friend: Lade einen Freund ein
   #en: invitation_was_successfully_created: Invitation was successfully created.
-  invitation_was_successfully_created: Invitation was successfully created.
+  invitation_was_successfully_created: Einladung wurde erfolgreich angelegt.
   #en: invite_message: The more people you invite the better %{site} becomes.
-  invite_message: "The more people you invite the better %{site} becomes."
+  invite_message: Einladungsnachricht
   #en: invite_some_customers: Invite some customers!
-  invite_some_customers: Invite some customers!
+  invite_some_customers: Lade einige Kunden ein!
   #en: invite_your_friends_to_join: Invite Your Friends To Join!
-  invite_your_friends_to_join: Invite Your Friends To Join!
-  #en: invited_friends: invited some friends to join!
-  invited_friends: invited some friends to join!
+  invite_your_friends_to_join: Lade deine Freunde ein, sich zu beteiligen!
   #en: is_great_check_it_out_youll_love_it: is great, check it out you'll love it!
-  is_great_check_it_out_youll_love_it: "is great, check it out you'll love it!"
+  is_great_check_it_out_youll_love_it: ist großartig, du wirst es lieben!
   #en: items: Items
-  items: Items
-  #en: items_tagged: Items tagged
-  items_tagged: "Items tagged"
+  items: Inhalt
   #en: joined: joined
-  joined: joined
+  joined: Mitglied seit
   #en: joined_the_site: joined %{site}
-  joined_the_site: joined %{site}
+  joined_the_site: "%{site} beigetreten"
   #en: just_uploading_one_photo: Just uploading one photo?
-  just_uploading_one_photo: Just uploading one photo?
+  just_uploading_one_photo: Nur ein Foto hochladen?
   #en: keywords: Keywords
   keywords: Keywords
   #en: large: Large
-  large: Large
+  large: Groß
   #en: last: last
-  last: last
+  last: letzte
   #en: last_post: Last post
-  last_post: Last post
+  last_post: Letzter Beitrag
   #en: left_a_comment: "left a comment:"
-  left_a_comment: "left a comment:"
+  left_a_comment: "hat einen Kommentar hinterlassen:"
   #en: links: Links
   links: Links
   #en: listing_invitations: Listing invitations
-  listing_invitations: Listing invitations
+  listing_invitations: Liste der Einladungen
   #en: loading_images: Loading images
-  loading_images: Loading images
+  loading_images: Lade Bilder
   #en: loading_recent_content: Loading recent content...
-  loading_recent_content: Loading recent content...
+  loading_recent_content: Lade letzten Inhalt...
   #en: location: Location
-  location: Location
+  location: Ort
   #en: log_in: Log in
-  log_in: Log in
+  log_in: Anmelden
   #en: log_in_to_create_a_new_topic: Log in to create a new topic
-  log_in_to_create_a_new_topic: Log in to create a new topic
+  log_in_to_create_a_new_topic: Log dich ein, um ein neues Thema zu beginnen
   #en: log_in_to_leave_a_comment: Log in to leave a comment
-  log_in_to_leave_a_comment: Log in to leave a comment
+  log_in_to_leave_a_comment: Zum Kommentarschreiben anmelden
   #en: log_in_to_reply_to_this_topic: Log in to reply to this topic
-  log_in_to_reply_to_this_topic: Log in to reply to this topic
-  #en: log_in_to_site: Log in to %{site}
-  log_in_to_site: "Log in to %{site}"
+  log_in_to_reply_to_this_topic: Zum Antworten auf das Thema musst du dich anmelden
   #en: log_in_to_vote: Log in to vote
-  log_in_to_vote: Log in to vote
+  log_in_to_vote: Zum Abstimmen musst du dich anmelden
+  #en: log_in_to_site: Log in to %{site}
+  log_in_to_site: Anmeldung bei %{site}
   #en: log_in_to_your: Log in to your
-  log_in_to_your: Log in to your
+  log_in_to_your: Einloggen zu deinem
   #en: log_out: Log Out
-  log_out: Log Out
+  log_out: Abmelden
   #en: log_out_of_your: Log out of your 
-  log_out_of_your: Log out of your 
+  log_out_of_your: Abmelden vom
   #en: logged_in: "Logged in:"
-  logged_in: "Logged in:"
+  logged_in: "Angemeldet:"
   #en: logged_into_the_site: logged into the site
-  logged_into_the_site: logged into the site
+  logged_into_the_site: hat sich angemeldet
   #en: login: Login
-  login: Login
+  login: Anmeldung
   #en: logins: Logins
-  logins: Logins
+  logins: Anmeldungen
   #en: location: Location
-  location: Location
+  location: Ort
   #en: locked: Locked
-  locked: Locked
+  locked: Geschlossen
   #en: locked2: (locked)
-  locked2: (locked)
-  #en: look_for_a_message_from: "Look for a message from: %{from}"
-  look_for_a_message_from: "Look for a message from: %{from}"
-  #en: looking_for_most_x: Looking for %{link}
-  looking_for_most_x: "Looking for %{link}"
-  #en: most_recent: most recent
-  most_recent: most recent
-  #en: most_popular: most popular
-  most_popular: most popular
+  locked2: "(geschlossen)"
+  #en: look_for_a_message_from: Look for a message from:
+  look_for_a_message_from: "Schau nach einer Mitteilung von:"
+  #en looking_for_most_x: Looking for %{link}
+  looking_for_most_x: Suchst du nach %{link}?
   #en: make_moderator: Make moderator
-  make_moderator: Make moderator
-  #en: make_page_public: Make this page public
-  make_page_public: Make this page public
+  make_moderator: Zum Moderator machen
   #en: make_my_profile_public: Make my profile public
-  make_my_profile_public: Make my profile public
+  make_my_profile_public: Mach mein Profil öffentlich
   #en: make_this_my_profile_photo: Make this my profile photo
-  make_this_my_profile_photo: Make this my profile photo
+  make_this_my_profile_photo: Als Profilfoto übernehmen
   #en: male: Male
-  male: Male
-  #en: manage: "Manage"
-  manage: "Manage"
-  #en: manage_pages: Manage Pages
-  manage_pages: Manage Pages
+  male: "Männlich"
   #en: manage_posts: Manage Posts
-  manage_posts: Manage Posts
+  manage_posts: "Einträge verwalten"
   #en: medium: Medium
-  #en: map_it: Map It!
-  map_it: Map It!
-  medium: Medium
-  #en: megabyte_upload_limit: %{count} megabytes upload limit
-  megabyte_upload_limit:
-    one: "1 megabyte upload limit"
-    other: "%{count} megabytes upload limit"
-  #en: megabyte_upload_limit_per_file: %{count} megabytes upload limit per file.
-  megabyte_upload_limit_per_file:
-    one: "1 megabyte upload limit per file."
-    other: "%{count} megabytes upload limit per file."
+  medium: Mittel
+  #en: megabyte_upload_limit: megabyte upload limit
+  megabyte_upload_limit: Megabyte Limit
+  #en: megabyte_upload_limit_per_file: megabyte upload limit per file.
+  megabyte_upload_limit_per_file: megabyte upload limit per file.
   #en: member: Member
-  member: Member
+  member: Mitglied
   #en: members: Members
-  members: Members
+  members: Mitglieder
   #en: member_since: Member since
-  member_since: Member since
+  member_since: Mitglied seit
   #en: message: Message
-  message: Message
+  message: Nachricht
   #en: messages_deleted: Messages deleted
-  messages_deleted: Messages deleted
+  messages_deleted: Nachricht gelöscht
   #en: messages_sent: Messages sent!
-  messages_sent: Messages sent!
-  #en: message_sent: Message sent!
-  message_sent: Message sent!
-  #en: read: read
-  read: read
-  #en: unread: unread
-  unread: unread
-  #en: unread_messages: %{count} unread messages
-  unread_messages:
-    one: 1 unread message
-    other: "%{count} unread messages"
+  messages_sent: Nachricht abgeschickt
   #en: metro_area: Metro Area
   metro_area: Metro Area
   #en: metro_areas: Metro Areas
   metro_areas: Metro Areas
   #en: metro_area_was_successfully_created: MetroArea was successfully created.
-  metro_area_was_successfully_created: MetroArea was successfully created.
-  #en: minutes_ago: %{count} minutes ago
-  minutes_ago:
-    one: "one minute ago"
-    other: "%{count} minutes ago"
+  metro_area_was_successfully_created: MetroArea wurde erfolgreich angelegt.
+  #en: minutes_ago: minutes ago
+  minutes_ago: Minuten zuvor
   #en: moderator: Moderator
   moderator: Moderator
   #en: moderators: Moderators
-  moderators: Moderators
+  moderators: Moderatoren
   #en: monitored_topics: Monitored Topics
-  monitored_topics: Monitored Topics
+  monitored_topics: beobachtete Themen
   #en: month: Month
-  month: Month
+  month: Monat
   #en: more: More
-  more: More
+  more: Mehr
   #en: most_active_1_month: Most active (1 month)
-  most_active_1_month: Most active (1 month)
-  #en: my_account: My Account
-  my_account: My Account
-  #en: my_blog: My Blog
-  my_blog: My Blog
-  #en: my_blog_posts: My Blog Posts
-  my_blog_posts: My Blog Posts
-  #en: my_clippings: My Clippings
-  my_clippings: My Clippings
+  most_active_1_month: Am aktivsten (1 Monat)
+  #en: most_recent: most recent
+  most_recent: aktuellem
+  #en: most_popular: most popular
+  most_popular: beliebtesten
   #en: my_details: My Details
-  my_details: My Details
+  my_details: Meine Details
   #en: my_friends: My Friends
-  my_friends: My Friends
-  #en: my_photos: My Photos
-  my_photos: My Photos
+  my_friends: Meine Verbindungen
   #en: my_profile: My Profile
-  my_profile: My Profile
+  my_profile: Mein Profil
   #en: my_recent_comments: My recent comments
-  my_recent_comments: My recent comments
+  my_recent_comments: Meine letzten Kommentare
   #en: my_tags: My tags
-  my_tags: My tags
+  my_tags: Meine Tags
   #en: name: Name
   name: Name
   #en: navigation_menu_text: Navigation menu text
-  navigation_menu_text: Navigation menu text
+  navigation_menu_text: "Navigationsmenütext"
   #en: need_some_help_contact_our: Need some help?  Check out our
-  need_some_help_contact_our: Need some help?  Check out our
+  need_some_help_contact_our: Brauchst du Hilfe?  Check unseren
   #en: need_to_contact_us: Need to contact us?
-  need_to_contact_us: Need to contact us?
-  #en: new: New1
-  new: New!
+  need_to_contact_us: Brauchst du Hilfe?
   #en: new_ad: New Ad
-  new_ad: New Ad
+  new_ad: Neue Anzeige
   #en: new_category: New category
-  new_category: New category
+  new_category: Neue Kategorie
   #en: new_clipping: New clipping
-  new_clipping: New clipping
+  new_clipping: Neues Clipping
   #en: new_event: New Event
-  new_event: New Event
+  new_event: Neues Ereignis
   #en: new_forum: New Forum
-  new_forum: New Forum
+  new_forum: Neues Forum
   #en: new_homepage_feature: New Homepage Feature
-  new_homepage_feature: New Homepage Feature
+  new_homepage_feature: Neues Homepage Feature
   #en: new_invitation: New Invitation
-  new_invitation: New Invitation
+  new_invitation: Neue Einladung
   #en: new_invitation_from: New Invitation from
-  new_invitation_from: New Invitation from
+  new_invitation_from: Neue Einladung von
   #en: new_metro_area: New Metro Area
-  new_metro_area: New Metro Area
-  #en: new_page: New Page
-  new_page: New Page
+  new_metro_area: Neue Metro Area
   #en: new_photo: New photo
-  new_photo: New photo
-  #en: new_photos_multiple_uploader: "New Photos &raquo; Multiple Uploader"
-  new_photos_multiple_uploader: "New Photos &raquo; Multiple Uploader"
+  new_photo: Neues Foto
+  #en: new_photos_&raquo;_multiple_uploader: "New Photos &raquo; Multiple Uploader"
+  new_photos_raquo_multiple_uploader: "Neue Fotos &raquo; Multiple Uploader"
   #en: new_post: New post
-  new_post: New post
+  new_post: Neuer Beitrag
   #en: new_post_for_category: New %{category}
-  new_post_for_category: "New %{category}"
+  new_post_for_category: "Neuer Eintrag für Kategorie"
   #en: new_post_text: New Post text
-  new_post_text: New Post text
+  new_post_text: Text für den Link 'Neuer Beitrag'
   #en: new_today: New today
-  new_today: New today
+  new_today: Heute neu
   #en: new_topic: New topic
-  new_topic: New topic
+  new_topic: Neues Thema
   #en: new_yesterday: New yesterday
-  new_yesterday: New yesterday
-  #en: next: next
-  next: next
+  new_yesterday: Gestern neu
   #en: no_activation_email: No activation e-mail?
-  no_activation_email: No activation e-mail?
-  #en: no_comments_found_for_that_item: Sorry, we couldn't find any comments for that %{type}
-  no_comments_found: "Sorry, we couldn't find any comments for that %{type}"
-  #en: no_clippings_yet: No clippings saved yet.
-  no_clippings_yet: No clippings saved yet.
+  no_activation_email: Keine Aktivierungsmail bekommen ?
+  #en: no_comments_found: Sorry, we couldn't find any comments for that %{type}
+  no_comments_found: Kein Kommentar gefunden
   #en: no_images_uploaded_yet: No images uploaded yet.
-  no_images_uploaded_yet: No images uploaded yet.
+  no_images_uploaded_yet: Bisher keine Bilder hochgeladen.
   #en: no_messages: no messages
-  no_messages: no messages
+  no_messages: keine Nachrichten
   #en: no_profile_photo: "No profile photo?"
-  no_profile_photo: "No profile photo?"
+  no_profile_photo: "Noch kein Profilfoto?" 
   #en: no_recent_activity: No recent activity
-  no_recent_activity: No recent activity
+  no_recent_acitivity: Keine aktuellen Einträge
   #en: no_tags: No tags
-  no_tags: No tags
+  no_tags: "Keine Schlagwörter"
   #en: notify_email_updates: Notify of community news
-  notify_email_updates: Notify of community news
-  #en: notify_me_of_follow_ups_via_email: Notify me of follow ups via e-mail
-  notify_me_of_follow_ups_via_email: Notify me of follow ups via e-mail  
+  notify_email_updates: Benachrichtigung bei Community News
   #en: notify_of_comments: Notify of comments
-  notify_of_comments: Notify of comments
+  notify_of_comments: Benachrichtigung bei Kommentaren
   #en: notify_of_friend_requests: Notify of friend requests
-  notify_of_friend_requests: Notify of friend requests
-  #en: number_of_attendees: Number of attendees (including you)
-  number_of_attendees: Number of attendees (including you)
-  #en: of: of
-  of: of
+  notify_of_friend_requests: Benachrichtigung bei Freundschaftsanfragen
+  #en: on: On
+  on: Zu
   #en: on_commentable: On
-  on_commentable: 'On'
-  #en: optional: optional
-  optional: optional
+  on_commentable: 'An'
+  #en: one_day_ago: one day ago
+  one_day_ago: vor einem Tag
+  #en: one_hour_ago: one hour ago
+  one_hour_ago: vor einer Stunde
+  #en: one_minute_ago: one minute ago
+  one_minute_ago: vor einer Minute
+  #en: optional: (optional)
+  optional: (optional)
   #en: optional_keywords_describing_this_clipping_separated_by_commas: optional keywords describing this clipping, separated by commas
-  optional_keywords_describing_this_clipping_separated_by_commas: optional keywords describing this clipping, separated by commas
+  optional_keywords_describing_this_clipping_separated_by_commas: "(optionale Schlüsselwörter, die diesen Ausschnitt beschreiben, durch Komma getrennt)"
   #en: optional_keywords_describing_this_forum_separated_by_commas: optional keywords describing this forum, separated by commas
-  optional_keywords_describing_this_forum_separated_by_commas: optional keywords describing this forum, separated by commas
+  optional_keywords_describing_this_forum_separated_by_commas: "(optionale Schlüsselwörter, die das Forum beschreiben, durch Komma getrennt)"
   #en: optional_keywords_describing_this_photo_separated_by_commas: optional keywords describing this photo, separated by commas
-  optional_keywords_describing_this_photo_separated_by_commas: optional keywords describing this photo, separated by commas
-  #en: optional_keywords_describing_this_post_separated_by_commas: optional keywords describing this post, separated by commas
-  optional_keywords_describing_this_post_separated_by_commas: "optional keywords describing this post, separated by commas"
+  optional_keywords_describing_this_photo_separated_by_commas: "(optionale Schlüsselwörter, die dieses Foto beschreiben, durch Komma getrennt)"
+  #en: optional_keywords_describing_this_post_separated_by_commas: (optional keywords describing this post, separated by commas)
+  optional_keywords_describing_this_post_separated_by_commas: "(optionale Schlüsselwörter, die den Betrag beschreiben, durch Komma getrennt)"
   #en: optional_keywords_describing_this_topic_separated_by_commas: optional keywords describing this topic, separated by commas
-  optional_keywords_describing_this_topic_separated_by_commas: optional keywords describing this topic, separated by commas
-  #en: yes_status: yes
-  yes_status: "yes"
-  #en: no_status: no
-  no_status: "no"
+  optional_keywords_describing_this_topic_separated_by_commas: "(optionale Schlüsselwörter, die das Thema beschreiben, durch Komma getrennt)"
   #en: or: or
-  or: or
+  or: oder
   #en: page: page
-  page: page
-  #en: page_not_found: The page you are trying to view has been moved or no longer exists.
-  page_not_found: The page you are trying to view has been moved or no longer exists.
-  #en: page_not_public_warning: This page is not public, you'll need to create an account and log in to access it
-  page_not_public_warning: "This page is not public, you'll need to create an account and log in to access it"
-  #en: page_was_successfully_created: Page was successfully created.
-  page_was_successfully_created: Page was successfully created.
-  #en: page_was_successfully_deleted: Page was successfully deleted.
-  page_was_successfully_deleted: Page was successfully deleted.
-  #en: page_was_successfully_updated: Page was successfully updated.
-  page_was_successfully_updated: Page was successfully updated.
-  #en: pages: Pages
-  pages: Pages
-  #en: page_tips: "Pages are a good place to put static content that you would rather not post to the blog or the forums."
-  page_tips: "Pages are a good place to put static content that you would rather not post to the blog or the forums."
+  page: Seite
+  #en: pages: "Pages:"
+  pages: "Seiten:"
   #en: password: Password
-  password: Password
+  password: Kennwort
   #en: pending: pending
-  pending: pending
+  pending: ausstehend
   #en: pending_friendships: Pending Friendships
-  pending_friendships: Pending Friendships
+  pending_friendships: zu bestätigende Freundschaften
   #en: people: People
-  people: People
-  #en: people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends: People who sign up using your invitation will automatically be added as your friends
-  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends: People who sign up using your invitation will automatically be added as your friends.
+  people: Leute
   #en: people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: People who sign up using your invitation will automatically be added as your friends on
-  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: People who sign up using your invitation will automatically be added as your friends on
+  people_who_sign_up_using_your_invitation_will_automatically_be_added_as_your_friends_on: "Leute, die sich durch deine Einladung angemeldet haben, werden automatisch zu deinen Verbindungen gemacht." 
   #en: permanently_delete_this_clipping: Permanently delete this clipping?
-  permanently_delete_this_clipping: Permanently delete this clipping?
+  permanently_delete_this_clipping: "Soll das Clipping dauerhaft gelöscht werden?"
   #en: permanently_delete_this_event: Permanently delete this event?
-  permanently_delete_this_event: Permanently delete this event?
+  permanently_delete_this_event: "Soll das Ereignis dauerhaft gelöscht werden?"
   #en: permanently_delete_this_post: Permanently delete this post?
-  permanently_delete_this_post: Permanently delete this post?
+  permanently_delete_this_post: "Soll der Eintrag dauerhaft gelöscht werden?"
   #en: photo_comments: Photo Comments
-  photo_comments: Photo Comments
-  #en: photo_description_from_user: "%{photo_description} from %{user}"
-  photo_description_from_user: "%{photo_description} from %{user}"
-  #en: photo_from_user: "Photo from %{user}"
-  photo_from_user: "Photo from %{user}"
+  photo_comments: Fotokommentare
   #en: photo_message: Your profile photo represents you on %{site}. You can change it later.
-  photo_message: "Your profile photo represents you on %{site}. You can change it later."
+  photo_message: Fotonachricht
   #en: photo_was_successfully_created: Photo was successfully created.
-  photo_was_successfully_created: Photo was successfully created.
+  photo_was_successfully_created: Foto wurde erfolgreich angelegt.
   #en: photos: Photos
-  photos: Photos
-  #en: plural_photos: %{count} Photos
-  plural_photos:
-    one: 1 Photo
-    other: "%{count} Photos"
-  #en: photos_should_be_x_pixels: Photos should be 300x200 pixels.
-  photos_should_be_x_pixels: Photos should be 300x200 pixels.
-  #en: photos_tagged: Photos tagged
-  photos_tagged: "Photos tagged"
+  photos: Fotos
+  #en: photos_should_be_x_pixels: Photos should be 300x300 pixels.
+  photos_should_be_x_pixels: "Fotos sollten 300x300 Pixel groß sein."
   #en: photo_tip_1: Photos show the world your creativity. Pick your best pics, and give them good titles and descriptions.
-  photo_tip_1: "Photos show the world your creativity. Pick your best pics, and give them good titles and descriptions."
+  photo_tip_1: Fotos zeigen der Welt deine Kreativität. Nimm deine besten Bilder, gib ihnen einen guten Titel und Beschreibung.
   #en: photo_tip_2: Use tags to organize your photos. Separate tags with commas.
-  photo_tip_2: Use tags to organize your photos. Separate tags with commas.
-  #en: please_activate_your_new_account: Please activate your new %{site} account
-  please_activate_your_new_account: "Please activate your new %{site} account"
+  photo_tip_2: Benutze Tags, um die Bilder zu organisieren. Trenne die Tags mit Kommas.
   #en: please_log_in: Please log in.
-  please_log_in: Please log in.
+  please_log_in: Bitte anmelden.
   #en: please_post_something_at_least: Please post something at least...
   please_post_something_at_least: Please post something at least...
   #en: plural_posts: "%{count} posts"
-  plural_posts: "%{count} posts"
+  plural_posts: "Einträge"
   #en: popular: Popular
-  popular: My Friends posts
-  #en: popular_category: Popular %{name}
-  popular_category: "Popular %{name}"
+  popular: "Aktivitäten meiner Verbindungen"
+  #en: popular_catgory: Popular %{name}
+  popular_catgory: "beliebt in %{name}"
   #en: popular_posts: Popular Posts
-  popular_posts: Popular Posts
+  popular_posts: "beliebte Einträge"
   #en: popular_posts_on: Popular Posts on
-  popular_posts_on: Popular Posts on
+  popular_posts_on: "beliebte Einträge auf"
   #en: popular_polls: Popular Polls
-  popular_polls: Popular Polls
+  popular_polls: beliebte Umfragen
   #en position: Position
   position: Position
   #en: post: Post
-  post: Post
+  post: "Beitrag"
+  post_found:
+    one: 1 Beitrag gefunden
+    other: "%{count} Beiträge gefunden"
   #en: posts: Posts
-  posts: Posts
+  posts: "Beiträge"
   #en: post_a_new_topic: Post a new topic
-  post_a_new_topic: Post a new topic
+  post_a_new_topic: Fang ein neues Thema an
   #en: post_an_event: Post an event
-  post_an_event: Post an event
-  #en: posted_an_event: "posted an event:"
-  posted_an_event: "posted an event:"
-  #en: upcoming_events: Upcoming Events
-  upcoming_events: Upcoming Events
-  #en: past_events: Past Events
-  past_events: Past Events
+  post_an_event: Ereignis erfassen
   #en: post_created_for_category: Your '%{category}' post was successfully created.
-  post_created_for_category: "Your '%{category}' post was successfully created."
+  post_created_for_category: "Eintrag für %{category} erstellt"
   #en: post_comments: Post Comments
-  post_comments: Post Comments
+  post_comments: Kommentare schreiben
   #en: postal_code: "Postal code:"
-  postal_code: "Postal code:"
+  postal_code: "Postleitzahl:"
   #en: posting_tips: "Posting Tips"
-  posting_tips: "Posting Tips"
+  posting_tips: "Tip zum Schreiben eines Beitrags"
   #en: post_topic: Post topic
-  post_topic: Post topic
+  post_topic: Thema speichern
   #en: posts_photos_and_bookmarks: %{name} posts, photos and bookmarks
-  posts_photos_and_bookmarks: "%{name} posts, photos and bookmarks"
-  #en: posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: "Posts saved with 'draft' status won't appear in your blog until you publish them."
-  posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: "Posts saved with 'draft' status won't appear in your blog until you publish them."
-  post_not_published_yet: "This post is not published yet."
-  #en: posts_tagged: Posts tagged
-  posts_tagged: "Posts tagged"
-  #en: pages_saved_with_draft_status_wont_appear_on_the_site_until_you_publish_them: Pages saved with 'draft' status won't appear on the site until you publish them.
-  pages_saved_with_draft_status_wont_appear_on_the_site_until_you_publish_them: Pages saved with 'draft' status won't appear on the site until you publish them.
-  #en: public: Public
-  public: Public
+  posts_photos_and_bookmarks: "%{name} Beiträge, Fotos und Bookmarks"
+  #en: posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: Posts saved with 'draft' status won't appear in your blog until you publish them.
+  posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: "Einträge, die als Entwurf gespeichert wurden, erscheinen erst in deinem Blog, wenn du sie veröffentlichst."
+  post_not_published_yet: "Dieser Eintrag wurde noch nicht veröffentlicht."
   #en: preview: Preview
-  preview: Preview
+  preview: Vorschau
   #en: previewing_your_post: Previewing your post
-  previewing_your_post: Previewing your post
-  #en: previous: previous
-  previous: previous
+  previewing_your_post: Vorschau deines Textes
   #en: print: Print
-  print: Print
+  print: Drucken
   #en: print_this_story: "Print this story"
-  print_this_story: "Print this story"
+  print_this_story: "Druck diese Geschichte"
   #en: profile: Profile
-  profile: Profile
+  profile: Profil
   #en: profile_comments: Profile Comments
-  profile_comments: Profile Comments
+  profile_comments: Profilkommentare
   #en: profile_photo: Profile Photo
-  profile_photo: Profile Photo
-  #en: profile_photo_change: Change profile photo
-  profile_photo_change: Change profile photo
-  #en: profile_photo_crop: Crop profile photo
-  profile_photo_crop: Crop profile photo
+  profile_photo: Profilfoto
   #en: profile_privacy: Profile Privacy
-  profile_privacy: Profile Privacy
+  profile_privacy: Privatsphäre
   #en: profile_views: profile views
-  profile_views: profile views
+  profile_views: Profilansichten
   #en: pros: Pros
-  pros: Pros
+  pros: Profis
   #en: published: Published
-  published: Published
+  published: "Veröffentlicht"
   #en: question: Question
-  question: Question
+  question: Frage
   #en: re_type_your_password_to_confirm: "Re-type your password to confirm:"
-  re_type_your_password_to_confirm: "Re-type your password to confirm:"
+  re_type_your_password_to_confirm: "Erneute Passworteingabe zur Bestätigung:"
   #en: read_more: read more
-  read_more: read more
+  read_more: hier mehr
   #en: recent: Recent
-  recent: Recent
+  recent: Neu
   #en: recent_activity: Recent activity
-  recent_activity: Recent activity
+  recent_activity: Letzte Beiträge
   #en: recent_blog_posts: Recent Blog Posts
-  recent_blog_posts: Recent Blog Posts
-  #en: recent_photos: Recent Photos
-  recent_photos: Recent Photos
+  recent_blog_posts: "Neue Blogbeiträge"
   #en: recent_posts: Recent Posts
-  recent_posts: Recent Listings
+  recent_posts: "Neue Beiträge"
   #en: recommended_posts: Recommended Posts
-  recommended_posts: Recommended Posts
+  recommended_posts: "Empfohlene Einträge"
   #en: related_clippings_all_members: Related Clippings (all members)
-  related_clippings_all_members: Related Clippings (all members)
+  related_clippings_all_members: In Verbindung stehende Clippings (alle Mitglieder)
   #en: related_photos_all_members: Related Photos (all members)
-  related_photos_all_members: Related Photos (all members)
+  related_photos_all_members: In Verbindung stehende Fotos (alle Mitglieder)
   #en: related_posts: Related Posts
-  related_posts: Related Posts
+  related_posts: "In Verbindung stehende Einträge"
   #en: related_tags: Related Tags
-  related_tags: Related Tags
+  related_tags: "In Verbindung stehende Schlagwörter"
   #en: remember_me: Remember me
-  remember_me: Remember me
+  remember_me: Angemeldet bleiben
   #en: remember_you_can_always_change_this_later: Remember, you can always change this later.
-  remember_you_can_always_change_this_later: "Remember, you can always change this later."
+  remember_you_can_always_change_this_later: "Vergiss nicht, du kannst das auch jederzeit im Nachhinein Ändern"
   #en: remove_moderator: Remove moderator
-  remove_moderator: Remove moderator
+  remove_moderator: Moderator wegnehmen
   #en: remove_this_friend: Remove this friend
-  remove_this_friend: Remove this friend
+  remove_this_friend: Diese Verbindung löschen
   #en: reply: Reply
-  reply: Reply
+  reply: Antworten
   #en: reply_to_topic: Reply
-  reply_to_topic: Reply
+  reply_to_topic: Antworte auf das Thema
   #en: request_friendship: Request friendship
-  request_friendship: Request friendship
+  request_friendship: Verbindungsanfrage
   #en: requested: requested
-  requested: requested
+  requested: angefragt
   #en: requested_friendship_with: Requested friendship with
-  requested_friendship_with: Requested friendship with
+  requested_friendship_with: Freundschaft angefragt bei
   #en: requesting_friendship: Requesting friendship
-  requesting_friendship: Requesting friendship
-  #en: friendship_request_failed
-  friendship_request_failed: Friendship request failed
-  #en: required: required
-  required: required
+  requesting_friendship: Verbindungsanfrage
+  #en: required: (required)
+  required: (erforderlich)
   #en: required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
-  required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Required: We will send a confirmation e-mail to the address you enter.)"
-  #en: required_you_must_be_at_least_years_old_to_sign_up: "(Required: You must be at least %{min_age} years old to sign up.)"
-  required_you_must_be_at_least_years_old_to_sign_up: "(Required: You must be at least %{min_age} years old to sign up.)"
-  #en: required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain spaces or special characters.)"
-  required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain spaces or special characters.)"
+  required_we_will_send_a_confirmation_e_mail_to_the_address_you_enter: "(Erforderlich: Wir senden eine Bestätigungsmail an die eingegebene Adresse.)"
+  #en: required_you_must_be_at_least_years_old_to_sign_up: "(Required: you must be at least %{min_age} years old to sign up.)"
+  required_you_must_be_at_least_years_old_to_sign_up: "(Erfoderlich: Du musst mindestens %{min_age} Jahre alt sein, um dich zu registrieren.)"
+  #en: required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Required: Your username must not contain numerals, spaces or special characters.)"
+  required_your_username_must_not_contain_numerals_spaces_or_special_characters: "(Erforderlich: Dein Benutzername sollte keine Zahlen, Leer- oder Sonderzeichen enthalten.)"
   #en: resend_my_activation_e_mail: Resend my activation e-mail
-  resend_my_activation_e_mail: Resend my activation e-mail
+  resend_my_activation_e_mail: Schicke meine Aktivierungsmail erneut
   #en: resend_your_activation_e_mail: Resend your activation e-mail
-  resend_your_activation_e_mail: Resend your activation e-mail
+  resend_your_activation_e_mail: Aktivierungsmail erneut schicken
   #en: reset_my_password: Reset my password
-  reset_my_password: Reset my password
-  #en: retract_rsvp: Retract RSVP
-  retract_rsvp: Retract RSVP
+  reset_my_password: "Passwort zurücksetzen"
   #en: rss: RSS
   rss: RSS
   #en: rss_feed: RSS feed
   rss_feed: RSS feed
-  #en: rsvp_for: RSVP for
-  rsvp_for: RSVP for
-  #en: rsvped_for_an_event: "RSVPed for an event:"
-  rsvped_for_an_event: "RSVPed for an event:"
-  #en: rsvp: RSVP  
-  rsvp: RSVP
-  #en: rsvps: RSVPs
-  rsvps: RSVPs
   #en: run: Run
-  run: Run
+  run: Start
   #en: save: Save
-  save: Save
+  save: Speichern
   #en: save_and_continue_to_step_three: Save, and continue to step three
-  save_and_continue_to_step_three: "Save, and continue to step three"
+  save_and_continue_to_step_three: Speicher und mach mit Schritt 3 weiter
   #en: save_changes: Save Changes
-  save_changes: Save Changes
+  save_changes: "Änderungen speichern"
   #en: save_forum: Save Forum
-  save_forum: Save Forum
-  #en: save_page_as: "Save page as:"
-  save_page_as: "Save page as:"
+  save_forum: Forum speichern
   #en: save_post_as: "Save post as:"
-  save_post_as: "Save post as:"
+  save_post_as: "Eintrag speichern als:"
   #en: save_reply: Save reply
-  save_reply: Save reply
+  save_reply: Antwort speichern
   #en: says: says
-  says: says
+  says: sagt
   #en: sb_post_was_deleted: Post '%{title}' was deleted.
-  sb_post_was_deleted: "Post '%{title}' was deleted."
+  sb_post_was_deleted: Der Eintrag '%{title}' wurde gelöscht.
   #en: scrapbook: Scrapbook
-  scrapbook: Scrapbook
+  scrapbook: Album
   #en: search: Search
-  search: Search
+  search: Suche
   #en: search_users: Search Users
-  search_users: Search Users
+  search_users: Suche Benutzer
   #en: searching_for: Searching for
-  searching_for: Searching for
+  searching_for: Suchen nach
   #en: see_all: SEE ALL
-  see_all: SEE ALL
+  see_all: Alles sehen
   #en: see_all_activity: See all activity
-  see_all_activity: See all activity
+  see_all_activity: Alle Aktivitäten
   #en: see_all_events: See all events
-  see_all_events: See all events
+  see_all_events: Sieh dir die Liste der Ereignisse an
   #en: see_all_recent_posts: See all recent posts
-  see_all_recent_posts: See all recent listings
+  see_all_recent_posts: Alle letzten Posts
   #en: see_you_back_here_in_a_short_while: See you back here in a short while.
-  see_you_back_here_in_a_short_while: See you back here in a short while.
+  see_you_back_here_in_a_short_while: Wir sehen uns hoffentlich bald wieder.
   #en: select_images_to_upload: Select Images to Upload
-  select_images_to_upload: Select Images to Upload
-  #en: select_your_city: Select your city
-  select_your_city: Select your city
+  select_images_to_upload: Wähle Bilder zum Hochladen aus
   #en: send: "Send"
-  send: "Send"
+  send: "Senden"
   #en: send_comment_notifications: Send comment notifications?
-  send_comment_notifications: Send comment notifications?  
-  #en: send_me_a_message: "Send me a message"
-  send_me_a_message: "Send me a message"
+  send_comment_notifications: Benachrichtigen bei Kommentaren ?
   #en: send_invitations: Send Invitations!
-  send_invitations: Send Invitations!
+  send_invitations: Einladung verschicken!
   #en: send_me_my_username: Send me my username
-  send_me_my_username: Send me my username
-  #en: send_this_story_to_friends: Send this message to friends
-  send_this_story_to_friends: Send this message to friends
+  send_me_my_username: Zusendung des Benutzernamens
   #en: sent_messages: Sent messages
-  sent_messages: Sent messages
-  #en: sent_you_a_private_message: %{user} sent you a private message!
-  sent_you_a_private_message: "%{user} sent you a private message!"
+  sent_messages: gesendete Nachrichten
+  #en: send_this_story_to_friends: Send this message to friends
+  send_this_story_to_friends: Schick diese Nachricht an Freunde
   #en: service_could_not_be_deleted: Service could not be deleted.
-  service_could_not_be_deleted: Service could not be deleted.
+  service_could_not_be_deleted: "Service kann nicht gelöscht werden."
   #en: share_the_love: Share the love
   share_the_love: Share the love
-  #en: sharethis: ShareThis
-  sharethis: ShareThis
   #en: show: Show
-  show: Show
-  #en: show_category: %{category}
-  show_category: "%{category}"
+  show: Zeigen
+  #en: show_category: "%{category}"
+  show_category: Zeige "%{category}"
   #en: show_this_photo: Show this photo
-  show_this_photo: Show this photo
+  show_this_photo: Zeige dieses Foto
   #en: showing: Showing
-  showing: Showing
+  showing: Zeige
   #en: showing_ad: Showing Ad
-  showing_ad: Showing Ad
+  showing_ad: Zeige Anzeige
   #en: showing_categories: Showing categories
-  showing_categories: Showing categories
+  showing_categories: Zeige Kategorien 
   #en: showing_metro_area_details: Showing Metro Area Details
-  showing_metro_area_details: Showing Metro Area Details
+  showing_metro_area_details: Zeige Detals der MetroArea
   #en: showing_users: Showing users
-  showing_users: Showing users
+  showing_users: Zeige Benutzer
   #en: sign_up: Sign Up!
-  sign_up: Sign Up!
-  sign_up_customer: As Customer
-  sign_up_shop_owner: As Shop Owner
-  shop_category: Shop Category
-  shop_location: Shop Address
-  bakery_shop: Bakery
-  farm_shop: Farm Shop
-  first_name: First Name
-  required_first_name: "(Required: Your first name must not contain spaces or special characters.)"
-  optional_first_name: "(Optional: Your first name must not contain spaces or special characters.)"
+  sign_up: Registrieren!
+  sign_up_customer: Als Kunde
+  sign_up_shop_owner: As Ladengeschaeft
+  shop_category: Laden Kategorie
+  shop_location: Ladenadresse
+  bakery_shop: Bäckerei
+  farm_shop: Hofladen
+  first_name: Vorname
+  required_first_name: "(Required: Dein Vorname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
+  optional_first_name: "(Optional: Dein Vorname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
   last_name: Last Name
-  required_last_name: "(Required: Your last name must not contain spaces or special characters.)"
-  optional_last_name: "(Optional: Your last name must not contain spaces or special characters.)"
+  required_last_name: "(Required: Dein Nachname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
+  optional_last_name: "(Optional: Dein Nachname darf keine Leerzeichen oder Sonderzeichen beinhalten.)"
   facebook_link: Facebook Link
-  no_results_for_city: 'No results found for your city. Try again later.'
-  required_facebook_link: (Optional.Example - https://www.facebook.com/profile.php?id=100000504463883)
-  privacy_check: Privacy Setting
-  show_info: Allow other users to see your personal data.
-  shop_name: Shop Name
-  required_shop_name: "(Required.)"
-  shop_street: Shop Street
-  required_shop_street: "(Required: street address of your shop.)"
-  shop_country: Country
-  required_shop_country: "(Required: country.)"
+  no_results_for_city: 'Keine Ergebnisse zur eingegebenen Stadt'
+  required_facebook_link: (Optional. Zum Beispiel - https://www.facebook.com/fernunihagen/)
+  privacy_check: Einstellungen zur Privatsphaere
+  show_info: Anderen Gemeinschafts-Mitgliedern ermöglichen, deine persoenlichen Details zu sehen.
+  shop_name: Laden Name
+  required_shop_name: "(Notwendig.)"
+  shop_street: Laden Anschrift (Strasse)
+  required_shop_street: "(Die Adresse deines Ladens wird benoetigt.)"
+  shop_country: Land
+  required_shop_country: "(Notwendig: Land)"
   shop_region: Region
-  required_shop_region: "(Required: region.)"
-  shop_zip_code: Zip Code
-  required_shop_zip_code: "(Required: zip code.)"
-  shop_features: Shop Features
-  vegan: Vegan products
-  gluten: Gluten-free products
-  diabetis: Diabetis-friendly products
-  lactose: Lactose-free products
-  gmo: Gmo-free products
-  self_made: Self-made products
-  select_city: Your city
+  required_shop_region: "(Notwendig: Region.)"
+  shop_zip_code: PLZ
+  required_shop_zip_code: "(Notwendig: PLZ)"
+   shop_features: Laden Features
+  vegan: Vegane Produkte
+  gluten: Gluten-freie Produkte
+  diabetis: Diabetiker-freundliche Produkte
+  lactose: Laktose-freie Produkte
+  gmo: GVO-freie Produkte
+  self_made: Selbstgemachte Produkte
+  select_city: Deine Stadt
   customer_vegan: Vegan
-  customer_gluten: Gluten-free
-  customer_diabetis: Diabeties-friendly
-  customer_lactose: Lactose-free
-  customer_gmo: None-GMO
-  recipe: Recipe
-  review: Review
-  shop_info: Shop Information
-  shops: Shops
-  city: City
-  customer_vegan: Vegan
-  customer_vegetarian: Vegetarian
+  customer_gluten: Gluten-frei
+  customer_diabetis: Diabetiker freundlich
+  customer_lactose: Laktose-frei
+  customer_gmo: Ohne Gentechnik
+  recipe: Rezept
+  review: Erfahrungsbericht
+  shop_info: Laden Information
+  shops: Laeden
+  city: Stadt
+  customer_vegan: Veganer
+  customer_vegetarian: Vegetarier
   customer_gluten: Gluten intolerant
-  customer_lactose: Lactose intollerant
-  customer_organic_food: Interested in organic food
-  customer_cook: Cook
-  customer_diabetic: Diabetic
-  edit_shop: Edit Shop
-  facebook_profile: Facebook profile
-  send_me_a_collaboration: Propose collaboration
-  customers_friends: Customers
-  shop_owner_friends: Shop owners
-  send_me_a_critic: Send a critic
-  send_a_recommendation: Recommend to a friend
-  organize_meeting: Organize a meeting
-  meeting_time: Meeting Time
+  customer_lactose: Laktose intolerant
+  customer_organic_food: An Gentechnik-freien Lebensmitteln interessiert
+  customer_cook: Koch
+  customer_diabetic: Diabetiker
+  edit_shop: Laden bearbeiten
+  facebook_profile: Facebook Profil
+  send_me_a_collaboration: Zusammenarbeit anbieten
+  send_me_a_message: Nachricht senden
+  customers_friends: Kunden
+  shop_owner_friends: Laeden
+  send_me_a_critic: Kritik senden
+  send_a_recommendation: Einem Freund empfehlen
+  organize_meeting: Verabredung ausmachen
+  meeting_time: Verabredungszeit
   hygiene: Hygiene
-  top_place: Top rating
+  top_place: Top Bewertung
   staff: 'Staff/Friendliness'
-  food: Food Quality
+  food: Nahrungsmittel Qualitaet
   organization: 'Organization/Opening Times'
-  expectations: I expected something else
-  below_expectations: Below expectations
-  disappointed: Disappointing
-  crucial_issue: Crucial issue
-  add_friends: Select friends to participate
-  friends_message: Message to your friends
-  shop_owner_message: Message to the shop owner
-  search_stores_by_name_and_feature: Shop name or category
-  severity: 'Critic severity:'
-  shop_rating: 'Shop rating: '
-  choose_a_photo_for_your_post: 'Choose a photo for your post:'
-  current_post_photo: 'Current post photo:'
-  address: Address
-  top_users: Score
+  expectations: Ich hatte etwas anderes erwartet
+  below_expectations: schlechter als erwartet
+  disappointed: unzufrieden
+  crucial_issue: Sehr unzufrieden
+  add_friends: Verbindungen zur Teilnahme auswaehlen
+  friends_message: Nachricht an deine Verbindungen
+  shop_owner_message: Nachricht an den Ladenbetreiber
+  search_stores_by_name_and_feature: Ladenname oder Kategorie
+  severity: 'Schwere des Vorfalls:'
+  shop_rating: 'Laden Bewertung: '
+  choose_a_photo_for_your_post: 'Waehle ein Foto fuer diesen Eintrag:'
+  current_post_photo: 'Aktuelles Beitragsfoto:'
+  address: Addresse
+  top_users: Highscore
   #en: sign_up_for_an_account: Sign up for an account.
   sign_up_for_an_account: Sign up for an account.
   #en: sign_up_for_a_: Sign up for a
