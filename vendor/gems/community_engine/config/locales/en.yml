@@ -272,7 +272,7 @@ en:
   #en: comments_rss: Comments RSS
   comments_rss: Kommentar-RSS-Feed
   #en: community_tagline: CommunityEngine Rocks!
-  community_tagline: die Basis dieser Community
+  community_tagline: Prototyp LVZ - 2016 Thomas Bayer - Basierend auf CommunityEngine
   #en: compose: Compose
   compose: Verfassen
   #en: compose_messages: Compose messages
@@ -818,7 +818,7 @@ en:
   #en: plural_posts: "%{count} posts"
   plural_posts: "Einträge"
   #en: popular: Popular
-  popular: "Beliebt"
+  popular: "Neuigkeiten meiner Freunde"
   #en: popular_catgory: Popular %{name}
   popular_catgory: "beliebt in %{name}"
   #en: popular_posts: Popular Posts
@@ -1045,12 +1045,12 @@ en:
   gmo: Gentechnikfreie Produkte
   self_made: Selbstgemachte Produkte
   select_city: Deine Stadt
-  customer_vegan: Veganer
-  customer_gluten: Gluten-frei lebend
-  customer_diabetis: Diabetiker
+  customer_vegan: Vegan
+  customer_gluten: Gluten-Vermeidend 
+  customer_diabetis: Diabetisch
   my_photos: Meine Bilder
-  customer_lactose: Laktose-frei lebend
-  customer_gmo: Interessiert an gentechnikfreien Produkten
+  customer_lactose: Laktose-Vermeidend 
+  customer_gmo: Gentechnik Vermeidend
   recipe: Rezept
   review: Erfahrungsbericht
   shop_info: Laden Informationen
@@ -1215,7 +1215,7 @@ en:
   #en: to_accept: to accept
   to_accept: ", dass er bestätigt"
   #en: to_get_recommended_content_on_your_dashboard: to start getting recommended content on your dashboard.
-  to_get_recommended_content_on_your_dashboard: "Zum Start bring Inhalt in deine Übersicht."
+  to_get_recommended_content_on_your_dashboard: "Viel Erfolg beim Nutzen der LokalVZ Community!"
   #en: to_get_started_with_clippings_first: To get started with clippings, first 
   to_get_started_with_clippings_first: "Um mit den Clippings zu beginnen:" 
   #en: to_start_adding_friends: To start adding friends, you can
@@ -1353,7 +1353,7 @@ en:
   #en: what_are_tags: 'What are "Tags"?'
   what_are_tags: 'Was sind "Tags"?'
   #en: what_is_popular: What's Popular
-  what_is_popular: Was ist beliebt
+  what_is_popular: Neuigkeiten meiner Freunde - Was ist beliebt?
   #en: whats_fresh: What's fresh
   whats_fresh: Was ist gerade so los
   #en: whats_hot: What's Hot
