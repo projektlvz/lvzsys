@@ -36,9 +36,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #Some temporary keys for development:
-  ENV['GOOGLE_MAPS_API_KEY'] = 'AIzaSyCPDQ4gMjIDzGnGZeMK_8IB5J7bjrG6Qr8'
-  ENV['GMAIL_USERNAME'] = 'd.romanovskybox@gmail.com'
-  ENV['GMAIL_APP_SPECIFIC_PASSWORD'] = 'kmnjsjwtrogfewmg'
+  ENV['GOOGLE_MAPS_API_KEY'] = 'AIzaSyB_vUto09qc7rEmWVeHNNkyfus5ZLVBr5I'
+  ENV['GMAIL_USERNAME'] = 'thomasbayerfernunihagen@gmail.com'
+  ENV['GMAIL_APP_SPECIFIC_PASSWORD'] = 'rydvokafffxoipuy'
   ENV['S3_ACCESS_KEY'] = 'j6JE3hr38mYZma+RL06o8xJthskYYw5FzT8lRHJB'
   ENV['S3_ACCESS_KEY_ID'] = 'AKIAJN35QGVT6SEIWS5A'
   ENV['S3_BUCKET_NAME'] = 'vzbucket16'
