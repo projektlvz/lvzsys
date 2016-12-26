@@ -1,0 +1,24 @@
+-# Renders all the buttons for additional messaging on Friends page - send a critic, meeting etc.
+%li{style: 'min-height: 600px;'}
+  - user = friendship.friend
+  
+  = image_tag( user.avatar_photo_url(:medium))
+   
+  %h3= link_to user.login, user_path(user)
+  - if user.metro_area      
+    %p= "#{:from.l} #{user.location}"
+  %p= friendship.friendship_status.name.l
+  %p
+    = :requested.l
+    = time_ago_in_words friendship.created_at
+  - if @is_current_user
+    %ul.list-unstyled
+      %li.compose= link_to(:send_me_a_message.l, new_user_message_path(@current_user, :to=>user))
+      %li.compose= link_to(:send_me_a_collaboration.l, new_user_message_path(@current_user, :to=>user, type: 'collaboration')) if !friendship.friend_customer? && !@current_user.customer?
+      %li.compose= link_to(:send_me_a_critic.l, new_user_message_path(@current_user, :to=>user, type: 'critic')) if !friendship.friend_customer? && @current_user.customer?
+      %li.compose= link_to(:send_a_recommendation.l, new_user_message_path(@current_user, type: 'recommendation', recommended_user: user.id)) if !friendship.friend_customer? && @current_user.customer?
+      %li.compose= link_to(:organize_meeting.l, new_user_message_path(@current_user, type: 'meeting', :to=>user)) if !friendship.friend_customer? && @current_user.customer?
+    %br
+    = friendship_control_links(friendship)
+    %br
+    %br
