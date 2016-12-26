@@ -1,0 +1,13 @@
+-# Score page.
+-@page_title = :top_users.l
+-box :id => "top_users" do
+  %ul.list-unstyled.thumbnails
+    .row.well
+      .col-sm-6
+        %h3
+          = :shop_owner_friends.l
+        = render :partial => "users/top_user", :collection => @shop_owners
+      .col-sm-6
+        %h3
+          = :customers_friends.l
+        = render :partial => "users/top_user", :collection => @customers
