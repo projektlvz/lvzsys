@@ -1,0 +1,17 @@
+-# Full-scale search tab with check boxes for tags.
+%div{style: 'background-color: gray; color: white; border-radius: 10px; padding-left: 5px;'}
+  = form_tag("/categories/#{category}", method: "get") do
+    .row
+      .col-md-3
+        %input{type: "text", class: "form-control", id: "city", name: "city", placeholder: :select_city.l, style: 'width: 240px; margin-top: 12px;', value: params['city']}
+      - Shop.features_list.each_slice(2) do |slice|
+        .col-md-3
+          - slice.each do |feature|
+            %div.checkbox
+              %label
+                - checked = params[:search_tags].present? && params[:search_tags][feature[0]].present?
+                %input{type: "checkbox", id: "s_#{feature[0]}", name: "search_tags[#{feature[0]}]", checked: checked}
+                = feature[1]
+    .row
+      .col-md-2
+        = submit_tag(:search.l, class: "btn btn-default", style: 'margin-bottom: 10px;')
