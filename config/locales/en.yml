@@ -1009,12 +1009,15 @@ en:
   #en: showing_users: Showing users
   showing_users: Zeige Benutzer
   #en: sign_up: Sign Up!
+  #Die Folgenden Begriffe von Zeile 1013 bis 1104 sind im Rahmen von LVZ Neu hinzugefuegt worden.
   sign_up: Registrieren!
   sign_up_customer: Als Kunde
   sign_up_shop_owner: Als Ladengeschaeft
   shop_category: Laden Kategorie
   shop_location: Laden Adresse
   bakery_shop: Bäckerei
+  bakery_product: Bäckerprodukte
+  farmer_product: Hofladen Produkte
   farm_shop: Hofladen
   first_name: Vorname
   my_blog: Meine Beiträge
