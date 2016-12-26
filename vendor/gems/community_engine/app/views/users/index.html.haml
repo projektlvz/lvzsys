@@ -1,8 +1,0 @@
--@page_title=:site_members.l :site => configatron.community_name
-- @section = (params[:metro_area_id] ? 'metro_area' : 'users')
-
-= @customers ? (render :partial => 'users/search_customers', :locals => {search_params: @search_params}) :  (render :partial => 'users/search_shop_owners', :locals => {search_params: @search_params})
-
-= render :partial => "users/user", :collection => @users
-
-= paginate @users, :theme => 'bootstrap'
