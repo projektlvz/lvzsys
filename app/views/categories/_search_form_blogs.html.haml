@@ -1,0 +1,12 @@
+-# City-only search tab.
+%div{style: 'background-color: gray; color: white; border-radius: 10px; padding-top: 15px; padding-left: 5px;'}
+  = form_tag("/categories/#{category}", method: "get") do
+    .row
+      .col-sm-10
+        .form-group
+          %input{type: "text", class: "form-control", id: "city", name: "city", placeholder: :select_city.l, style: 'width: 240px;', value: params['city']}
+      .col-sm-2
+        = hidden_field_tag(:simple_search, true)
+        = hidden_field_tag(:listings, true) if params[:listings]
+        = hidden_field_tag(:tags, params[:tags]) if params[:tags]
+        = submit_tag(:search.l, class: "btn btn-default")
