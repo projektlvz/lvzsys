@@ -122,7 +122,7 @@ en:
   #en: after_signing_up_youll_receive_an_e_mail_confirmation_message: After signing up, you'll receive an e-mail confirmation message.
   after_signing_up_youll_receive_an_e_mail_confirmation_message: "Nach der Registrierung erhaeltst du eine Bestaetigungsnachricht."
   #en: all_clippings_tagged: All clippings tagged %{tag_name}
-  all_clippings_tagged: Alle Clippings zu diesem Schlagwort %{tag_name}
+  all_clippings_tagged: Alle Clippings zu diesem Tag %{tag_name}
   #en: all_comments: All comments
   all_comments: Alle Kommentare
   #en: all_photos_tagged: All photos tagged %{tag_name}
@@ -899,7 +899,7 @@ en:
   #en: related_posts: Related Posts
   related_posts: "In Verbindung stehende Einträge"
   #en: related_tags: Related Tags
-  related_tags: "In Verbindung stehende Schlagwörter"
+  related_tags: "In Verbindung stehende Tags"
   #en: remember_me: Remember me
   remember_me: Angemeldet bleiben
   #en: remember_you_can_always_change_this_later: Remember, you can always change this later.
