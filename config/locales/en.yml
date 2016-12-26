@@ -628,7 +628,7 @@ en:
   #en: look_for_a_message_from: Look for a message from:
   look_for_a_message_from: "Schau nach einer Mitteilung von LokalVZ."
   #en looking_for_most_x: Looking for %{link}
-  looking_for_most_x: Suchst du nach %{link}?
+  looking_for_most_x: Das war es. Suchst du nach %{link}?
   #en: make_moderator: Make moderator
   make_moderator: Zum Moderator machen
   #en: make_my_profile_public: Make my profile public
@@ -850,7 +850,7 @@ en:
   #en: post_topic: Post topic
   post_topic: Thema speichern
   #en: posts_photos_and_bookmarks: %{name} posts, photos and bookmarks
-  posts_photos_and_bookmarks: "%{name} Beiträge, Fotos und Bookmarks"
+  posts_photos_and_bookmarks: "Verzeichnis"
   #en: posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: Posts saved with 'draft' status won't appear in your blog until you publish them.
   posts_saved_with_draft_status_wont_appear_in_your_blog_until_you_publish_them: "Einträge, die als Entwurf gespeichert wurden, erscheinen erst in deinem Blog, wenn du sie veröffentlichst."
   post_not_published_yet: "Dieser Eintrag wurde noch nicht veröffentlicht."
@@ -881,13 +881,13 @@ en:
   #en: re_type_your_password_to_confirm: "Re-type your password to confirm:"
   re_type_your_password_to_confirm: "Erneute Passworteingabe zur Bestätigung:"
   #en: read_more: read more
-  read_more: hier mehr
+  read_more: weiterlesen...
   #en: recent: Recent
   recent: Neu
   #en: recent_activity: Recent activity
   recent_activity: Letzte Beiträge
   #en: recent_blog_posts: Recent Blog Posts
-  recent_blog_posts: "Neue Blogbeiträge"
+  recent_blog_posts: "Neue Beiträge"
   #en: recent_posts: Recent Posts
   recent_posts: "Neue Beiträge"
   #en: recommended_posts: Recommended Posts
@@ -1358,7 +1358,7 @@ en:
   #en: what_are_tags: 'What are "Tags"?'
   what_are_tags: 'Was sind "Tags"?'
   #en: what_is_popular: What's Popular
-  what_is_popular: Neuigkeiten meiner Freunde - Was ist beliebt?
+  what_is_popular: Neuigkeiten meiner Freunde - Welche neuen Beiträge gibt es von ihnen?
   #en: whats_fresh: What's fresh
   whats_fresh: Was ist gerade so los
   #en: whats_hot: What's Hot
