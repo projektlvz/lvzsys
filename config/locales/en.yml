@@ -820,7 +820,7 @@ en:
   #en: plural_posts: "%{count} posts"
   plural_posts: "Einträge"
   #en: popular: Popular
-  popular: "Neuigkeiten meiner Freunde"
+  popular: "Neuigkeiten meiner Verbindungen"
   #en: popular_catgory: Popular %{name}
   popular_catgory: "beliebt in %{name}"
   #en: popular_posts: Popular Posts
